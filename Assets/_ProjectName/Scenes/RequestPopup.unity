@@ -449,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 989
+      value: 1188
       objectReference: {fileID: 0}
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
@@ -459,7 +459,7 @@ PrefabInstance:
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 250
+      value: 616.5
       objectReference: {fileID: 0}
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
@@ -491,12 +491,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 772976228247273236, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: DebugPopupManager
-      value: 
-      objectReference: {fileID: 3040497850415407574, guid: 80ffe52bd4f50694c976a90a17abbeb9,
-        type: 3}
     - target: {fileID: 2200970493349306522, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -527,23 +521,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7073155988242968890, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: m_text
-      value: 'CorrectAnswer
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7073155988242968890, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 7073155988242968890, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4195805636057638754, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -573,23 +550,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063338922441186261, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: m_text
-      value: 'FalseAnswer
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063338922441186261, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063338922441186261, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0922cf33665e73409ef62924f1f027e, type: 3}
