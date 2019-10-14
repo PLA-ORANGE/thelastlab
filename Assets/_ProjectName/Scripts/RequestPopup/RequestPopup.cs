@@ -6,6 +6,7 @@
 using UnityEngine;
 using TMPro;
 using Pixelplacement;
+using System;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -18,11 +19,19 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         protected Vector2 initialPos;
         protected RectTransform rectTransform;
+        [SerializeField]
+        protected RectTransform cardHolderRectTransform;
 
         [SerializeField]
         protected string titlePopup;
         [SerializeField]
         protected string textPopup;
+
+        protected bool exist = false;
+
+
+        protected Camera cam;
+
 
         public string TextPopup
         {
@@ -74,7 +83,9 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         {
             rectTransform = GetComponent<RectTransform>();
             initialPos = rectTransform.anchoredPosition;
+            cam = Camera.main;
             UpdateText();
+            rectTransform.localScale = new Vector2(0, 0);
         }
 
         public void FalseAnswer()
@@ -85,18 +96,48 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public void Appear()
         {
-            Tween.AnchoredPosition(rectTransform, new Vector2(0, 0), 1f, 0.1f, Tween.EaseOutBack);
+            Tween.LocalScale(rectTransform, new Vector2(1, 1), 1f, 0.1f, Tween.EaseOutBack);
+            exist = true;
         }
 
         public void Disapear()
         {
-            Tween.AnchoredPosition(rectTransform, initialPos, 0.5f, 0.1f, Tween.EaseIn);
+            Tween.LocalScale(rectTransform, new Vector2(0, 0), 0.5f, 0.1f, Tween.EaseIn);
+            exist = false;
         }
 
         public void CorrectAnswer()
         {
             Debug.Log("La reponse donnee a la requete est correct");
             Disapear();
+        }
+
+        protected void Update()
+        {
+            CheckCard();
+        }
+
+        private void CheckCard()
+        {
+            int layerMask = 1 << 8;
+            layerMask = ~layerMask;
+            RaycastHit hit;
+
+            if (exist)
+            {
+                if (Physics.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward), out hit, Mathf.Infinity, layerMask))
+                {
+                    if (hit.collider.CompareTag("carte"))
+                    {
+                        Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
+                    }
+                }
+                else
+                {
+                    Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * 1000, Color.red);
+
+                }
+            }
         }
     }
 }
