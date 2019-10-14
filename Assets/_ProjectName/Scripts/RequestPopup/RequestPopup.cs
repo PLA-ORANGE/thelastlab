@@ -5,6 +5,7 @@
 
 using UnityEngine;
 using TMPro;
+using Pixelplacement;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -29,7 +30,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             set
             {
                 textPopup = value;
-                
+                UpdateText();
             }
         }
 
@@ -39,23 +40,24 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             set
             {
                 titlePopup = value;
+                UpdateText();
             }
         }
 
-        protected void SetText()
+        public void SetText()
         {
             TitlePopup = "";
             TextPopup = "";
 
         }
 
-        protected void SetText(string title, string text)
+        public void SetText(string title, string text)
         {
             TitlePopup = title;
             TextPopup = text;
         }
 
-        protected void SetText(string text)
+        public void SetText(string text)
         {
             TitlePopup = "";
             TextPopup = text;
@@ -78,11 +80,23 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         public void FalseAnswer()
         {
             Debug.Log("La reponse donnee a la requete est incorrecte");
+            Disapear();
+        }
+
+        public void Appear()
+        {
+            Tween.AnchoredPosition(rectTransform, new Vector2(0, 0), 1f, 0.1f, Tween.EaseOutBack);
+        }
+
+        public void Disapear()
+        {
+            Tween.AnchoredPosition(rectTransform, initialPos, 0.5f, 0.1f, Tween.EaseIn);
         }
 
         public void CorrectAnswer()
         {
             Debug.Log("La reponse donnee a la requete est correct");
+            Disapear();
         }
     }
 }

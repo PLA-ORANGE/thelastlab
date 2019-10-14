@@ -21,8 +21,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected Button Event1Button;
         [SerializeField]
         protected Button Event2Button;
+        [SerializeField]
+        protected RequestPopup requestPopup;
 
-		private void Awake(){
+        private void Awake(){
 			if (instance){
 				Destroy(gameObject);
 				return;
@@ -35,35 +37,33 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             popupAppearButton.onClick.AddListener(OnClickPopupAppearButton);
             popupDisapearButton.onClick.AddListener(OnClickDisapearButton);
             Event1Button.onClick.AddListener(OnClickEvent1);
-            popupAppearButton.onClick.AddListener(OnClickEvent2);
-
+            Event2Button.onClick.AddListener(OnClickEvent2);
+            requestPopup = GameObject.FindObjectOfType<RequestPopup>();
         }
 
         
 
         protected void OnClickPopupAppearButton()
         {
-
+            requestPopup.SetText();
+            requestPopup.Appear();
         }
 
         protected void OnClickDisapearButton()
         {
-
+            requestPopup.Disapear();
         }
 
         protected void OnClickEvent1()
         {
-
+            requestPopup.SetText("Event 1","Ceci est l'event 1");
+            requestPopup.Appear();
         }
         private void OnClickEvent2()
         {
-
+            requestPopup.SetText("Ceci est l'event 2");
+            requestPopup.Appear();
         }
-
-
-        private void Update () {
-			
-		}
 		
 		private void OnDestroy(){
 			if (this == instance) instance = null;
