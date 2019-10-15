@@ -31,7 +31,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
 		private void Update () {
             if (!onSpaceDown && Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("teub");
                 onSpaceDown = true;
                 
                 GameObject card = deck.GetCard(0);

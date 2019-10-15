@@ -9,11 +9,11 @@ using UnityEngine;
 namespace Com.Github.PLAORANGE.Thelastlab
 {
     public class Deck : MonoBehaviour {
-
+        
         private List<GameObject> cardList = new List<GameObject>();
-        [SerializeField, Range(0,5)] private float maxHight = 1.6f;
-        [SerializeField, Range(0,2)] private float cardSpace = 0.45f;
-        [SerializeField, Range(0,90)] private float angleIntervalle = 60;
+        [SerializeField, Range(0,5)] private float maxHight = 4.5f;
+        [SerializeField, Range(0,2)] private float cardSpace = 1.6f;
+        [SerializeField, Range(0,90)] private float angleIntervalle = 35;
 
             
         public void AddCard(GameObject newCard)
@@ -69,19 +69,16 @@ namespace Com.Github.PLAORANGE.Thelastlab
             {
                 card = cardList[i];
 
-                if (cardListCount > 0)
-                {
-                    angle = Mathf.Lerp(Mathf.PI, 0, (float)i / cardListCount);
+                angle = (cardListCount == 0)? 0: Mathf.Lerp(angleIntervalle, -angleIntervalle, (float)i / cardListCount) * Mathf.Deg2Rad;
 
-                    pos.x = Mathf.Cos(angle) * xRadius;
-                    pos.y = Mathf.Sin(angle) * maxHight;
-                    pos.z = -i;
+                card.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
 
-                    angle = Mathf.Lerp(angleIntervalle, -angleIntervalle, (float)i / cardListCount) * Mathf.Deg2Rad;
-                }
+                angle += Mathf.PI / 2;
+                pos.x = Mathf.Cos(angle) * xRadius;
+                pos.y = Mathf.Sin(angle) * maxHight;
+                pos.z = -i;
 
                 card.transform.position = transform.position + pos;
-                card.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
             }
         }
 
