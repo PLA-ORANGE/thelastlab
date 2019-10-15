@@ -15,6 +15,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private int cardNumber = 7;
 
         [SerializeField] private List<string> jobList = new List<string>();
+
+        private bool onSpaceDown = false;
 	
 		private void Start () {
             GameObject lCard;
@@ -27,7 +29,15 @@ namespace Com.Github.PLAORANGE.Thelastlab
 		}
 		
 		private void Update () {
-			
+            if (!onSpaceDown && Input.GetKey(KeyCode.Space))
+            {
+                onSpaceDown = true;
+                
+                GameObject card = deck.GetCard(0);
+                deck.RemoveCard(card);
+                Destroy(card);
+            }
+            else if(onSpaceDown) onSpaceDown = false;
 		}
 	}
 }

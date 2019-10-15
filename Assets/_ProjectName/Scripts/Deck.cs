@@ -9,42 +9,87 @@ using UnityEngine;
 namespace Com.Github.PLAORANGE.Thelastlab
 {
     public class Deck : MonoBehaviour {
-
+        
         private List<GameObject> cardList = new List<GameObject>();
-        [SerializeField] private float maxHight = 0;
+        [SerializeField, Range(0,5)] private float maxHight = 4f;
+        [SerializeField, Range(0,2)] private float cardSpace = 1f;
+        [SerializeField, Range(0,90)] private float angleIntervalle = 35;
 
+            
         public void AddCard(GameObject newCard)
         {
             cardList.Add(newCard);
             newCard.transform.parent = transform;
+            OrderCards();
+        }
 
+        public GameObject GetCard(int index)
+        {
+            return cardList[index];
+        }
+
+        public void RemoveCard(GameObject card)
+        {
+            cardList.Remove(card);
+            card.transform.parent = transform.parent;
+            OrderCards();
+        }
+
+        public void RemoveCard(int index)
+        {
+            GameObject card = cardList[index];
+
+            cardList.RemoveAt(index);
+            card.transform.parent = transform.parent;
+            OrderCards();
+        }
+
+        public void Clear()
+        {
             GameObject card;
-            Vector3 localPos = new Vector3();
-            int cardListCount = cardList.Count - 1;
-            float angle = 0;
 
-            Vector3 right = Vector3.right * cardListCount / 2;
-            Vector3 left = Vector3.left * cardListCount / 2;
-            Vector3 up = Vector3.up * cardListCount / 2;
+            while (cardList.Count != 0)
+            {
+                card = cardList[0];
+                cardList.Remove(card);
+                Destroy(this);
+            }
+        }
+
+        private void OrderCards()
+        {
+            GameObject card;
+            Vector3 pos = new Vector3();
+            int cardListCount = cardList.Count - 1;
+
+            float angle = 0;
+            float xRadius = cardListCount * cardSpace / 2;
+            float yOffSet = 0;
 
             for (int i = cardListCount; i >= 0; i--)
             {
                 card = cardList[i];
 
-                if (cardListCount > 0)
-                {
-                    localPos = Vector3.Slerp(left, right, (float)i / cardListCount);
-                    localPos.z = -i;
+                angle = (cardListCount == 0)? 0: Mathf.Lerp(angleIntervalle, -angleIntervalle, (float)i / cardListCount) * Mathf.Deg2Rad;
+                card.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
 
-                    
+                angle += Mathf.PI / 2;
 
-                    angle = Mathf.Lerp(45, -45, (float)i / cardListCount);
-                    localPos.y = Mathf.Lerp(0, 1, 1 - ((float)Mathf.Abs(angle) / 90));
-                }
+                pos.x = Mathf.Cos(angle) * xRadius;
+                pos.y = Mathf.Sin(angle) * maxHight;
+                pos.z = -i;
 
-                card.transform.position = transform.position + localPos;
-                card.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                if (i == cardListCount) yOffSet = pos.y - 1;
+                pos.y -= yOffSet;
+
+                card.transform.position = transform.position + pos;
             }
         }
+
+        private void OnValidate()
+        {
+            OrderCards();
+        }
+        
     }
 }
