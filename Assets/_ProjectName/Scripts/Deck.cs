@@ -64,19 +64,23 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
             float angle = 0;
             float xRadius = cardListCount * cardSpace / 2;
+            float yOffSet = 0;
 
             for (int i = cardListCount; i >= 0; i--)
             {
                 card = cardList[i];
 
                 angle = (cardListCount == 0)? 0: Mathf.Lerp(angleIntervalle, -angleIntervalle, (float)i / cardListCount) * Mathf.Deg2Rad;
-
                 card.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
 
                 angle += Mathf.PI / 2;
+
                 pos.x = Mathf.Cos(angle) * xRadius;
                 pos.y = Mathf.Sin(angle) * maxHight;
                 pos.z = -i;
+
+                if (i == cardListCount) yOffSet = pos.y - 1;
+                pos.y -= yOffSet;
 
                 card.transform.position = transform.position + pos;
             }
