@@ -22,22 +22,27 @@ namespace Com.Github.PLAORANGE.Thelastlab
         private const float BACKGROUND_COLOR_COEFF = 0.5f;
         private static List<Color> colorList = new List<Color>() { Color.red, Color.blue, Color.green};
 
-        private Draggable draggable;
-
         public static event CardEventHandler OnCardTaken;
 
-        public void StartDrag(Ray ray)
+        public void StartDrag()
         {
             OnCardTaken?.Invoke(this);
             transform.rotation = Quaternion.identity;
-            //GetComponent<Rigidbody2D>().simulated = false;
-            //GetComponent<Draggable>().StartDrag(ray);
+
+            gameObject.GetComponent<Collider2D>().enabled = false;
+        }
+
+        public void StopDrag()
+        {
+            gameObject.GetComponent<Collider2D>().enabled = true;
         }
 
         private void Start () {
             setAleaColor();
+
             persoName = perso.job; 
-            //draggable = new Draggable(transform);
+           
+
         }
 
         private void setAleaColor()

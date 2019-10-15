@@ -110,9 +110,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!collision.CompareTag("carte")) return;
+            if (!collision.CompareTag("carte") || GetCard(collision.gameObject) != null) return;
 
-            if(GetCard(collision.gameObject) == null) Debug.Log("wtf !!!");
+            AddCard(collision.gameObject);
         }
 
 
