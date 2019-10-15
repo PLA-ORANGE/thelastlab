@@ -11,8 +11,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
     public class Deck : MonoBehaviour {
         
         private List<GameObject> cardList = new List<GameObject>();
-        [SerializeField, Range(0,5)] private float maxHight = 4.5f;
-        [SerializeField, Range(0,2)] private float cardSpace = 1.6f;
+        [SerializeField, Range(0,5)] private float maxHight = 4f;
+        [SerializeField, Range(0,2)] private float cardSpace = 1f;
         [SerializeField, Range(0,90)] private float angleIntervalle = 35;
 
             
