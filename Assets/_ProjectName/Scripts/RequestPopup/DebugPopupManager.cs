@@ -4,8 +4,10 @@
 ///-----------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -23,7 +25,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected Button Event2Button;
         [SerializeField]
         protected RequestPopup requestPopup;
-
+        private List<string> jobList = new List<string>() { "Chimiste", "Mathématicien", "Développeur", "Physicien" };
+        public static Random rand = new Random(); 
         private void Awake(){
 			if (instance){
 				Destroy(gameObject);
@@ -45,7 +48,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         protected void OnClickPopupAppearButton()
         {
-            requestPopup.SetText();
+            requestPopup.SetText(jobList[rand.Next(0,jobList.Count)]);
             requestPopup.Appear();
         }
 

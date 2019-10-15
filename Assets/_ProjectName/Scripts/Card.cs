@@ -21,10 +21,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
         private const float BACKGROUND_COLOR_COEFF = 0.5f;
         private static List<Color> colorList = new List<Color>() { Color.red, Color.blue, Color.green};
 
-        private static int lol = 0;
+     
 
         private void Start () {
-
+          
+            persoName = perso.job; 
             setAleaColor();
         }
 

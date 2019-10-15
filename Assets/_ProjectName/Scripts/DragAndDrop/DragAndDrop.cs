@@ -18,13 +18,15 @@ namespace Com.Github.PLAORANGE.Thelastlab {
 
         private void Start() {
             camera = Camera.main;
+
         }
 
         private void Update() {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-            bool hitSomething = Physics.Raycast(ray, out RaycastHit hitInfo, 100f);
            
-            if(hitSomething && Input.GetMouseButton(0)) {
+            RaycastHit2D hitInfo = Physics2D.Raycast(ray.origin, ray.direction);
+           
+            if(hitInfo.collider != null && Input.GetMouseButton(0)) {
 
                 if(hitInfo.collider.CompareTag("carte")) {
 
@@ -33,7 +35,7 @@ namespace Com.Github.PLAORANGE.Thelastlab {
                         vector.Set(ray.GetPoint(1f).x - hitInfo.transform.position.x, ray.GetPoint(1f).y - hitInfo.transform.position.y,0);
                     }
                     hitInfo.transform.position = (ray.GetPoint(1f) - vector);
-
+                    
                    
                 }
                    
