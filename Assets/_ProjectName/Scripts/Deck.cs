@@ -15,7 +15,17 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField, Range(0,2)] private float cardSpace = 1f;
         [SerializeField, Range(0,90)] private float angleIntervalle = 35;
 
-            
+
+        private void Start()
+        {
+            Card.OnCardTaken += Card_OnCardTaken;
+        }
+
+        public void Card_OnCardTaken(Card card)
+        {
+            RemoveCard(card.gameObject);
+        }
+
         public void AddCard(GameObject newCard)
         {
             cardList.Add(newCard);
@@ -26,6 +36,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public GameObject GetCard(int index)
         {
             return cardList[index];
+        }
+
+        public GameObject GetCard(GameObject card)
+        {
+            int index = cardList.IndexOf(card);
+
+            return (index < 0) ? null : cardList[index];
         }
 
         public void RemoveCard(GameObject card)
@@ -90,6 +107,15 @@ namespace Com.Github.PLAORANGE.Thelastlab
         {
             OrderCards();
         }
-        
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (!collision.CompareTag("carte")) return;
+
+            if(GetCard(collision.gameObject) == null) Debug.Log("wtf !!!");
+        }
+
+
+
     }
 }
