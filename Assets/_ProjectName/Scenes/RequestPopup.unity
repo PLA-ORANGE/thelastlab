@@ -291,6 +291,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6150802360375278403, guid: d1935b23c8bea724a918b0dde2190d2b,
+        type: 3}
+      propertyPath: persoName
+      value: "Math\xE9maticien"
+      objectReference: {fileID: 0}
     - target: {fileID: 5457213997314544705, guid: d1935b23c8bea724a918b0dde2190d2b,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -556,6 +561,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6150802360375278403, guid: d1935b23c8bea724a918b0dde2190d2b,
+        type: 3}
+      propertyPath: persoName
+      value: Chimiste
+      objectReference: {fileID: 0}
     - target: {fileID: 5457213997314544705, guid: d1935b23c8bea724a918b0dde2190d2b,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -716,6 +726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150802360375278403, guid: d1935b23c8bea724a918b0dde2190d2b,
+        type: 3}
+      propertyPath: persoName
+      value: Physicien
       objectReference: {fileID: 0}
     - target: {fileID: 5457213997314544705, guid: d1935b23c8bea724a918b0dde2190d2b,
         type: 3}
