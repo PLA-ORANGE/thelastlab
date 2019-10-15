@@ -7,6 +7,8 @@ using UnityEngine;
 using TMPro;
 using Pixelplacement;
 using System;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -21,6 +23,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected RectTransform rectTransform;
         [SerializeField]
         protected RectTransform cardHolderRectTransform;
+        [SerializeField]
+        protected Image cardHolderImage;
 
         [SerializeField]
         protected string titlePopup;
@@ -28,7 +32,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected string textPopup;
 
         protected bool exist = false;
-
+       
 
         protected Camera cam;
 
@@ -121,21 +125,30 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         {
             int layerMask = 1 << 8;
             layerMask = ~layerMask;
-            RaycastHit hit;
+            RaycastHit2D hit;
 
             if (exist)
             {
-                if (Physics.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward), out hit, Mathf.Infinity, layerMask))
+                 hit = Physics2D.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward)/*out hit*Mathf.Infinity*/, layerMask); 
+                if (hit.collider != null)
                 {
                     if (hit.collider.CompareTag("carte"))
                     {
                         Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
+
+                        if(hit.collider.GetComponent<Perso>().job == textPopup) {
+                            Disapear();
+                            cardHolderImage.color = Color.green;
+                            GameObject.Destroy(hit.collider.gameObject);
+                        }
+
+                        else cardHolderImage.color = Color.red; 
                     }
                 }
                 else
                 {
                     Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * 1000, Color.red);
-
+                    cardHolderImage.color = Color.grey;
                 }
             }
         }

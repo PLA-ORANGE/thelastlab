@@ -11,6 +11,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         [SerializeField] SpriteRenderer head = null;
         [SerializeField] SpriteRenderer bust = null;
+        [SerializeField] public string job = "Mathématicien";
 
         private Color color;
         public Color Color {
