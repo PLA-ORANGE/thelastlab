@@ -95,7 +95,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         public void FalseAnswer()
         {
             Debug.Log("La reponse donnee a la requete est incorrecte");
-            Disapear();
+            cardHolderImage.color = Color.red;
+            //Disapear();
         }
 
         public void Appear()
@@ -112,8 +113,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public void CorrectAnswer()
         {
+            cardHolderImage.color = Color.green;
             Debug.Log("La reponse donnee a la requete est correct");
             Disapear();
+            
         }
 
         protected void Update()
@@ -137,12 +140,11 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
 
                         if(hit.collider.GetComponent<Perso>().job == textPopup) {
-                            Disapear();
-                            cardHolderImage.color = Color.green;
+                            CorrectAnswer();
                             GameObject.Destroy(hit.collider.gameObject);
                         }
 
-                        else cardHolderImage.color = Color.red; 
+                        else FalseAnswer(); 
                     }
                 }
                 else
