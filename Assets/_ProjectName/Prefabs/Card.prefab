@@ -374,6 +374,8 @@ GameObject:
   - component: {fileID: 6150802360375278403}
   - component: {fileID: -686474490180257855}
   - component: {fileID: 7772362086591867324}
+  - component: {fileID: 763215777}
+  - component: {fileID: 763215782}
   m_Layer: 0
   m_Name: Card
   m_TagString: carte
@@ -413,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   persoText: {fileID: 5457213997314544705}
   logoSprite: {fileID: 837595893222033955}
-  perso: {fileID: 2183606863195537516}
+  perso: {fileID: 2183606863195537516, guid: d1935b23c8bea724a918b0dde2190d2b, type: 3}
   backgroundSprite: {fileID: 2545559706388135062}
   persoName: default
 --- !u!61 &-686474490180257855
@@ -463,6 +465,47 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &763215777
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836755535208183790}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.012452483, y: 1.2701777}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9215012, y: 3.2414916}
+  m_EdgeRadius: 0
+--- !u!114 &763215782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836755535208183790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750bb61233773fc4ba5fa7184f237bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 7706564362516505928}
+  bust: {fileID: 6616972534551916275}
+  job: Mathematicien
 --- !u!1001 &2123757274857585569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,7 +583,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 230988848214686669, guid: a8e082371a2612e40b64d4a1dff6a484, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8e082371a2612e40b64d4a1dff6a484, type: 3}
 --- !u!4 &6859025076849800715 stripped
 Transform:
@@ -548,15 +592,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2123757274857585569}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2183606863195537516 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 230988848214686669, guid: a8e082371a2612e40b64d4a1dff6a484,
+--- !u!212 &7706564362516505928 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8613748406054199017, guid: a8e082371a2612e40b64d4a1dff6a484,
     type: 3}
   m_PrefabInstance: {fileID: 2123757274857585569}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750bb61233773fc4ba5fa7184f237bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+--- !u!212 &6616972534551916275 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5092775729262892370, guid: a8e082371a2612e40b64d4a1dff6a484,
+    type: 3}
+  m_PrefabInstance: {fileID: 2123757274857585569}
+  m_PrefabAsset: {fileID: 0}

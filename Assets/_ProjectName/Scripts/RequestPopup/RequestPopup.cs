@@ -31,6 +31,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField]
         protected string textPopup;
 
+        protected GameObject detectedCard;
+
         protected bool exist = false;
        
 
@@ -136,13 +138,20 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     {
                         Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
 
-                        if(hit.collider.GetComponent<Perso>().job == textPopup) {
-                            Disapear();
+                        if(hit.collider.GetComponent<Perso>().job == "Mathematicien" && detectedCard is null) {
+                            float delay = 0;
+                            detectedCard = hit.collider.gameObject;
+                            Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
+                            Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
+                            delay += 0.5f;
+                            Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None,CardDetected);
                             cardHolderImage.color = Color.green;
-                            GameObject.Destroy(hit.collider.gameObject);
+                            
                         }
-
-                        else cardHolderImage.color = Color.red; 
+                        else if(detectedCard is null)
+                        {
+                            cardHolderImage.color = Color.red;
+                        }
                     }
                 }
                 else
@@ -151,6 +160,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     cardHolderImage.color = Color.grey;
                 }
             }
+        }
+
+        protected void CardDetected()
+        {
+            //Debug.Log("coucou");
+            Disapear();
+            GameObject.Destroy(detectedCard);
+            detectedCard = null;
         }
     }
 }
