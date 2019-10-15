@@ -6,7 +6,7 @@ EditorSettings:
   serializedVersion: 7
   m_ExternalVersionControlSupport: Visible Meta Files
   m_SerializationMode: 2
-  m_LineEndingsForNewScripts: 0
+  m_LineEndingsForNewScripts: 2
   m_DefaultBehaviorMode: 1
   m_PrefabRegularEnvironment: {fileID: 0}
   m_PrefabUIEnvironment: {fileID: 0}
@@ -17,9 +17,9 @@ EditorSettings:
   m_EtcTextureNormalCompressor: 2
   m_EtcTextureBestCompressor: 4
   m_ProjectGenerationIncludedExtensions: txt;xml;fnt;cd
-  m_ProjectGenerationRootNamespace: Com.Github.PLAORANGE.LastLab
+  m_ProjectGenerationRootNamespace: Com.Github.PLAORANGE.Thelastlab
   m_CollabEditorSettings:
     inProgressEnabled: 1
-  m_EnableTextureStreamingInEditMode: 1
+  m_EnableTextureStreamingInEditMode: 0
   m_EnableTextureStreamingInPlayMode: 1
   m_AsyncShaderCompilation: 1
