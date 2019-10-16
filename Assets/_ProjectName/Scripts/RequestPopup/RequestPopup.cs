@@ -149,7 +149,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
                         Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
                         delay += 0.5f;
-                        Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None,CardDetected);
+                        //Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None,CardDetected);
                         cardHolderImage.color = Color.green;
                             
                     }
