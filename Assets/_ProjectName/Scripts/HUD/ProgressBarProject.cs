@@ -18,6 +18,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         protected Color initColor;
         [SerializeField]
         protected Image fillImage;
+        protected float height;
         public float Slidervalue
         {
             get => slidervalue; set
@@ -42,6 +43,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
             initPosition = rectTransform.anchoredPosition;
             slider = GetComponent<Slider>();
             UpdateSlider(slidervalue);
+            height = rectTransform.rect.height;
 		}
 
         protected void UpdateSlider(float value)
@@ -65,7 +67,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         {
             initColor = fillImage.GetComponentInChildren<Image>().color;
             fillImage.GetComponentInChildren<Image>().color = Color.red;
-            Tween.Shake(rectTransform, initPosition, (Vector3.up + Vector3.left) * 1, .75f, 0, Tween.LoopType.None, null, UpdatePosition);
+            Tween.Shake(rectTransform, initPosition - (Vector2.up *height/2), (Vector3.up + Vector3.left) * 3, .75f, 0, Tween.LoopType.None, null, UpdatePosition);
         }
 
         protected void UpdatePosition()
