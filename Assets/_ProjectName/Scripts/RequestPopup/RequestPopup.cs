@@ -31,6 +31,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField]
         protected string textPopup;
 
+        protected GameObject detectedCard;
+
         protected bool exist = false;
        
 
@@ -95,8 +97,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         public void FalseAnswer()
         {
             Debug.Log("La reponse donnee a la requete est incorrecte");
-            cardHolderImage.color = Color.red;
-            //Disapear();
+            Disapear();
         }
 
         public void Appear()
@@ -113,10 +114,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public void CorrectAnswer()
         {
-            cardHolderImage.color = Color.green;
             Debug.Log("La reponse donnee a la requete est correct");
             Disapear();
-            
         }
 
         protected void Update()
@@ -132,19 +131,27 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
             if (exist)
             {
-                 hit = Physics2D.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward)/*out hit*Mathf.Infinity*/, layerMask); 
+                 hit = Physics2D.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward), layerMask); 
                 if (hit.collider != null)
                 {
                     if (hit.collider.CompareTag("carte"))
                     {
                         Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
 
-                        if(hit.collider.GetComponent<Perso>().job == textPopup) {
-                            CorrectAnswer();
-                            GameObject.Destroy(hit.collider.gameObject);
+                        if(hit.collider.GetComponent<Perso>().job == "Mathematicien" && detectedCard is null) {
+                            float delay = 0;
+                            detectedCard = hit.collider.gameObject;
+                            Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
+                            Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
+                            delay += 0.5f;
+                            Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None,CardDetected);
+                            cardHolderImage.color = Color.green;
+                            
                         }
-
-                        else FalseAnswer(); 
+                        else if(detectedCard is null)
+                        {
+                            cardHolderImage.color = Color.red;
+                        }
                     }
                 }
                 else
@@ -153,6 +160,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     cardHolderImage.color = Color.grey;
                 }
             }
+        }
+
+        protected void CardDetected()
+        {
+            //Debug.Log("coucou");
+            Disapear();
+            GameObject.Destroy(detectedCard);
+            detectedCard = null;
         }
     }
 }

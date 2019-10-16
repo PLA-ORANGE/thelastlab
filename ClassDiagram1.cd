@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pixelplacement.Chooser" Collapsed="true">
+    <Position X="86.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAgEAIBAIoBEMAkIDAAABJBkAAIQEIAQUABECESCA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Chooser\Chooser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.ColliderButton" Collapsed="true">
+    <Position X="88.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAQbAoAgYkAgVBWBsIHASOBKEkCAFKsadQRhCjAGiEI=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\ColliderButton\ColliderButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.DisplayObject" Collapsed="true">
+    <Position X="81.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAIAAAAAAAIAAABAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\DisplayObject\DisplayObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.GameObjectEvent" Collapsed="true">
+    <Position X="86.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Events\Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.ColliderButtonEvent" Collapsed="true">
+    <Position X="79.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Events\Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.BoolEvent" Collapsed="true">
+    <Position X="81.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Events\Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="84.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAQAIAAAAAAAAABAAAAAAQAAAgAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Singleton\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.BezierCurves" Collapsed="true">
+    <Position X="79.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\BezierCurves.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.Spline" Collapsed="true">
+    <Position X="86.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAYRAgAgAPQILCgKBAAhQABABgAwAIGAAACAAAAAIEY=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\Spline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.SplineAnchor" Collapsed="true">
+    <Position X="88.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAASAAASAABgAGAAAAAAqAAAAAAADAAAKADEA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\SplineAnchor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.SplineFollower" Collapsed="true">
+    <Position X="81.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAAAAAAgAAAAIABACAAAAAAAAACIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\SplineFollower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.SplineTangent" Collapsed="true">
+    <Position X="84.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\SplineTangent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.SplineRenderer" Collapsed="true">
+    <Position X="83" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAADggAAAAQASAAAAEABIAAAgAAAQAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Utilities\SplineRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.State" Collapsed="true">
+    <Position X="86.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAIAAAAAABggAAAAAAAAAAAQAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\StateMachine\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.StateMachine" Collapsed="true">
+    <Position X="88.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAgAAAACABhwEAIABQASAEAAgEABAAoAAACAAAAjA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\StateMachine\StateMachine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.Tween" Collapsed="true">
+    <Position X="79.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAGiAECQAABhpBlggJIGm2gEABQAhICZAJkhAAwgAo=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\Tween.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.EditorUtilities" Collapsed="true">
+    <Position X="84.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Utilities\EditorUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.Initialization" Collapsed="true">
+    <Position X="88.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAgAAAAAAAAAIAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Utilities\Initialization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.LayerMaskHelper" Collapsed="true">
+    <Position X="79.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAQAAAEQIAAEAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Utilities\LayerMaskHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.CoreMath" Collapsed="true">
+    <Position X="84.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Utilities\Math.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColliderButtonInteraction" Collapsed="true">
+    <Position X="81.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\ColliderButton\Utilities\ColliderButtonInteraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColliderButtonSelector" Collapsed="true">
+    <Position X="83" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgYAAAAAAAAABgAAAAAgAQAAAAAAgAAAAAAAAAgQCAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\ColliderButton\Utilities\ColliderButtonSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SplineControlledParticleSystem" Collapsed="true">
+    <Position X="79.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBAAAAAAAAAAEACAAAAIAAAAAAAAAiAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Utilities\SplineControlledParticleSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.TweenBase" Collapsed="true">
+    <Position X="38.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAsQSACAIAACAABAAAIAjgIAAAAoAEAAAgQQAg=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\Helpers\TweenBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.TweenEngine" Collapsed="true">
+    <Position X="81.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\Helpers\TweenEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.TweenUtilities" Collapsed="true">
+    <Position X="83" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACEAAAAACCAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\Helpers\TweenUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.AnchoredPosition" Collapsed="true">
+    <Position X="25.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\AnchoredPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.CameraBackgroundColor" Collapsed="true">
+    <Position X="34.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\CameraBackgroundColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.CanvasGroupAlpha" Collapsed="true">
+    <Position X="43.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\CanvasGroupAlpha.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.FieldOfView" Collapsed="true">
+    <Position X="52.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\FieldOfView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ImageColor" Collapsed="true">
+    <Position X="61.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ImageColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.LightColor" Collapsed="true">
+    <Position X="70.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\LightColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.LightIntensity" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\LightIntensity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.LightRange" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\LightRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.LocalPosition" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\LocalPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.LocalRotation" Collapsed="true">
+    <Position X="27.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\LocalRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.LocalScale" Collapsed="true">
+    <Position X="36.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\LocalScale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.PanStereo" Collapsed="true">
+    <Position X="45.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\PanStereo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.Pitch" Collapsed="true">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\Pitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.Position" Collapsed="true">
+    <Position X="63.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.RawImageColor" Collapsed="true">
+    <Position X="72.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\RawImageColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.Rotate" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAABA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\Rotate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.Rotation" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\Rotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ShaderColor" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ShaderColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ShaderFloat" Collapsed="true">
+    <Position X="29.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ShaderFloat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ShaderInt" Collapsed="true">
+    <Position X="38.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ShaderInt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ShaderVector" Collapsed="true">
+    <Position X="47.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ShaderVector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ShakePosition" Collapsed="true">
+    <Position X="56.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAICAAAQAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ShakePosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.Size" Collapsed="true">
+    <Position X="65.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\Size.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.SplinePercentage" Collapsed="true">
+    <Position X="74.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAIAAAAQABAAAAAAAAAQiAAAAAAAAEEAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\SplinePercentage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.SpriteRendererColor" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\SpriteRendererColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.TextColor" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\TextColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.TextMeshColor" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\TextMeshColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ValueColor" Collapsed="true">
+    <Position X="32" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAAiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ValueColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ValueFloat" Collapsed="true">
+    <Position X="41" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAAiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ValueFloat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ValueInt" Collapsed="true">
+    <Position X="50" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAAiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ValueInt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ValueRect" Collapsed="true">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAAiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ValueRect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ValueVector2" Collapsed="true">
+    <Position X="68" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAAiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ValueVector2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ValueVector3" Collapsed="true">
+    <Position X="77" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAAiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ValueVector3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.ValueVector4" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAAiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\ValueVector4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pixelplacement.TweenSystem.Volume" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAwAAAAAAAAAAAQiAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Tween\TweenActions\Volume.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.Card" Collapsed="true">
+    <Position X="92.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAREAAIAACAAEAAAAAAAAAAAAAQCAIABAAACAACAQAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.CardManager" Collapsed="true">
+    <Position X="92.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAACAAAAAAAAAAAAAAAAAAAECEAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\CardManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.Deck" Collapsed="true">
+    <Position X="92.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKAAAACAAAAQQAAEAAAAAQUCAAAAAAAEAAABAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.DragAndDrop" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="92.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACAAAAAAIAAAAAAAAAAAQAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\DragAndDrop\DragAndDrop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.Perso" Collapsed="true">
+    <Position X="92.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAgCAAAAAAAAAAAAIAAAAAAACAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\Perso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.Popup.DebugPopupManager" Collapsed="true">
+    <Position X="101.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgBAIAIACAAAAAAAAAAAIAAAADAAAAEQAIAAAAgAEA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\RequestPopup\DebugPopupManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.Popup.DebugRequest" Collapsed="true">
+    <Position X="101.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAQAAAAAACAAAAAAAAAAAAAAAABAIAAAAAAAAIgACAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\RequestPopup\DebugRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Github.PLAORANGE.Thelastlab.Popup.RequestPopup" Collapsed="true">
+    <Position X="92.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEBAQAAKgAAACAAIAAiAAAAAAAQABCAUIAACGAAAE=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\RequestPopup\RequestPopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Pixelplacement.CurveDetail" Collapsed="true">
+    <Position X="79.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\CurveDetail.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Pixelplacement.IChooser" Collapsed="true">
+    <Position X="79.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAEAAAAAAAAEAAI=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Chooser\Interfaces\IChooser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Pixelplacement.SplineDirection" Collapsed="true">
+    <Position X="79.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\Spline.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Pixelplacement.TangentMode" Collapsed="true">
+    <Position X="81.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\_ProjectName\Scenes\Pixelplacement\Surge\Spline\Objects\SplineAnchor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Com.Github.PLAORANGE.Thelastlab.CardEventHandler" Collapsed="true">
+    <Position X="79.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\_ProjectName\Scripts\Card.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
