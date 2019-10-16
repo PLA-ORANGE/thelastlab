@@ -15,8 +15,8 @@ namespace Com.Github.PLAORANGE.Thelastlab {
             cam = Camera.main;
         }
 
-        Transform target;
-        Card currentCardTaken;
+        private Transform target;
+        private Card currentCardTaken;
 
         private void Update() {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -45,10 +45,10 @@ namespace Com.Github.PLAORANGE.Thelastlab {
                 currentCardTaken.StartDrag();
             }
 
-            if (target)
-            {
-                target.position = ray.GetPoint(1f) - dragOffset;
-            }
+
+            if (!target) return;
+
+            target.position = ray.GetPoint(1f) - dragOffset;
 
             if (Input.GetMouseButtonUp(0))
             {

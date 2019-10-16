@@ -132,39 +132,35 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         private void CheckCard()
         {
-            int layerMask = 1 << 8;
-            layerMask = ~layerMask;
-            RaycastHit2D hit;
+            RaycastHit hit;
+            bool lHitSomething;
 
             if (exist)
             {
-                 hit = Physics2D.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward), layerMask); 
-                if (hit.collider != null)
+                lHitSomething = Physics.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward), out hit); 
+                
+                if (lHitSomething && hit.collider.CompareTag("carte"))
                 {
-                    if (hit.collider.CompareTag("carte"))
-                    {
-                        Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
 
-                        if (hit.collider.GetComponent<Perso>().job == textPopup && detectedCard is null)
-                        {
-                            float delay = 0;
-                            detectedCard = hit.collider.gameObject;
-                            Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
-                            Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
-                            delay += 0.5f;
-                            Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None,CardDetected);
-                            cardHolderImage.color = Color.green;
+                    if (hit.collider.GetComponent<Card>().job == textPopup && detectedCard is null)
+                    {
+                        float delay = 0;
+                        detectedCard = hit.collider.gameObject;
+                        Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
+                        Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
+                        delay += 0.5f;
+                        Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None,CardDetected);
+                        cardHolderImage.color = Color.green;
                             
-                        }
-                        else if(detectedCard is null)
-                        {
-                            cardHolderImage.color = Color.red;
-                        }
                     }
+                    else if(detectedCard is null)
+                    {
+                        cardHolderImage.color = Color.red;
+                    }
+                    
                 }
                 else
                 {
-                    Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * 1000, Color.red);
                     cardHolderImage.color = Color.grey;
                 }
             }

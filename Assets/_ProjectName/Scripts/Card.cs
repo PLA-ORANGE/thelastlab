@@ -22,6 +22,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public static event CardEventHandler OnCardTaken;
 
+        public string job = "Mathématicien";
+
         private Collider collider;
 
         public string Title {
