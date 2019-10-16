@@ -24,7 +24,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
 		protected void Start () {
             DebugPopupManagerRectTransform = Instantiate(DebugPopupManager, transform.parent.parent).GetComponent<RectTransform>();
-            DebugPopupManagerRectTransform.anchoredPosition = new Vector2(20, 20);
+            DebugPopupManagerRectTransform.anchoredPosition = new Vector2(20, -100);
             falseAnswerButton.onClick.AddListener(DebugFalseAnswer);
             correctAnswerButton.onClick.AddListener(DebugCorrectAnswer);
 		}

@@ -9,6 +9,7 @@ using Pixelplacement;
 using System;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Com.Github.PLAORANGE.Thelastlab.Hud;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -94,11 +95,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             rectTransform.localScale = new Vector2(0, 0);
         }
 
-        public void FalseAnswer()
-        {
-            Debug.Log("La reponse donnee a la requete est incorrecte");
-            Disapear();
-        }
+        
 
         public void Appear()
         {
@@ -114,7 +111,17 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public void CorrectAnswer()
         {
+            ProgressBarProject progressBar = FindObjectOfType<ProgressBarProject>();
+            progressBar.Slidervalue += 10;
             Debug.Log("La reponse donnee a la requete est correct");
+            Disapear();
+        }
+
+        public void FalseAnswer()
+        {
+            ProgressBarProject progressBar = FindObjectOfType<ProgressBarProject>();
+            progressBar.FalseAnswer();
+            Debug.Log("La reponse donnee a la requete est incorrecte");
             Disapear();
         }
 
@@ -138,7 +145,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     {
                         Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
 
-                        if(hit.collider.GetComponent<Perso>().job == "Mathematicien" && detectedCard is null) {
+                        if (hit.collider.GetComponent<Perso>().job == textPopup && detectedCard is null)
+                        {
                             float delay = 0;
                             detectedCard = hit.collider.gameObject;
                             Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
@@ -164,7 +172,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         protected void CardDetected()
         {
-            //Debug.Log("coucou");
             Disapear();
             GameObject.Destroy(detectedCard);
             detectedCard = null;
