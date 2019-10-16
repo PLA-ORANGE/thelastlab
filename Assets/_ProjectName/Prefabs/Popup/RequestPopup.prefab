@@ -446,6 +446,7 @@ MonoBehaviour:
   popupTitle: {fileID: 1409636181049444419}
   popupText: {fileID: 1409636180129991698}
   cardHolderRectTransform: {fileID: 911518012}
+  cardHolderImage: {fileID: 0}
   titlePopup: je suis un titre
   textPopup: coucou
 --- !u!1 &1409636181049444417
@@ -1026,7 +1027,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1057,7 +1058,7 @@ GameObject:
   - component: {fileID: 772976228247273236}
   m_Layer: 5
   m_Name: DebugButton
-  m_TagString: Untagged
+  m_TagString: EditorOnly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
