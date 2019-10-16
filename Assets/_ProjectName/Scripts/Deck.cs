@@ -83,8 +83,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
             float yOffSet = 0;
             float angle;
 
-            Quaternion lCameraRotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
-
             for (int i = cardListCount; i >= 0; i--)
             {
                 card = cardList[i];

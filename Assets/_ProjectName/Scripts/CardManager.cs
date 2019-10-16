@@ -14,7 +14,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private GameObject deckPrefab = null;
         [SerializeField] private int cardNumber = 7;
 
-        private Vector3 deckPos = new Vector3(2.86f, -9.5f, 4.2f);
+        private Vector3 deckPos = new Vector3(2.86f, -10f, 4.2f);
 
         private GameObject deck;
 
