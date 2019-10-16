@@ -533,9 +533,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 7836755535208183790, guid: d1935b23c8bea724a918b0dde2190d2b,
     type: 3}
-  deck: {fileID: 0}
+  deckPrefab: {fileID: 1349772435022648706, guid: 382937c87a25f2d449eb5d0697e4b8c3,
+    type: 3}
   cardNumber: 7
-  jobList: []
 --- !u!1001 &1409636179813192940
 PrefabInstance:
   m_ObjectHideFlags: 0

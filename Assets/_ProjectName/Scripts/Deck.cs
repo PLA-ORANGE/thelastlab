@@ -79,27 +79,29 @@ namespace Com.Github.PLAORANGE.Thelastlab
             Vector3 pos = new Vector3();
             int cardListCount = cardList.Count - 1;
 
-            float angle = 0;
             float xRadius = cardListCount * cardSpace / 2;
             float yOffSet = 0;
+            float angle;
+
+            Quaternion lCameraRotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
 
             for (int i = cardListCount; i >= 0; i--)
             {
                 card = cardList[i];
 
                 angle = (cardListCount == 0)? 0: Mathf.Lerp(angleIntervalle, -angleIntervalle, (float)i / cardListCount) * Mathf.Deg2Rad;
-                card.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+                card.GetComponent<Card>().RotateInZ(angle);
 
                 angle += Mathf.PI / 2;
-
-                pos.x = Mathf.Cos(angle) * xRadius;
-                pos.y = Mathf.Sin(angle) * maxHight;
+                
+                pos.x = xRadius * Mathf.Cos(angle);
+                pos.y = maxHight * Mathf.Sin(angle);
                 pos.z = -i;
-
+                
                 if (i == cardListCount) yOffSet = pos.y - 1;
                 pos.y -= yOffSet;
 
-                card.transform.position = transform.position + pos;
+                card.transform.position = transform.TransformPoint(pos);
             }
         }
 
@@ -108,14 +110,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
             OrderCards();
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (!collision.CompareTag("carte") || GetCard(collision.gameObject) != null) return;
+            if (!other.CompareTag("carte") || GetCard(other.gameObject) != null) return;
 
-            AddCard(collision.gameObject);
+            AddCard(other.gameObject);
         }
-
-
-
     }
 }

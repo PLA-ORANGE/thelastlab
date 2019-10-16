@@ -12,44 +12,65 @@ namespace Com.Github.PLAORANGE.Thelastlab
     public delegate void CardEventHandler(Card sender);
     public class Card : MonoBehaviour {
 
-        [SerializeField] private TextMeshPro persoText = null;
+        [SerializeField] private TextMeshPro titleText = null;
         [SerializeField] private SpriteRenderer logoSprite = null;
         [SerializeField] private Perso perso = null;
         [SerializeField] private SpriteRenderer backgroundSprite = null;
 
-        [SerializeField] private string persoName = "default";
-
         private const float BACKGROUND_COLOR_COEFF = 0.5f;
         private static List<Color> colorList = new List<Color>() { Color.red, Color.blue, Color.green};
 
+        private Collider collider;
+
         public static event CardEventHandler OnCardTaken;
+
+
+        private Quaternion CameraRotation { 
+            get {
+                return Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
+            }
+        }
+
+        public void RotateInZ(float angle)
+        {
+            transform.rotation = CameraRotation * Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+        }
+        
+
+        public string Title {
+            get {
+                return titleText.text;
+            }
+            set {
+                titleText.text = value;
+            } 
+        }
 
         public void StartDrag()
         {
             OnCardTaken?.Invoke(this);
-            transform.rotation = Quaternion.identity;
 
-            gameObject.GetComponent<Collider2D>().enabled = false;
+            transform.rotation = CameraRotation;
+
+            collider.enabled = false;
         }
 
         public void StopDrag()
         {
-            gameObject.GetComponent<Collider2D>().enabled = true;
+            collider.enabled = true;
         }
 
         private void Start () {
             setAleaColor();
 
-            persoName = perso.job; 
-           
+            collider = GetComponent<Collider>();
 
+            Title = perso.job;
+            titleText.color = Color.white;
         }
 
         private void setAleaColor()
         {
-            persoText.text = persoName;
-            persoText.color = Color.white;
-            
             Color lColor = colorList[Random.Range(0, colorList.Count)];
             logoSprite.color = lColor;
 

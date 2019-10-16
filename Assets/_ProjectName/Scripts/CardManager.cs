@@ -11,33 +11,27 @@ namespace Com.Github.PLAORANGE.Thelastlab
 	public class CardManager : MonoBehaviour {
 
         [SerializeField] private GameObject cardPrefab = null;
-        [SerializeField] private Deck deck = null;
+        [SerializeField] private GameObject deckPrefab = null;
         [SerializeField] private int cardNumber = 7;
 
-        [SerializeField] private List<string> jobList = new List<string>();
+        private Vector3 deckPos = new Vector3(2.86f, -9.5f, 4.2f);
 
-        private bool onSpaceDown = false;
-	
+        private GameObject deck;
+
 		private void Start () {
-            GameObject lCard;
 
+            deck = Instantiate(deckPrefab, deckPos, Camera.main.transform.rotation);
+            GameObject lCard;
+            
             for (int i = 0; i < cardNumber; i++)
             {
                 lCard = Instantiate(cardPrefab);
-                deck.AddCard(lCard);
+                deck.GetComponent<Deck>().AddCard(lCard);
             }
+            
 		}
 		
 		private void Update () {
-            if (!onSpaceDown && Input.GetKey(KeyCode.Space))
-            {
-                onSpaceDown = true;
-                
-                GameObject card = deck.GetCard(0);
-                deck.RemoveCard(card);
-                Destroy(card);
-            }
-            else if(onSpaceDown) onSpaceDown = false;
 		}
 	}
 }
