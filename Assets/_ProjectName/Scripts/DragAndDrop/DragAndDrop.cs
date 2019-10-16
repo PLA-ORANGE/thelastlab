@@ -36,7 +36,7 @@ namespace Com.Github.PLAORANGE.Thelastlab {
             // affecter null a la variable
 
             
-            if (Input.GetMouseButtonDown(0) && isHitSomthing)
+            if (Input.GetMouseButtonDown(0) && isHitSomthing && hitInfo.collider.CompareTag("carte"))
             {
                 target = hitInfo.transform;
                 dragOffset = ray.GetPoint(1f) - target.position;

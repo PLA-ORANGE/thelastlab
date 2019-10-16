@@ -369,7 +369,7 @@ MonoBehaviour:
     type: 3}
   deckPrefab: {fileID: 1349772435022648706, guid: 382937c87a25f2d449eb5d0697e4b8c3,
     type: 3}
-  cardNumber: 7
+  cardNumber: 3
 --- !u!114 &1183919228
 MonoBehaviour:
   m_ObjectHideFlags: 0
