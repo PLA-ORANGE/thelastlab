@@ -3,6 +3,7 @@
 /// Date : 16/10/2019
 ///-----------------------------------------------------------------
 
+using Com.Github.PLAORANGE.Thelastlab.Popup;
 using Pixelplacement;
 using System;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         [SerializeField]
         protected Image fillImage;
         protected float height;
+        protected PopupWin popupWin; 
         public float Slidervalue
         {
             get => slidervalue; set
@@ -44,6 +46,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
             slider = GetComponent<Slider>();
             UpdateSlider(slidervalue);
             height = rectTransform.rect.height;
+            popupWin = FindObjectOfType<PopupWin>(); 
 		}
 
         protected void UpdateSlider(float value)
@@ -56,7 +59,12 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         {
             if(slidervalue == 100)
             {
-                //DoSomething
+                //code du Win 
+                // appelé PopupWin 
+
+                popupWin.Appear();
+                popupWin.SetText("TU AS GAGNé"); 
+
             }
         }
 
