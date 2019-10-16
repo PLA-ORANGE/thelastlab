@@ -145,7 +145,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     {
                         Debug.DrawRay(cardHolderRectTransform.position, transform.TransformDirection(-Vector3.forward) * hit.distance, Color.yellow);
 
-                        if(hit.collider.GetComponent<Perso>().job == "Mathematicien" && detectedCard is null) {
+                        if (hit.collider.GetComponent<Perso>().job == textPopup && detectedCard is null)
+                        {
                             float delay = 0;
                             detectedCard = hit.collider.gameObject;
                             Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
@@ -171,7 +172,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         protected void CardDetected()
         {
-            //Debug.Log("coucou");
             Disapear();
             GameObject.Destroy(detectedCard);
             detectedCard = null;
