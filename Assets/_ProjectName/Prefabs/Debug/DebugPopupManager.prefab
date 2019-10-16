@@ -437,11 +437,11 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 20, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20, y: -20}
   m_SizeDelta: {x: 200, y: 350}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &4130340679723744219
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -520,6 +520,7 @@ MonoBehaviour:
   popupDisapearButton: {fileID: 2210419157147975616}
   Event1Button: {fileID: 8544778713427037045}
   Event2Button: {fileID: 6996921463868969039}
+  requestPopup: {fileID: 0}
 --- !u!1 &3338264325046515816
 GameObject:
   m_ObjectHideFlags: 0
