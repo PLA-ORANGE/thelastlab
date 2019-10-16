@@ -15,7 +15,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         protected Slider slider;
         protected float slidervalue = 0;
         protected Vector2 initPosition;
-
+        protected Color initColor;
         public float Slidervalue
         {
             get => slidervalue; set
@@ -53,11 +53,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         }
         public void FalseAnswer()
         {
-            Tween.Shake(rectTransform, initPosition, (Vector3.up + Vector3.left) * 5, 1f, 0, Tween.LoopType.None, null, UpdatePosition);
+            initColor = slider.GetComponentInChildren<Image>().color;
+            slider.GetComponentInChildren<Image>().color = Color.red;
+            Tween.Shake(rectTransform, initPosition, (Vector3.up + Vector3.left) * 1, .75f, 0, Tween.LoopType.None, null, UpdatePosition);
         }
 
         protected void UpdatePosition()
         {
+            slider.GetComponentInChildren<Image>().color = initColor;
             Debug.Log("Position");
             rectTransform.anchoredPosition = initPosition;
         }
