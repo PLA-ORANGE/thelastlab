@@ -90,7 +90,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 card = cardList[i];
 
                 angle = (cardListCount == 0)? 0: Mathf.Lerp(angleIntervalle, -angleIntervalle, (float)i / cardListCount) * Mathf.Deg2Rad;
-                card.GetComponent<Card>().RotateInZ(angle);
+                //card.GetComponent<Card>().RotateInZ(angle);
 
                 angle += Mathf.PI / 2;
                 
