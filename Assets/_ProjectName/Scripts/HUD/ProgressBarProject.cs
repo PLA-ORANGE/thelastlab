@@ -48,7 +48,16 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
 
         protected void UpdateSlider(float value)
         {
-            Tween.Value(slider.value, value/100, SliderUpdate, 1, 0, Tween.EaseInOut);
+            Tween.Value(slider.value, value/100, SliderUpdate, 1, 0, Tween.EaseInOut, Tween.LoopType.None, null, CheckValuePoint);
+        }
+
+
+        protected void CheckValuePoint()
+        {
+            if(slidervalue == 100)
+            {
+                //DoSomething
+            }
         }
 
         protected void SliderUpdate(float value)
