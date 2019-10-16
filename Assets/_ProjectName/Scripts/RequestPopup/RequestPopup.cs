@@ -131,7 +131,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
             if (exist)
             {
-                 hit = Physics2D.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward)/*out hit*Mathf.Infinity*/, layerMask); 
+                 hit = Physics2D.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward), layerMask); 
                 if (hit.collider != null)
                 {
                     if (hit.collider.CompareTag("carte"))
