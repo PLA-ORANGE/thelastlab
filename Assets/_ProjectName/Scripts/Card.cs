@@ -39,8 +39,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Start () {
             setAleaColor();
-
-            persoName = perso.job; 
            
 
         }
