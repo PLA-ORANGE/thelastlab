@@ -440,15 +440,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1409636181034746741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f4ec7c333238c4fae7400e8cddf20d, type: 3}
+  m_Script: {fileID: 11500000, guid: e826be73015c1b940b0077b988192f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   popupTitle: {fileID: 1409636181049444419}
   popupText: {fileID: 1409636180129991698}
+  titlePopup: 
+  textPopup: 
   cardHolderRectTransform: {fileID: 911518012}
-  cardHolderImage: {fileID: 0}
-  titlePopup: je suis un titre
-  textPopup: coucou
+  cardHolderImage: {fileID: 911518013}
 --- !u!1 &1409636181049444417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1027,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
