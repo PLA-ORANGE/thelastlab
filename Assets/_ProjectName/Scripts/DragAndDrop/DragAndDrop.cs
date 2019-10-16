@@ -7,24 +7,19 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Com.Github.PLAORANGE.Thelastlab {
-    public class DragAndDrop : MonoBehaviour, IDragHandler{
+    public class DragAndDrop : MonoBehaviour{
         private Vector3 vector = new Vector3();
-        private Camera camera;
-       
-
-        public void OnDrag(PointerEventData eventData) {
-            Debug.Log(eventData); 
-        }
+        private Camera cam;
 
         private void Start() {
-            camera = Camera.main;
+            cam = Camera.main;
         }
 
         Transform target;
         Card currentCardTaken;
 
         private void Update() {
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit2D hitInfo = Physics2D.Raycast(ray.origin, ray.direction);
 
@@ -59,8 +54,6 @@ namespace Com.Github.PLAORANGE.Thelastlab {
                 currentCardTaken.StopDrag();
                 target = null;
             }
-                
-
         }
 
 

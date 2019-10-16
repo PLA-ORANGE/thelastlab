@@ -17,7 +17,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private Perso perso = null;
         [SerializeField] private SpriteRenderer backgroundSprite = null;
 
-        [SerializeField] private string persoName = "Default";
+        [SerializeField] private string persoName = "default";
 
         private const float BACKGROUND_COLOR_COEFF = 0.5f;
         private static List<Color> colorList = new List<Color>() { Color.red, Color.blue, Color.green};
@@ -39,6 +39,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Start () {
             setAleaColor();
+
+            persoName = perso.job; 
+           
+
         }
 
         private void setAleaColor()
