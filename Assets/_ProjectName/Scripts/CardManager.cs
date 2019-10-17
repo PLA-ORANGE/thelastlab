@@ -28,6 +28,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
             }
             
 		}
+
+        public void GameFinish() {
+            deck.GetComponent<Deck>().Clear(); 
+        }
 		
 		private void Update () {
 		}

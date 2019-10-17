@@ -21,7 +21,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         protected Image fillImage;
         protected float height;
         protected PopupWin popupWin;
-        protected Deck deck; 
+        protected CardManager cardManager; 
         public float Slidervalue
         {
             get => slidervalue; set
@@ -48,7 +48,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
             UpdateSlider(slidervalue);
             height = rectTransform.rect.height;
             popupWin = FindObjectOfType<PopupWin>(); 
-            deck = FindObjectOfType<Deck>(); 
+            cardManager = FindObjectOfType<CardManager>(); 
 		}
 
         protected void UpdateSlider(float value)
@@ -61,9 +61,9 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         {
             if(slidervalue == 100)
             {
-               popupWin.Appear();
-                popupWin.SetText("Félicitations !!","Voici votre invention"); 
-                deck.Clear(); 
+                popupWin.Appear();
+                popupWin.SetText("Félicitations !!","Voici votre invention");
+                cardManager.GameFinish();
                 GameObject.Destroy(slider.gameObject); 
             }
         }
