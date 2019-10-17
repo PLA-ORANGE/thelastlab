@@ -21,10 +21,12 @@ namespace Com.Github.PLAORANGE.Thelastlab
         private static List<Color> colorList = new List<Color>() { Color.red, Color.blue, Color.green};
 
         public static event CardEventHandler OnCardTaken;
+        public static event CardEventHandler OnCardDrop;
 
         public string job = "Mathématicien";
 
-        private Collider collider;
+        private Collider myCollider;
+        public bool isLock;
 
         public string Title {
             get{
@@ -49,21 +51,23 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void StartDrag()
         {
+            if (isLock) return;
             OnCardTaken?.Invoke(this);
             transform.rotation = CameraRotation;
 
-            collider.enabled = false;
+            myCollider.enabled = false;
         }
 
         public void StopDrag()
         {
-            collider.enabled = true;
+            myCollider.enabled = true;
+            OnCardDrop?.Invoke(this);
         }
 
         private void Start () {
             setAleaColor();
             Title = perso.job;
-            collider = GetComponent<Collider>();
+            myCollider = GetComponent<Collider>();
         }
 
         private void setAleaColor()

@@ -75,12 +75,12 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
 
 
-        public void Appear() {
+        virtual public void Appear() {
             Tween.LocalScale(rectTransform, new Vector2(1, 1), 1f, 0.1f, Tween.EaseOutBack);
             exist = true;
         }
 
-        public void Disapear() {
+        virtual public void Disapear() {
             Tween.LocalScale(rectTransform, new Vector2(0, 0), 0.5f, 0.1f, Tween.EaseIn);
             exist = false;
         }

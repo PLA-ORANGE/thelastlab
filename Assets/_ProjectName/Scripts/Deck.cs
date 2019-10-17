@@ -3,6 +3,8 @@
 /// Date : #DATE#
 ///-----------------------------------------------------------------
 
+using Com.Github.PLAORANGE.Thelastlab.Popup;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,15 +17,37 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField, Range(0,2)] private float cardSpace = 1f;
         [SerializeField, Range(0,90)] private float angleIntervalle = 35;
 
+        private bool colliderOnly = false;
 
         private void Start()
         {
             Card.OnCardTaken += Card_OnCardTaken;
+            Card.OnCardDrop += Card_OnCardDrop;
+
+            RequestPopup.OnAppear += RequestPopup_OnAppear;
+            RequestPopup.OnDisappear += RequestPopup_OnDisappear;
         }
 
-        public void Card_OnCardTaken(Card card)
+        private void RequestPopup_OnDisappear(RequestPopup sender)
         {
-            RemoveCard(card.gameObject);
+            colliderOnly = false;
+        }
+
+        private void RequestPopup_OnAppear(RequestPopup sender)
+        {
+            colliderOnly = true;
+        }
+
+        private void Card_OnCardTaken(Card sender)
+        {
+            RemoveCard(sender.gameObject);
+        }
+
+        private void Card_OnCardDrop(Card sender)
+        {
+            if (colliderOnly) return;
+
+            AddCard(sender.gameObject);
         }
 
         public void AddCard(GameObject newCard)
@@ -69,9 +93,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
             {
                 card = cardList[0];
                 cardList.Remove(card);
-                Destroy(this);
+                Destroy(card);
             }
         }
+
 
         private void OrderCards()
         {
@@ -110,7 +135,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.CompareTag("carte") || GetCard(other.gameObject) != null) return;
+            if (!other.CompareTag("carte") || GetCard(other.gameObject) != null || !colliderOnly) return;
 
             AddCard(other.gameObject);
         }

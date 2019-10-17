@@ -34,7 +34,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.lab
 
         private void Update()
         {
-            Debug.Log(Vector3.Distance(transform.position, finalPosition));
+            //Debug.Log(Vector3.Distance(transform.position, finalPosition));
             if (Vector3.Distance(transform.position, finalPosition) <= 1f || Vector3.Distance(transform.position, finalPosition) == Mathf.Infinity)
             {
                 GoToRandomPosition();

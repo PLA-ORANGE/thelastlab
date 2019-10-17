@@ -13,7 +13,9 @@ using Com.Github.PLAORANGE.Thelastlab.Hud;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
-	public class RequestPopup : Popup {
+    public delegate void RequestPopupEventHandler(RequestPopup sender);
+
+    public class RequestPopup : Popup {
 
         [SerializeField]
         protected RectTransform cardHolderRectTransform;
@@ -22,9 +24,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected Image cardHolderImage;
         protected Camera cam;
 
+        public static event RequestPopupEventHandler OnAppear;
+        public static event RequestPopupEventHandler OnDisappear;
 
-        
-       override public void Start() {
+        override public void Start() {
             base.Start();
             cam = Camera.main; 
         }
@@ -51,6 +54,18 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             CheckCard();
         }
 
+        public override void Appear()
+        {
+            base.Appear();
+            OnAppear?.Invoke(this);
+        }
+
+        public override void Disapear()
+        {
+            base.Disapear();
+            OnDisappear?.Invoke(this);
+        }
+
         private void CheckCard() {
             RaycastHit hit;
             bool lHitSomething;
@@ -61,15 +76,21 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                 if(lHitSomething && hit.collider.CompareTag("carte")) {
 
                     if(hit.collider.GetComponent<Card>().job == textPopup && detectedCard is null) {
-                        CorrectAnswer();
-                        float delay = 0;
+                        
                         detectedCard = hit.collider.gameObject;
+                        detectedCard.GetComponent<Card>().isLock = true;              
+
+                        float delay = 0;
+
                         Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
                         Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
                         delay += 0.5f;
-                        Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None, CardDetected);
+                        //Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, null, Tween.LoopType.None, CardDetected);
+                        CardDetected();
                         cardHolderImage.color = Color.green;
 
+
+                        CorrectAnswer();
                     }
                     else if(detectedCard is null) {
                         cardHolderImage.color = Color.red;
@@ -86,7 +107,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected void CardDetected()
         {
             Disapear();
-            GameObject.Destroy(detectedCard);
+            Destroy(detectedCard);
             detectedCard = null;
         }
     }

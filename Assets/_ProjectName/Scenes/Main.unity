@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922772641}
   m_LocalRotation: {x: 0.33186063, y: 0.2273322, z: -0.08274214, w: 0.91177976}
-  m_LocalPosition: {x: -6.29, y: 2.31, z: -8.5}
+  m_LocalPosition: {x: -5.45, y: 1.1, z: -10.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -399,7 +399,7 @@ MonoBehaviour:
     type: 3}
   deckPrefab: {fileID: 1349772435022648706, guid: 382937c87a25f2d449eb5d0697e4b8c3,
     type: 3}
-  cardNumber: 3
+  cardNumber: 7
   deckSpawn: {fileID: 922772642}
 --- !u!114 &1183919228
 MonoBehaviour:
@@ -596,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 2975408862072723682, guid: 537163a308e433e428a7cef0456e9fb5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.77
       objectReference: {fileID: 0}
     - target: {fileID: 2975408862072723682, guid: 537163a308e433e428a7cef0456e9fb5,
         type: 3}
