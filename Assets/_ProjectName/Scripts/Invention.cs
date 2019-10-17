@@ -11,7 +11,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Start() {
             transform.localScale = Vector3.zero;
-            transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
+            //transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
         }
 
 
