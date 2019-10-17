@@ -23,7 +23,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public static event CardEventHandler OnCardTaken;
         public static event CardEventHandler OnCardDrop;
 
-        public string job = "Mathématicien";
+        public string job = JobCode.Mathématicien.ToString();
 
         private Collider myCollider;
         public bool isLock;
