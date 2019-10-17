@@ -22,10 +22,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public static event CardEventHandler OnCardTaken;
         public static event CardEventHandler OnCardDrop;
 
-        private Job _job;
+        private Job job;
 
-        public string job { 
-            get { return _job.code.ToString();}
+        public JobCode JobCode { 
+            get { return job.code;}
         }
 
         public string Title {
@@ -69,10 +69,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void setJob(Job job)
         {
-            _job = job;
-            Title = _job.code.ToString();
+            this.job = job;
+            Title = this.job.code.ToString();
 
-            Color lColor = _job.color;
+            Color lColor = this.job.color;
 
             perso.Color = lColor;
             logoSprite.color = lColor;

@@ -27,9 +27,19 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         public static event RequestPopupEventHandler OnAppear;
         public static event RequestPopupEventHandler OnDisappear;
 
+        private JobCode jobCode = JobCode.Mathématicien;
+
+        public JobCode JobCode {
+            set
+            {
+                jobCode = value;
+                SetText(jobCode.ToString());
+            }
+        }
+
         override public void Start() {
             base.Start();
-            cam = Camera.main; 
+            cam = Camera.main;
         }
             
         
@@ -75,9 +85,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
                 if(lHitSomething && hit.collider.CompareTag("carte")) {
 
-                    if(hit.collider.GetComponent<Card>().job == textPopup && detectedCard is null) {
+                    if(hit.collider.GetComponent<Card>().JobCode == jobCode && detectedCard is null) {
                         detectedCard = hit.collider.gameObject;
-
 
                         float delay = 0;
 

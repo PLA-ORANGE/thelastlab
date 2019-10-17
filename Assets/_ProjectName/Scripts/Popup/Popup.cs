@@ -69,10 +69,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             popupText.text = TextPopup;
         }
 
-        
-
-
-
         virtual public void Appear() {
             Tween.LocalScale(rectTransform, new Vector2(1, 1), 1f, 0.1f, Tween.EaseOutBack);
             exist = true;
