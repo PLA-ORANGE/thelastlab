@@ -18,15 +18,15 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private SpriteRenderer backgroundSprite = null;
 
         private const float BACKGROUND_COLOR_COEFF = 0.5f;
-        private static List<Color> colorList = new List<Color>() { Color.red, Color.blue, Color.green};
 
         public static event CardEventHandler OnCardTaken;
         public static event CardEventHandler OnCardDrop;
 
-        public string job = JobCode.Mathématicien.ToString();
+        private Job _job;
 
-        private Collider myCollider;
-        public bool isLock;
+        public string job { 
+            get { return _job.code.ToString();}
+        }
 
         public string Title {
             get{
@@ -51,28 +51,30 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void StartDrag()
         {
-            if (isLock) return;
             OnCardTaken?.Invoke(this);
             transform.rotation = CameraRotation;
 
-            myCollider.enabled = false;
+            GetComponent<Collider>().enabled = false;
         }
 
         public void StopDrag()
         {
-            myCollider.enabled = true;
+            GetComponent<Collider>().enabled = true;
             OnCardDrop?.Invoke(this);
         }
 
         private void Start () {
-            setAleaColor();
-            Title = perso.job;
-            myCollider = GetComponent<Collider>();
+            setJob(Job.GetAleaJob());
         }
 
-        private void setAleaColor()
+        public void setJob(Job job)
         {
-            Color lColor = colorList[Random.Range(0, colorList.Count)];
+            _job = job;
+            Title = _job.code.ToString();
+
+            Color lColor = _job.color;
+
+            perso.Color = lColor;
             logoSprite.color = lColor;
 
             lColor.g *= BACKGROUND_COLOR_COEFF;
