@@ -26,7 +26,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public static event RequestPopupEventHandler OnAppear;
         public static event RequestPopupEventHandler OnDisappear;
-
+        protected  GameManager gameManager; 
         private JobCode jobCode = JobCode.Mathématicien;
 
         public JobCode JobCode {
@@ -40,13 +40,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         override public void Start() {
             base.Start();
             cam = Camera.main;
+            gameManager = FindObjectOfType<GameManager>(); 
         }
             
         
         public void CorrectAnswer()
         {
-            ProgressBarProject progressBar = FindObjectOfType<ProgressBarProject>();
-            progressBar.Slidervalue += 100;
+            gameManager.UpdateScore(100); 
+            
             Debug.Log("La reponse donnee a la requete est correct");
             Disapear();
         }
