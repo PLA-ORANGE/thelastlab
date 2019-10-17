@@ -21,7 +21,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         protected Image fillImage;
         protected float height;
         protected PopupWin popupWin;
-        protected CardManager cardManager; 
+        protected GameManager gameManager; 
         public float Slidervalue
         {
             get => slidervalue; set
@@ -48,24 +48,17 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
             UpdateSlider(slidervalue);
             height = rectTransform.rect.height;
             popupWin = FindObjectOfType<PopupWin>(); 
-            cardManager = FindObjectOfType<CardManager>(); 
+            gameManager = FindObjectOfType<GameManager>(); 
 		}
 
-        protected void UpdateSlider(float value)
+        public void UpdateSlider(float value)
         {
-            Tween.Value(slider.value, value/100, SliderUpdate, 1, 0, Tween.EaseInOut, Tween.LoopType.None, null, CheckValuePoint);
+            Debug.Log(value); 
+            Tween.Value(slider.value, value/100, SliderUpdate, 1, 0, Tween.EaseInOut, Tween.LoopType.None, null, EndTween);
         }
 
-
-        protected void CheckValuePoint()
-        {
-            if(slidervalue == 100)
-            {
-                popupWin.Appear();
-                popupWin.SetText("Félicitations !!","Voici votre invention");
-                cardManager.GameFinish();
-                GameObject.Destroy(slider.gameObject); 
-            }
+        private void EndTween() {
+            gameManager.CheckScoreValue();
         }
 
         protected void SliderUpdate(float value)
@@ -93,5 +86,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
             Debug.Log("Position");
             rectTransform.anchoredPosition = initPosition;
         }
-	}
+
+        public void ClearBar() {
+            GameObject.Destroy(slider.gameObject);
+
+        }
+    }
 }
