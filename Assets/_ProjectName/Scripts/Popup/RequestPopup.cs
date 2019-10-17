@@ -60,7 +60,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
                 if(lHitSomething && hit.collider.CompareTag("carte")) {
 
-                    if(/*hit.collider.GetComponent<Card>().job == textPopup &&*/ detectedCard is null) {
+                    if(hit.collider.GetComponent<Card>().job == textPopup && detectedCard is null) {
+                        CorrectAnswer();
                         float delay = 0;
                         detectedCard = hit.collider.gameObject;
                         Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
@@ -72,6 +73,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     }
                     else if(detectedCard is null) {
                         cardHolderImage.color = Color.red;
+                        FalseAnswer();
                     }
 
                 }

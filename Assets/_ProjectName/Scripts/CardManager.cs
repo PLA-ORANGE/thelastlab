@@ -13,15 +13,12 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private GameObject cardPrefab = null;
         [SerializeField] private GameObject deckPrefab = null;
         [SerializeField] private int cardNumber = 7;
-
-        private Vector3 deckPos;
+        [SerializeField] private Transform deckSpawn = null;
 
         private GameObject deck;
 
 		private void Start () {
-            deckPos = Camera.main.transform.forward;
-
-            deck = Instantiate(deckPrefab, deckPos, Camera.main.transform.rotation);
+            deck = Instantiate(deckPrefab, deckSpawn.position, Camera.main.transform.rotation);
             GameObject lCard;
             
             for (int i = 0; i < cardNumber; i++)

@@ -390,7 +390,7 @@ Transform:
   m_GameObject: {fileID: 7836755535208183790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2.5210073}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 6859025076849800715}
   - {fileID: 5807785969021921406}
@@ -415,6 +415,7 @@ MonoBehaviour:
   logoSprite: {fileID: 837595893222033955}
   perso: {fileID: 2183606863195537516}
   backgroundSprite: {fileID: 2545559706388135062}
+  job: "Math\xE9maticien"
 --- !u!65 &1557881838700161347
 BoxCollider:
   m_ObjectHideFlags: 0
