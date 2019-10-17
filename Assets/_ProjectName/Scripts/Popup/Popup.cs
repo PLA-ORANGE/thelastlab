@@ -22,10 +22,13 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected string textPopup;
         protected bool exist = false;
 
-        private void Update () {
-			
-		}
-
+        
+        virtual public void Start() {
+            rectTransform = GetComponent<RectTransform>();
+            initialPos = rectTransform.anchoredPosition;
+            UpdateText();
+            rectTransform.localScale = new Vector2(0, 0);
+        }
 
 
         public string TextPopup {
@@ -66,12 +69,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             popupText.text = TextPopup;
         }
 
-        virtual public void Start() {
-            rectTransform = GetComponent<RectTransform>();
-            initialPos = rectTransform.anchoredPosition;
-            UpdateText();
-            rectTransform.localScale = new Vector2(0, 0);
-        }
+        
 
 
 

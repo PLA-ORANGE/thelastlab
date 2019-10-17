@@ -20,7 +20,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         [SerializeField]
         protected Image fillImage;
         protected float height;
-        protected PopupWin popupWin; 
+        protected PopupWin popupWin;
+        protected Deck deck; 
         public float Slidervalue
         {
             get => slidervalue; set
@@ -47,6 +48,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
             UpdateSlider(slidervalue);
             height = rectTransform.rect.height;
             popupWin = FindObjectOfType<PopupWin>(); 
+            deck = FindObjectOfType<Deck>(); 
 		}
 
         protected void UpdateSlider(float value)
@@ -59,12 +61,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         {
             if(slidervalue == 100)
             {
-                //code du Win 
-                // appelé PopupWin 
-
-                popupWin.Appear();
-                popupWin.SetText("TU AS GAGNé"); 
-
+               popupWin.Appear();
+                popupWin.SetText("Félicitations !!","Voici votre invention"); 
+                deck.Clear(); 
+                GameObject.Destroy(slider.gameObject); 
             }
         }
 
