@@ -25,7 +25,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected Button Event2Button;
         [SerializeField]
         protected RequestPopup requestPopup;
-        private List<string> jobList = new List<string>() { "Chimiste", "Mathématicien", "Développeur", "Physicien" };
         public static Random rand = new Random(); 
         private void Awake(){
 			if (instance){
@@ -48,7 +47,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         protected void OnClickPopupAppearButton()
         {
-            requestPopup.SetText(jobList[rand.Next(0,jobList.Count)]);
+            requestPopup.JobCode = Job.GetAleaCode();
             requestPopup.Appear();
         }
 
