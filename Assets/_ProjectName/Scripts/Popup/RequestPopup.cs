@@ -76,9 +76,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                 if(lHitSomething && hit.collider.CompareTag("carte")) {
 
                     if(hit.collider.GetComponent<Card>().job == textPopup && detectedCard is null) {
-                        
                         detectedCard = hit.collider.gameObject;
-                        detectedCard.GetComponent<Card>().isLock = true;              
+
 
                         float delay = 0;
 
@@ -95,6 +94,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     else if(detectedCard is null) {
                         cardHolderImage.color = Color.red;
                         FalseAnswer();
+
+                        hit.collider.gameObject.GetComponent<Card>().StopDrag();
                     }
 
                 }
