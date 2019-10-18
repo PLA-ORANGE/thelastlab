@@ -70,7 +70,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
             RequestPopup.OnDisappear += RequestPopup_OnDisappear;
 
-            elapseTime = spawnFrequencyRequest;
+            elapseTime = spawnFrequencyRequest / 2;
         }
 
         private void RequestPopup_OnDisappear(RequestPopup sender)
