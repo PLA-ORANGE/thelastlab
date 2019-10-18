@@ -431,6 +431,7 @@ MonoBehaviour:
     type: 3}
   cardNumber: 7
   deckSpawn: {fileID: 922772642}
+  LabMenPrefab: {fileID: 0}
 --- !u!114 &1183919228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +672,41 @@ PrefabInstance:
     - target: {fileID: 2975408862072723682, guid: 537163a308e433e428a7cef0456e9fb5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035123956318831984, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035123956432114872, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035123956956634211, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035123957331566457, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035123957703989138, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035123958191502610, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321913401156875133, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

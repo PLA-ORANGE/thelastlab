@@ -23,8 +23,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         static public void InitJobColor()
         {
-            Debug.Log(JobCode.Développeur == 0);
-            
             jobsColors = new Dictionary<JobCode, Color>();
 
             jobsColors.Add(JobCode.Mathématicien, Color.red);

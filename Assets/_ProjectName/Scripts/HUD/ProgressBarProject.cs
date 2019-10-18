@@ -22,21 +22,12 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         protected float height;
         protected PopupWin popupWin;
         protected GameManager gameManager; 
+
         public float Slidervalue
         {
             get => slidervalue; set
             {
-                if (value >= 100)
-                {
-                    slidervalue = 100;
-                }
-                else if(value <= 0)
-                {
-                    slidervalue = 0;
-                } else
-                {
-                    slidervalue = value;
-                }
+                slidervalue = Mathf.Clamp(value, 0, 100);
                 UpdateSlider(slidervalue);
             }
         }
@@ -53,7 +44,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
 
         public void UpdateSlider(float value)
         {
-            Debug.Log(value); 
             Tween.Value(slider.value, value/100, SliderUpdate, 1, 0, Tween.EaseInOut, Tween.LoopType.None, null, EndTween);
         }
 
@@ -64,15 +54,9 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         protected void SliderUpdate(float value)
         {
             slider.value = value;
-            if(slider.value == 0)
-            {
-                fillImage.enabled = false;
-            }
-            else
-            {
-                fillImage.enabled = true;
-            }
+            fillImage.enabled = (value != 0);
         }
+
         public void FalseAnswer()
         {
             initColor = fillImage.GetComponentInChildren<Image>().color;
@@ -83,13 +67,11 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         protected void UpdatePosition()
         {
             fillImage.GetComponentInChildren<Image>().color = initColor;
-            Debug.Log("Position");
             rectTransform.anchoredPosition = initPosition;
         }
 
         public void ClearBar() {
             GameObject.Destroy(slider.gameObject);
-
         }
     }
 }

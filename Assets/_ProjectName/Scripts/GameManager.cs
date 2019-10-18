@@ -17,9 +17,12 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private GameObject deckPrefab = null;
         [SerializeField] private int cardNumber = 7;
         [SerializeField] private Transform deckSpawn = null;
+        [SerializeField] private GameObject labMenPrefab = null;
+        [SerializeField] private GameObject labo = null;
+
         protected PopupWin popupWin;
         protected ProgressBarProject progressBar;
-        protected float scoreValue = 0;  
+        protected float score = 0;  
         private GameObject deck;
 
 		private void Start () {
@@ -35,6 +38,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
             progressBar = FindObjectOfType<ProgressBarProject>();
         }
 
+        public void SpawnInLab()
+        {
+            Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
+        }
+
         public void ClearAll() {
             deck.GetComponent<Deck>().Clear();
             progressBar.ClearBar(); 
@@ -46,14 +54,14 @@ namespace Com.Github.PLAORANGE.Thelastlab
             popupWin.SetText("Félicitations !!", "Voici votre invention");
         }
 
-        public void  UpdateScore (float value) {
-            scoreValue += value;
-            progressBar.UpdateSlider(scoreValue);
-           
+        public void  AddScore (float value) {
+            score = Mathf.Clamp(score + value, 0, 100);
+            progressBar.UpdateSlider(score);
+            SpawnInLab();
         }
 
         public void CheckScoreValue() {
-            if(scoreValue < 100) return;
+            if(score < 100) return;
 
             ClearAll();
             DisplayWinScreen();

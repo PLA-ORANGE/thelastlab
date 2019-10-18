@@ -14,11 +14,32 @@ namespace Com.Github.PLAORANGE.Thelastlab.lab
         private float walkRadius = 5f;
         Vector3 finalPosition;
 
-        private void Start () {
+        Action DoAction;
+
+        public void SetModeVoid()
+        {
+            DoAction = DoActionVoid;
+        }
+
+        private void DoActionVoid()
+        {
+
+        }
+
+        public void SetModeNavigate()
+        {
             agent = GetComponent<NavMeshAgent>();
             GoToRandomPosition();
-            
+            DoAction = DoActionNavigate;
+        }
 
+        public void DoActionNavigate()
+        {
+            //Debug.Log(Vector3.Distance(transform.position, finalPosition));
+            if (Vector3.Distance(transform.position, finalPosition) <= 1f || Vector3.Distance(transform.position, finalPosition) == Mathf.Infinity)
+            {
+                GoToRandomPosition();
+            }
         }
 
         private void GoToRandomPosition()
@@ -32,13 +53,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.lab
             agent.SetDestination(finalPosition);
         }
 
+        private void Start()
+        {
+            SetModeNavigate();
+        }
+
         private void Update()
         {
-            //Debug.Log(Vector3.Distance(transform.position, finalPosition));
-            if (Vector3.Distance(transform.position, finalPosition) <= 1f || Vector3.Distance(transform.position, finalPosition) == Mathf.Infinity)
-            {
-                GoToRandomPosition();
-            }
+            DoAction();
         }
 	}
 }
