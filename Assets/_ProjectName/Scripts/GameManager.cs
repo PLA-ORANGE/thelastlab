@@ -6,6 +6,7 @@
 
 using Com.Github.PLAORANGE.Thelastlab.Hud;
 using Com.Github.PLAORANGE.Thelastlab.Popup;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,8 +23,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         protected PopupWin popupWin;
         protected ProgressBarProject progressBar;
+        private RequestPopup requestPopup;
         protected float score = 0;  
         private GameObject deck;
+
+        private bool isRequestPopUp;
 
         [SerializeField]
         private List<JobCode> startCards = new List<JobCode>() {
@@ -36,7 +40,19 @@ namespace Com.Github.PLAORANGE.Thelastlab
             JobCode.Développeur
         };
 
-		private void Start () {
+        [SerializeField]
+        private List<JobCode> popupRequests = new List<JobCode>() {
+            JobCode.Mathématicien,
+            JobCode.Ingénieur,
+            JobCode.Développeur,
+            JobCode.Chimiste,
+            JobCode.Mathématicien
+        };
+
+        [SerializeField] private float spawnFrequencyRequest = 4f;
+        private float elapseTime = 0;
+
+        private void Start () {
             deck = Instantiate(deckPrefab, deckSpawn.position, Camera.main.transform.rotation);
             GameObject lCard;
             
@@ -50,6 +66,16 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
             popupWin = FindObjectOfType<PopupWin>();
             progressBar = FindObjectOfType<ProgressBarProject>();
+            requestPopup = FindObjectOfType<RequestPopup>();
+
+            RequestPopup.OnDisappear += RequestPopup_OnDisappear;
+
+            elapseTime = spawnFrequencyRequest;
+        }
+
+        private void RequestPopup_OnDisappear(RequestPopup sender)
+        {
+            isRequestPopUp = false;
         }
 
         public void SpawnInLab(Job job)
@@ -82,6 +108,22 @@ namespace Com.Github.PLAORANGE.Thelastlab
         }
 
         private void Update () {
+            if (isRequestPopUp || popupRequests.Count == 0) return;
+
+            elapseTime += Time.deltaTime;
+
+            if (elapseTime < spawnFrequencyRequest) return;
+            
+            elapseTime -= spawnFrequencyRequest;
+
+            JobCode jobCode = popupRequests[0];
+            popupRequests.Remove(jobCode);
+
+            requestPopup.JobCode = jobCode;
+            requestPopup.Appear();
+
+            isRequestPopUp = true;
+            
 		}
 	}
 }
