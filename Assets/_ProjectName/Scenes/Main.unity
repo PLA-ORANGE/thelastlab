@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 0d43c8dce4514644f9e29644b2eb9f6d, type: 2}
+--- !u!1 &543120870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 795508194096390, guid: 537163a308e433e428a7cef0456e9fb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2028852479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &712980750
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +437,9 @@ MonoBehaviour:
     type: 3}
   cardNumber: 7
   deckSpawn: {fileID: 922772642}
-  LabMenPrefab: {fileID: 0}
+  labMenPrefab: {fileID: 5153881365893283936, guid: a78bad72c95df60429b45f29214ceb10,
+    type: 3}
+  labo: {fileID: 543120870}
 --- !u!114 &1183919228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,6 +716,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035123956956634236, guid: 537163a308e433e428a7cef0456e9fb5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 537163a308e433e428a7cef0456e9fb5, type: 3}

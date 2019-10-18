@@ -22,7 +22,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public static event CardEventHandler OnCardTaken;
         public static event CardEventHandler OnCardDrop;
 
-        private Job job;
+        public Job job;
 
         public JobCode JobCode { 
             get { return job.code;}
@@ -64,7 +64,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         }
 
         private void Start () {
-            setJob(Job.GetAleaJob());
+            //setJob(Job.GetAleaJob());
         }
 
         public void setJob(Job job)
@@ -83,5 +83,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
             backgroundSprite.color = lColor;
         }
-	}
+
+        public void setJob(JobCode jobCode)
+        {
+            setJob(new Job(jobCode));
+        }
+    }
 }

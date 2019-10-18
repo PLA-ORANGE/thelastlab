@@ -15,7 +15,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         [SerializeField] private GameObject cardPrefab = null;
         [SerializeField] private GameObject deckPrefab = null;
-        [SerializeField] private int cardNumber = 7;
+        //[SerializeField] private int cardNumber = 7;
         [SerializeField] private Transform deckSpawn = null;
         [SerializeField] private GameObject labMenPrefab = null;
         [SerializeField] private GameObject labo = null;
@@ -25,22 +25,37 @@ namespace Com.Github.PLAORANGE.Thelastlab
         protected float score = 0;  
         private GameObject deck;
 
+        [SerializeField]
+        private List<JobCode> startCards = new List<JobCode>() {
+            JobCode.Mathématicien, 
+            JobCode.Chimiste, 
+            JobCode.Développeur, 
+            JobCode.Mathématicien,
+            JobCode.Ingénieur,
+            JobCode.Chimiste,
+            JobCode.Développeur
+        };
+
 		private void Start () {
             deck = Instantiate(deckPrefab, deckSpawn.position, Camera.main.transform.rotation);
             GameObject lCard;
             
-            for (int i = 0; i < cardNumber; i++)
+            for (int i = 0; i < startCards.Count; i++)
             {
                 lCard = Instantiate(cardPrefab);
+                lCard.GetComponent<Card>().setJob(startCards[i]);
+
                 deck.GetComponent<Deck>().AddCard(lCard);
             }
+
             popupWin = FindObjectOfType<PopupWin>();
             progressBar = FindObjectOfType<ProgressBarProject>();
         }
 
-        public void SpawnInLab()
+        public void SpawnInLab(Job job)
         {
-            Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
+            GameObject labPeople = Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
+            labPeople.GetComponent<MeshRenderer>().material.color = job.color;
         }
 
         public void ClearAll() {
@@ -57,7 +72,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public void  AddScore (float value) {
             score = Mathf.Clamp(score + value, 0, 100);
             progressBar.UpdateSlider(score);
-            SpawnInLab();
         }
 
         public void CheckScoreValue() {
