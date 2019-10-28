@@ -56,15 +56,16 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         if (sender.JobCode == jobCode && detectedCard is null)
                         {
                             detectedCard = sender.gameObject;
-                            Debug.Log("coucou");
-                            CardDetected();
+                            Debug.Log("destroy card");
+
+                            sender.Destroy();
+                            detectedCard = null;
+
                             gameManager.SpawnInLab(sender.job);
                             CorrectAnswer();
                         }
                         else if (detectedCard is null)
                         {
-                            //cardHolderImage.color = Color.red;
-                            sender?.StopDrag();
                             FalseAnswer();
                         }
                     }
@@ -90,7 +91,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         protected void Update()
         {
-            CheckCard();
+            //CheckCard();
         }
 
         public override void Appear()
@@ -110,6 +111,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             Rect rect = cardHolderRectTransform.rect;
         }
 
+        /*
         private void CheckCard() {
             RaycastHit hit;
             bool lHitSomething;
@@ -146,13 +148,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                     //cardHolderImage.color = Color.grey;
                 }
             }
-        }
+        }*/
 
+            /*
         protected void CardDetected()
         {
-            Disapear();
             Destroy(detectedCard);
             detectedCard = null;
         }
+        */
     }
 }

@@ -24,6 +24,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public Job job;
 
+        public bool isDestroying;
+
         public JobCode JobCode { 
             get { return job.code;}
         }
@@ -87,6 +89,12 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public void setJob(JobCode jobCode)
         {
             setJob(new Job(jobCode));
+        }
+
+        public void Destroy()
+        {
+            isDestroying = true;
+            Destroy(gameObject);
         }
     }
 }
