@@ -83,8 +83,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             bool lHitSomething;
 
             if(exist) {
-                lHitSomething = Physics.Raycast(cardHolderRectTransform.position, cardHolderRectTransform.TransformDirection(-Vector3.forward), out hit);
-
+                lHitSomething = Physics.Raycast(GetComponent<RectTransform>().position, GetComponent<RectTransform>().TransformDirection(-Vector3.forward), out hit);
+                Debug.DrawRay(GetComponent<RectTransform>().position, GetComponent<RectTransform>().TransformDirection(-Vector3.forward));
                 if(lHitSomething && hit.collider.CompareTag("carte")) {
 
                     if(hit.collider.GetComponent<Card>().JobCode == jobCode && detectedCard is null) {
@@ -92,18 +92,18 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
                         float delay = 0;
 
-                        Vector3 tweenCardPosition = new Vector3(cardHolderRectTransform.position.x, cardHolderRectTransform.position.y - 1, detectedCard.transform.position.z);
+                        Vector3 tweenCardPosition = new Vector3(GetComponent<RectTransform>().position.x, GetComponent<RectTransform>().position.y - 1, GetComponent<RectTransform>().position.z);
                         Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
                         delay += 0.5f;
 
                         CardDetected();
-                        cardHolderImage.color = Color.green;
+                        //cardHolderImage.color = Color.green;
                         gameManager.SpawnInLab(hit.collider.GetComponent<Card>().job);
 
                         CorrectAnswer();
                     }
                     else if(detectedCard is null) {
-                        cardHolderImage.color = Color.red;
+                        //cardHolderImage.color = Color.red;
                         FalseAnswer();
 
                         hit.collider.gameObject.GetComponent<Card>().StopDrag();
@@ -111,7 +111,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
                 }
                 else {
-                    cardHolderImage.color = Color.grey;
+                    //cardHolderImage.color = Color.grey;
                 }
             }
         }
