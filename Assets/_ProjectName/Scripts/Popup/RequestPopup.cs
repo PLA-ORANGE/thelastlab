@@ -41,10 +41,37 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         override public void Start() {
             base.Start();
             cam = Camera.main;
-            gameManager = FindObjectOfType<GameManager>(); 
+            gameManager = FindObjectOfType<GameManager>();
+            Card.OnCardDrop += Card_OnCardDrop;
         }
-            
-        
+
+        private void Card_OnCardDrop(Card sender)
+        {
+            if (exist)
+            {
+                if (sender.transform.position.x >= cardHolderRectTransform.rect.x && sender.transform.position.x <= cardHolderRectTransform.rect.xMax)
+                {
+                    if (sender.transform.position.y >= cardHolderRectTransform.rect.y && sender.transform.position.y <= cardHolderRectTransform.rect.yMax)
+                    {
+                        if (sender.JobCode == jobCode && detectedCard is null)
+                        {
+                            detectedCard = sender.gameObject;
+                            Debug.Log("coucou");
+                            CardDetected();
+                            gameManager.SpawnInLab(sender.job);
+                            CorrectAnswer();
+                        }
+                        else if (detectedCard is null)
+                        {
+                            //cardHolderImage.color = Color.red;
+                            sender?.StopDrag();
+                            FalseAnswer();
+                        }
+                    }
+                }
+            }
+        }
+
         public void CorrectAnswer()
         {
             gameManager.AddScore(givingScore);
@@ -76,6 +103,11 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         {
             base.Disapear();
             OnDisappear?.Invoke(this);
+        }
+
+        protected void CreateRect()
+        {
+            Rect rect = cardHolderRectTransform.rect;
         }
 
         private void CheckCard() {
