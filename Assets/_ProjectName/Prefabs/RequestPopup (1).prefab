@@ -93,7 +93,9 @@ MonoBehaviour:
   popupText: {fileID: 6670655599833592740}
   titlePopup: 
   textPopup: 
-  invention: {fileID: 0}
+  invention: {fileID: 522657099156843775, guid: 74c605bf29bc90c4eace32e49afe5234,
+    type: 3}
+  inventionPos: {fileID: 0}
 --- !u!1 &6670655598605858807
 GameObject:
   m_ObjectHideFlags: 0

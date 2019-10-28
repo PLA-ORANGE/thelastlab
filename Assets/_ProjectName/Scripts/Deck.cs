@@ -45,7 +45,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Card_OnCardDrop(Card sender)
         {
-            if (colliderOnly) return;
+            if (sender.isDestroying || colliderOnly) return;
 
             AddCard(sender.gameObject);
         }
@@ -135,9 +135,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void OnTriggerEnter(Collider other)
         {
+            
             if (!other.CompareTag("carte") || GetCard(other.gameObject) != null || !colliderOnly) return;
 
             AddCard(other.gameObject);
+            
         }
     }
 }
