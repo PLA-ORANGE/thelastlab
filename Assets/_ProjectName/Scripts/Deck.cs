@@ -4,6 +4,7 @@
 ///-----------------------------------------------------------------
 
 using Com.Github.PLAORANGE.Thelastlab.Popup;
+using Pixelplacement;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField, Range(0,2)] private float cardSpace = 1f;
         [SerializeField, Range(0,90)] private float angleIntervalle = 35;
 
-        private bool colliderOnly = false;
+        public bool colliderOnly = false;
 
         private void Start()
         {
@@ -54,6 +55,15 @@ namespace Com.Github.PLAORANGE.Thelastlab
         {
             cardList.Add(newCard);
             newCard.transform.parent = transform;
+            OrderCards();
+        }
+
+
+        public void AddCard(GameObject newCard, bool Tween = true)
+        {
+            cardList.Add(newCard);
+            newCard.transform.parent = transform;
+            newCard.transform.localPosition = Vector3.zero;
             OrderCards();
         }
 
@@ -113,18 +123,18 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 card = cardList[i];
 
                 angle = (cardListCount == 0)? 0: Mathf.Lerp(angleIntervalle, -angleIntervalle, (float)i / cardListCount) * Mathf.Deg2Rad;
-                card.GetComponent<Card>().RotateInZ(angle);
+                card.GetComponent<Card>().RotateInZ(angle, true);
 
                 angle += Mathf.PI / 2;
                 
                 pos.x = xRadius * Mathf.Cos(angle);
                 pos.y = maxHight * Mathf.Sin(angle);
                 pos.z = -i;
-                
                 if (i == cardListCount) yOffSet = pos.y - 1;
                 pos.y -= yOffSet;
 
-                card.transform.position = transform.TransformPoint(pos);
+                //card.transform.position = transform.TransformPoint(pos);
+                Tween.Position(card.transform, transform.TransformPoint(pos), 0.2f, 0);
             }
         }
 
