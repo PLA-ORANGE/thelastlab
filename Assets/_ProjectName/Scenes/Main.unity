@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 0d43c8dce4514644f9e29644b2eb9f6d, type: 2}
+--- !u!224 &101671724 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2687328127965480914, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 997584219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &543120870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 795508194096390, guid: 537163a308e433e428a7cef0456e9fb5,
@@ -369,6 +375,71 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4661348187718418558, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661348187718418558, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661348187718418558, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661348187718418558, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661348187718418558, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661348187718418558, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206175588634167174, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206175588634167174, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206175588634167174, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206175588634167174, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206175588634167174, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206175588634167174, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: cardHolderRectTransform
+      value: 
+      objectReference: {fileID: 101671724}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0929f3a5e69c49544aec25d715d6e5d6, type: 3}
 --- !u!1 &1132079975

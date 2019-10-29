@@ -60,6 +60,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             if (exist)
             {
                 Vector3 position = cam.WorldToScreenPoint(sender.transform.position);
+
                 if (position.x >= (cardHolderRectTransform.position.x - cardHolderRectTransform.rect.width/2) && position.x <= (cardHolderRectTransform.position.x + cardHolderRectTransform.rect.width / 2))
                 {
                     if (position.y >= (cardHolderRectTransform.position.y - cardHolderRectTransform.rect.height / 2) && position.y <= (cardHolderRectTransform.position.y + cardHolderRectTransform.rect.height / 2))
@@ -67,7 +68,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         if (sender.JobCode == jobCode && detectedCard is null)
                         {
                             detectedCard = sender.gameObject;
-                            Debug.Log("destroy card");
 
                             sender.Destroy();
                             detectedCard = null;
