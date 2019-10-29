@@ -18,7 +18,11 @@ namespace Com.Github.PLAORANGE.Thelastlab {
         private Transform target;
         private Card currentCardTaken;
 
+        public bool active;
+
         private void Update() {
+            if (!active) return;
+
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hitInfo;

@@ -14,31 +14,25 @@ namespace Com.Github.PLAORANGE.Thelastlab
 {
 	public class GameManager : MonoBehaviour {
 
-        [SerializeField] private GameObject cardPrefab = null;
         [SerializeField] private GameObject deckPrefab = null;
-        //[SerializeField] private int cardNumber = 7;
+        [SerializeField] private GameObject cardPrefab = null;
         [SerializeField] private Transform deckSpawn = null;
         [SerializeField] private GameObject labMenPrefab = null;
         [SerializeField] private GameObject labo = null;
 
+        [SerializeField] private GameObject hud = null;
+        [SerializeField] private GameObject swipHud = null;
+        [SerializeField] private RequestPopup requestPopup;
+
         protected PopupWin popupWin;
-        protected ProgressBarProject progressBar;
-        private RequestPopup requestPopup;
+        [SerializeField] protected ProgressBarProject progressBar;
+        
         protected float score = 0;  
         private GameObject deck;
 
         private bool isRequestPopUp;
 
-        [SerializeField]
-        private List<JobCode> startCards = new List<JobCode>() {
-            JobCode.Mathématicien, 
-            JobCode.Chimiste, 
-            JobCode.Développeur, 
-            JobCode.Mathématicien,
-            JobCode.Ingénieur,
-            JobCode.Chimiste,
-            JobCode.Développeur
-        };
+        private Action GamePhase;
 
         [SerializeField]
         private List<JobCode> popupRequests = new List<JobCode>() {
@@ -49,28 +43,41 @@ namespace Com.Github.PLAORANGE.Thelastlab
             JobCode.Mathématicien
         };
 
+        [SerializeField]
+        private List<JobCode> startCards = new List<JobCode>() {
+            JobCode.Mathématicien,
+            JobCode.Ingénieur,
+            JobCode.Développeur,
+            JobCode.Chimiste,
+            JobCode.Mathématicien,
+            JobCode.Mathématicien,
+            JobCode.Mathématicien
+        };
+
         [SerializeField] private float spawnFrequencyRequest = 4f;
         private float elapseTime = 0;
 
         private void Start () {
-            deck = Instantiate(deckPrefab, deckSpawn.position, Camera.main.transform.rotation);
-            GameObject lCard;
-            
-            for (int i = 0; i < startCards.Count; i++)
-            {
-                lCard = Instantiate(cardPrefab);
-                lCard.GetComponent<Card>().setJob(startCards[i]);
-
-                deck.GetComponent<Deck>().AddCard(lCard, true);
-            }
-
             popupWin = FindObjectOfType<PopupWin>();
-            progressBar = FindObjectOfType<ProgressBarProject>();
-            requestPopup = FindObjectOfType<RequestPopup>();
 
             RequestPopup.OnDisappear += RequestPopup_OnDisappear;
 
-            elapseTime = spawnFrequencyRequest / 2;
+            SetCardSelectPhase();
+
+            //SetProjectPhase();
+
+            //deck = Instantiate(deckPrefab, deckSpawn.position, Camera.main.transform.rotation);
+            /*
+            GameObject card;
+
+            for (int i = 0; i < startCards.Count; i++)
+            {
+                card = Instantiate(cardPrefab);
+                deck.GetComponent<Deck>().AddCard(card);
+                card.GetComponent<Card>().setJob(startCards[i]);
+            }*/
+
+            
         }
 
         private void RequestPopup_OnDisappear(RequestPopup sender)
@@ -108,12 +115,46 @@ namespace Com.Github.PLAORANGE.Thelastlab
         }
 
         private void Update () {
+            GamePhase();
+		}
+
+        public void SetCardSelectPhase()
+        {
+            ///priorisation d'évenement
+            requestPopup.InitEvent();
+            ///
+
+            SwipManager swipManager = gameObject.GetComponent<SwipManager>();
+
+            deck = Instantiate(deckPrefab, deckSpawn.position, Camera.main.transform.rotation);
+
+            swipManager.deck = deck.GetComponent<Deck>();
+            swipManager.Init();
+
+            swipHud.SetActive(true);
+            GamePhase = VoidPhase;
+        }
+
+        public void SetProjectPhase()
+        {
+            GamePhase = ProjectPhase;
+            elapseTime = spawnFrequencyRequest / 2;
+
+            swipHud.SetActive(false);
+            hud.SetActive(true);
+
+            gameObject.GetComponent<DragAndDrop>().active = true;
+            gameObject.GetComponent<SwipManager>().active = false;
+        }
+
+        private void ProjectPhase()
+        {
             if (isRequestPopUp || popupRequests.Count == 0) return;
 
             elapseTime += Time.deltaTime;
 
             if (elapseTime < spawnFrequencyRequest) return;
-            
+
             elapseTime -= spawnFrequencyRequest;
 
             JobCode jobCode = popupRequests[0];
@@ -123,7 +164,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
             requestPopup.Appear();
 
             isRequestPopUp = true;
-            
-		}
-	}
+        }
+
+        private void VoidPhase()
+        {
+
+        }
+    }
 }

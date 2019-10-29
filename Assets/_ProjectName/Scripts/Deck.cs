@@ -32,6 +32,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Start()
         {
+            Debug.Log("Deck_start");
+
             Card.OnCardTaken += Card_OnCardTaken;
             Card.OnCardDrop += Card_OnCardDrop;
 
@@ -56,6 +58,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Card_OnCardDrop(Card sender)
         {
+            Debug.Log("Deck");
+
             if (sender.isDestroying || colliderOnly) return;
 
             AddCard(sender.gameObject);
