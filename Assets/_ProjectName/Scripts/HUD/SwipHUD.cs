@@ -3,6 +3,7 @@
 /// Date : #DATE#
 ///-----------------------------------------------------------------
 
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,10 +36,17 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         }
 
         private void Start () {
-            //swipManager .OnValidateCard 
+            swipManager.OnValidateCard += SwipManager_OnValidateCard;
         }
-		
-		private void Update () {
+
+        private void SwipManager_OnValidateCard(SwipManager sender)
+        {
+            Deck deck = sender.Deck;
+
+            CartCountTxt = deck.Count + " / " + deck.MaxCard;
+        }
+
+        private void Update () {
             iventionModel.transform.localScale = Vector3.one * modelSize;
         }
 	}

@@ -33,7 +33,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private List<JobCode> startCards = new List<JobCode>();
         private List<GameObject> cardList = new List<GameObject>();
 
-        [SerializeField] private GameObject deck;
+        [SerializeField] private Deck deck;
 
         private GameObject FrontCard 
         { 
@@ -47,7 +47,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         {
             get
             {
-                return deck.GetComponent<Deck>();
+                return deck;
             }
         }
 
@@ -121,22 +121,35 @@ namespace Com.Github.PLAORANGE.Thelastlab
                     GameObject frontCard = FrontCard;
 
                     cardList.Remove(frontCard);
-                    deck.GetComponent<Deck>().AddCard(frontCard);
+                    deck.AddCard(frontCard);
                     frontCard.transform.localScale = Vector3.one;
 
                     OrderRoulement();
                     SetRotation(0);
+
+                    OnValidateCard?.Invoke(this);
+                    
+                    if(deck.Count == deck.MaxCard)
+                    {
+                        Finish();
+                    }
                 }
             }
         }
 
-        private void Update () {
-            Control();
+        // à implémenter pour l'UI Flow
+        private void Finish()
+        {
+            Debug.Log("Finish");
+        }
 
+        private void Update () {
             elapsedTime += Time.deltaTime;
 
             float ratio = rotationCurve.Evaluate(elapsedTime / rotationDuration);
             FrontCard.transform.localRotation = Quaternion.Slerp(cardStartRotation, cardTargetRotation, ratio);
-		}
+
+            Control();
+        }
 	}
 }

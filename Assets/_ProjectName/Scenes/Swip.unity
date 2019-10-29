@@ -722,6 +722,7 @@ MonoBehaviour:
   modelSize: 200
   cartCount: {fileID: 1495633795}
   inventionName: {fileID: 1205028597}
+  swipManager: {fileID: 928055079}
 --- !u!1001 &8178998911772939877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,7 +743,7 @@ PrefabInstance:
     - target: {fileID: 1349772435022648733, guid: 382937c87a25f2d449eb5d0697e4b8c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.27
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 1349772435022648733, guid: 382937c87a25f2d449eb5d0697e4b8c3,
         type: 3}
