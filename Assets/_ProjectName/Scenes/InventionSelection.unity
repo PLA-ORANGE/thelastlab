@@ -203,6 +203,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &515791918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515791919}
+  - component: {fileID: 515791920}
+  m_Layer: 0
+  m_Name: ButtonPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &515791919
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515791918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0000007534027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 858925011}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: -229}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &515791920
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515791918}
+  m_CullTransparentMesh: 0
 --- !u!224 &858925011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3549983304458784337, guid: dad028fdd18e2ef45993d339ff43cd60,
@@ -245,17 +289,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990387482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0000007534027}
   m_LocalScale: {x: 56.100002, y: 56.100002, z: 56.100002}
   m_Children: []
   m_Father: {fileID: 858925011}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: -96.85}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &2033396412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,6 +311,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RequestPopupCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549983304458784337, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00048828125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549983304458784337, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -358.1233
       objectReference: {fileID: 0}
     - target: {fileID: 6020124789347081980, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
@@ -472,8 +526,13 @@ PrefabInstance:
         type: 3}
       propertyPath: button
       value: 
-      objectReference: {fileID: 5678503946637329524, guid: 5778ece8e609263448d0a8c735fef062,
+      objectReference: {fileID: 8478581818635427800, guid: 5778ece8e609263448d0a8c735fef062,
         type: 3}
+    - target: {fileID: 7501271307057831824, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: buttonPos
+      value: 
+      objectReference: {fileID: 515791919}
     - target: {fileID: 1144160861633869868, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -563,8 +622,13 @@ PrefabInstance:
         type: 3}
       propertyPath: button
       value: 
-      objectReference: {fileID: 5678503946637329524, guid: 5778ece8e609263448d0a8c735fef062,
+      objectReference: {fileID: 8478581818635427800, guid: 5778ece8e609263448d0a8c735fef062,
         type: 3}
+    - target: {fileID: 8891063358071037137, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: buttonPos
+      value: 
+      objectReference: {fileID: 515791919}
     - target: {fileID: 2061058439500839789, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -644,8 +708,13 @@ PrefabInstance:
         type: 3}
       propertyPath: button
       value: 
-      objectReference: {fileID: 3647472438093177674, guid: 5778ece8e609263448d0a8c735fef062,
+      objectReference: {fileID: 8478581818635427800, guid: 5778ece8e609263448d0a8c735fef062,
         type: 3}
+    - target: {fileID: 6923437349894566449, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: buttonPos
+      value: 
+      objectReference: {fileID: 515791919}
     - target: {fileID: 571327308736451981, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -706,6 +775,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -200
       objectReference: {fileID: 0}
+    - target: {fileID: 8216058931740918401, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 52.666626
+      objectReference: {fileID: 0}
+    - target: {fileID: 377063448, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 8478581818635427800, guid: 5778ece8e609263448d0a8c735fef062,
+        type: 3}
+    - target: {fileID: 377063448, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}
+      propertyPath: buttonPos
+      value: 
+      objectReference: {fileID: 515791919}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}
 --- !u!1 &2145022635

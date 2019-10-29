@@ -5,8 +5,7 @@
 
 using Pixelplacement;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
+
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -17,7 +16,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] RectTransform inventionPos;
         [SerializeField] private GameObject invention;
         [SerializeField] private RectTransform centerScreen;
-        [SerializeField] private Button button;
         private RectTransform inventionRect;
         private Vector2 initalPosition;
         
@@ -32,8 +30,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             inventionRect.localPosition = Vector3.zero;
             invention.GetComponent<Invention>().win = false;
             SetText(name);
-           
 
+            
         }
 
 
@@ -50,12 +48,9 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                 Tween.LocalScale(rectTransform, new Vector2(2.5f, 2.5f), 0.3f, 0, Tween.EaseOutBack);
                 Tween.Position(rectTransform, new Vector2(centerScreen.position.x, centerScreen.position.y), 0.5f, 0, Tween.EaseInOutBack,Tween.LoopType.None,null, ()=> { SetText("inserer description du bail tu connais le delire boy"); });
                 onClick = true;
-                GameObject.Instantiate(button,transform);
                 
-               
             }
            
-            
         }
 
         public void NotOnClick() {

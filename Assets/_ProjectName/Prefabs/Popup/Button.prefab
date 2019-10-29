@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "Valid\xE9\n"
 --- !u!1 &8380457522651083221
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4413265772419852356}
   - component: {fileID: 8559056017428195213}
   - component: {fileID: 6813423510691548296}
-  - component: {fileID: 3647472438093177674}
+  - component: {fileID: 8478581818635427800}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &3647472438093177674
+--- !u!114 &8478581818635427800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
