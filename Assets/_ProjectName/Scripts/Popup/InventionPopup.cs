@@ -5,7 +5,7 @@
 
 using Pixelplacement;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -30,8 +30,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             inventionRect.localPosition = Vector3.zero;
             invention.GetComponent<Invention>().win = false;
             SetText(name);
+            initalPosition = transform.position;
 
-            
         }
 
 
@@ -40,15 +40,15 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             exist = true;
         }
         
-        public void OnClick() {
+        protected void OnClick() {
             if(!onClick) {
-                initalPosition = transform.position;
+              
                 container.CheckPopup();
                 SetText(""); 
                 Tween.LocalScale(rectTransform, new Vector2(2.5f, 2.5f), 0.3f, 0, Tween.EaseOutBack);
                 Tween.Position(rectTransform, new Vector2(centerScreen.position.x, centerScreen.position.y), 0.5f, 0, Tween.EaseInOutBack,Tween.LoopType.None,null, ()=> { SetText("inserer description du bail tu connais le delire boy"); });
                 onClick = true;
-                
+                container.CheckWichInvention(gameObject.name); 
             }
            
         }
@@ -57,6 +57,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             onClick = false;
             SetText(""); 
             Tween.LocalScale(rectTransform, new Vector2(1, 1), 0.3f, 0, Tween.EaseOutBack);
+            Debug.Log(initalPosition); 
             Tween.Position(rectTransform, initalPosition, 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, () => { SetText(name); });
         }
     }
