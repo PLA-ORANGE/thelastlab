@@ -29,6 +29,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected  GameManager gameManager; 
         private JobCode jobCode;
         private int givingScore = 20;
+        private bool eventIsInit;
 
         public JobCode JobCode {
             set
@@ -42,6 +43,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             base.Start();
             cam = Camera.main;
             gameManager = FindObjectOfType<GameManager>();
+
+            if (!eventIsInit) InitEvent();
+        }
+
+        public void InitEvent()
+        {
+            eventIsInit = true;
+
             Card.OnCardDrop += Card_OnCardDrop;
             Card.OnCardTaken += Card_OnCardTaken;
         }
@@ -57,6 +66,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         private void Card_OnCardDrop(Card sender)
         {
+            Debug.Log("Request");
+
             if (exist)
             {
                 Vector3 position = cam.WorldToScreenPoint(sender.transform.position);

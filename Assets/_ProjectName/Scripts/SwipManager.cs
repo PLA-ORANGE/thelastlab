@@ -33,7 +33,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private List<JobCode> startCards = new List<JobCode>();
         private List<GameObject> cardList = new List<GameObject>();
 
-        [SerializeField] private Deck deck;
+        public Deck deck;
+        public bool active;
 
         private GameObject FrontCard 
         { 
@@ -43,15 +44,12 @@ namespace Com.Github.PLAORANGE.Thelastlab
             } 
         }
 
-        public Deck Deck
-        {
-            get
-            {
-                return deck;
-            }
+        private void Start () {
+            
         }
 
-        private void Start () {
+        public void Init()
+        {
             GameObject card = null;
 
             for (int i = 0; i < startCards.Count; i++)
@@ -62,6 +60,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 cardList.Add(card);
                 card.GetComponent<Card>().setJob(startCards[i]);
             }
+
+            active = true;
         }
 
         private void PushBack(GameObject card)
@@ -131,19 +131,16 @@ namespace Com.Github.PLAORANGE.Thelastlab
                     
                     if(deck.Count == deck.MaxCard)
                     {
-                        Finish();
+                        Destroy(cardContainer.gameObject);
+                        GetComponent<GameManager>().SetProjectPhase();
                     }
                 }
             }
         }
 
-        // à implémenter pour l'UI Flow
-        private void Finish()
-        {
-            Debug.Log("Finish");
-        }
-
         private void Update () {
+            if (!active) return;
+
             elapsedTime += Time.deltaTime;
 
             float ratio = rotationCurve.Evaluate(elapsedTime / rotationDuration);
