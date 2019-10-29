@@ -61,7 +61,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 lCard = Instantiate(cardPrefab);
                 lCard.GetComponent<Card>().setJob(startCards[i]);
 
-                deck.GetComponent<Deck>().AddCard(lCard);
+                deck.GetComponent<Deck>().AddCard(lCard, true);
             }
 
             popupWin = FindObjectOfType<PopupWin>();

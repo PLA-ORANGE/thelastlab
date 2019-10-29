@@ -43,15 +43,26 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             cam = Camera.main;
             gameManager = FindObjectOfType<GameManager>();
             Card.OnCardDrop += Card_OnCardDrop;
+            Card.OnCardTaken += Card_OnCardTaken;
+        }
+
+        private void Card_OnCardTaken(Card sender)
+        {
+            if (exist)
+            {
+                Deck deck = FindObjectOfType<Deck>();
+                deck.colliderOnly = false;
+            }
         }
 
         private void Card_OnCardDrop(Card sender)
         {
             if (exist)
             {
-                if (sender.transform.position.x >= cardHolderRectTransform.rect.x && sender.transform.position.x <= cardHolderRectTransform.rect.xMax)
+                Vector3 position = cam.WorldToScreenPoint(sender.transform.position);
+                if (position.x >= (cardHolderRectTransform.position.x - cardHolderRectTransform.rect.width/2) && position.x <= (cardHolderRectTransform.position.x + cardHolderRectTransform.rect.width / 2))
                 {
-                    if (sender.transform.position.y >= cardHolderRectTransform.rect.y && sender.transform.position.y <= cardHolderRectTransform.rect.yMax)
+                    if (position.y >= (cardHolderRectTransform.position.y - cardHolderRectTransform.rect.height / 2) && position.y <= (cardHolderRectTransform.position.y + cardHolderRectTransform.rect.height / 2))
                     {
                         if (sender.JobCode == jobCode && detectedCard is null)
                         {
@@ -67,11 +78,15 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         else if (detectedCard is null)
                         {
                             FalseAnswer();
+                            Deck deck = FindObjectOfType<Deck>();
+                            deck.colliderOnly = false;
                         }
                     }
                 }
             }
         }
+
+
 
         public void CorrectAnswer()
         {
@@ -105,57 +120,5 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             base.Disapear();
             OnDisappear?.Invoke(this);
         }
-
-        protected void CreateRect()
-        {
-            Rect rect = cardHolderRectTransform.rect;
-        }
-
-        /*
-        private void CheckCard() {
-            RaycastHit hit;
-            bool lHitSomething;
-
-            if(exist) {
-                lHitSomething = Physics.Raycast(GetComponent<RectTransform>().position, GetComponent<RectTransform>().TransformDirection(-Vector3.forward), out hit);
-                Debug.DrawRay(GetComponent<RectTransform>().position, GetComponent<RectTransform>().TransformDirection(-Vector3.forward));
-                if(lHitSomething && hit.collider.CompareTag("carte")) {
-
-                    if(hit.collider.GetComponent<Card>().JobCode == jobCode && detectedCard is null) {
-                        detectedCard = hit.collider.gameObject;
-
-                        float delay = 0;
-
-                        Vector3 tweenCardPosition = new Vector3(GetComponent<RectTransform>().position.x, GetComponent<RectTransform>().position.y - 1, GetComponent<RectTransform>().position.z);
-                        Tween.Position(detectedCard.transform, tweenCardPosition, .25f, delay, Tween.EaseIn, Tween.LoopType.None);
-                        delay += 0.5f;
-
-                        CardDetected();
-                        //cardHolderImage.color = Color.green;
-                        gameManager.SpawnInLab(hit.collider.GetComponent<Card>().job);
-
-                        CorrectAnswer();
-                    }
-                    else if(detectedCard is null) {
-                        //cardHolderImage.color = Color.red;
-                        FalseAnswer();
-
-                        hit.collider.gameObject.GetComponent<Card>().StopDrag();
-                    }
-
-                }
-                else {
-                    //cardHolderImage.color = Color.grey;
-                }
-            }
-        }*/
-
-            /*
-        protected void CardDetected()
-        {
-            Destroy(detectedCard);
-            detectedCard = null;
-        }
-        */
     }
 }

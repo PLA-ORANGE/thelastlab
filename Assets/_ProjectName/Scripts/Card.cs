@@ -3,6 +3,7 @@
 /// Date : #DATE#
 ///-----------------------------------------------------------------
 
+using Pixelplacement;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -50,6 +51,12 @@ namespace Com.Github.PLAORANGE.Thelastlab
         {
             transform.rotation = CameraRotation * Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
         }
+
+        public void RotateInZ(float angle,bool isTween = true)
+        {
+            Tween.Rotation(transform, CameraRotation * Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward), 0.2f, 0);
+        }
+
 
         public void StartDrag()
         {
