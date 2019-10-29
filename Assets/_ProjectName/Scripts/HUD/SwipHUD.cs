@@ -15,6 +15,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         
         [SerializeField] Text cartCount;
         [SerializeField] Text inventionName;
+
+        [SerializeField] SwipManager swipManager;
 	    
         public string CartCountTxt
         {
@@ -33,6 +35,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         }
 
         private void Start () {
+            //swipManager .OnValidateCard 
         }
 		
 		private void Update () {

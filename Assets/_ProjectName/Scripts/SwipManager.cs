@@ -9,7 +9,12 @@ using UnityEngine.Assertions;
 
 namespace Com.Github.PLAORANGE.Thelastlab
 {
-	public class SwipManager : MonoBehaviour {
+    public delegate void SwipManagerEventHandler(SwipManager sender);
+
+    public class SwipManager : MonoBehaviour {
+
+        public event SwipManagerEventHandler OnValidateCard;
+
         [SerializeField] GameObject cardPrefab;
         [SerializeField] Transform cardContainer;
 
@@ -28,10 +33,22 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private List<JobCode> startCards = new List<JobCode>();
         private List<GameObject> cardList = new List<GameObject>();
 
-        private GameObject FrontCard { 
-            get { 
+        [SerializeField] private GameObject deck;
+
+        private GameObject FrontCard 
+        { 
+            get 
+            { 
                 return (cardList.Count == 0)? null: cardList[0]; 
             } 
+        }
+
+        public Deck Deck
+        {
+            get
+            {
+                return deck.GetComponent<Deck>();
+            }
         }
 
         private void Start () {
@@ -49,14 +66,18 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void PushBack(GameObject card)
         {
-            card.transform.localRotation = Quaternion.identity;
-
             cardList.Remove(card);
             cardList.Add(card);
 
+            OrderRoulement();
+        }
+        
+        private void OrderRoulement()
+        {
             for (int i = 0; i < cardList.Count; i++)
             {
                 cardList[i].transform.localPosition = Vector3.forward * i;
+                cardList[i].transform.localRotation = Quaternion.identity;
             }
         }
 
@@ -69,8 +90,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
             elapsedTime = 0;
         }
 
-        private void Update () {
-            ////// swipControl
+        private void Control()
+        {
             if (Input.GetMouseButtonDown(0))
             {
                 startTouch = Input.mousePosition;
@@ -90,18 +111,28 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
             if (Input.GetMouseButtonUp(0))
             {
-                if(rotationDirection == 1)
+                if (rotationDirection == 1)
                 {
                     PushBack(FrontCard);
                     SetRotation(0);
                 }
-                else if(rotationDirection == -1)
+                else if (rotationDirection == -1)
                 {
-                    Debug.Log("validé");
+                    GameObject frontCard = FrontCard;
+
+                    cardList.Remove(frontCard);
+                    deck.GetComponent<Deck>().AddCard(frontCard);
+                    frontCard.transform.localScale = Vector3.one;
+
+                    OrderRoulement();
+                    SetRotation(0);
                 }
             }
+        }
 
-            //////
+        private void Update () {
+            Control();
+
             elapsedTime += Time.deltaTime;
 
             float ratio = rotationCurve.Evaluate(elapsedTime / rotationDuration);
