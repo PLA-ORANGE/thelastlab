@@ -258,8 +258,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   rotationDuration: 0.5
   touchTolerance: 20
-  startCards: 00000000010000000200000003000000
-  deck: {fileID: 1532551520}
+  startCards: 00000000010000000200000003000000020000000300000000000000010000000300000000000000
+  deck: {fileID: 1532551522}
 --- !u!4 &928055080
 Transform:
   m_ObjectHideFlags: 0
@@ -599,12 +599,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495633793}
   m_CullTransparentMesh: 0
---- !u!1 &1532551520 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1349772435022648706, guid: 382937c87a25f2d449eb5d0697e4b8c3,
+--- !u!114 &1532551522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1349772435022648732, guid: 382937c87a25f2d449eb5d0697e4b8c3,
     type: 3}
   m_PrefabInstance: {fileID: 8178998911772939877}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e453fb215ef7143b006c741b949a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7237142679380044068
 MonoBehaviour:
   m_ObjectHideFlags: 0
