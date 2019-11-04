@@ -325,15 +325,35 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 406087454}
-    - target: {fileID: 7501271307057831824, guid: dad028fdd18e2ef45993d339ff43cd60,
+    - target: {fileID: 5770864783918071582, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
-      propertyPath: inventionPos
-      value: 
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8891063358071037137, guid: dad028fdd18e2ef45993d339ff43cd60,
+    - target: {fileID: 5431798959767851518, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
-      propertyPath: inventionPos
-      value: 
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789375027179363242, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789375027179363242, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789375027179363242, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858402635963481183, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}

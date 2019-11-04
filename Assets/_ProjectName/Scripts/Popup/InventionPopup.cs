@@ -41,16 +41,13 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         }
         
         protected void OnClick() {
-            if(!onClick) {
-              
-                container.CheckPopup();
-                SetText(""); 
-                Tween.LocalScale(rectTransform, new Vector2(2.5f, 2.5f), 0.3f, 0, Tween.EaseOutBack);
-                Tween.Position(rectTransform, new Vector2(centerScreen.position.x, centerScreen.position.y), 0.5f, 0, Tween.EaseInOutBack,Tween.LoopType.None,null, ()=> { SetText("inserer description du bail tu connais le delire boy"); });
-                onClick = true;
-                container.CheckWichInvention(gameObject.name); 
-            }
-           
+            container.CheckPopup();
+            SetText("");
+            Tween.LocalScale(rectTransform, new Vector2(2.5f, 2.5f), 0.3f, 0, Tween.EaseOutBack);
+            Tween.Position(rectTransform, new Vector2(centerScreen.position.x, centerScreen.position.y), 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, () => { SetText("inserer description du bail tu connais le delire boy"); });
+            onClick = true;
+            container.CheckWichInvention(gameObject.name);
+
         }
 
         public void NotOnClick() {
