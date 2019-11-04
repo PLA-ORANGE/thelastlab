@@ -57,7 +57,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             onClick = false;
             SetText(""); 
             Tween.LocalScale(rectTransform, new Vector2(1, 1), 0.3f, 0, Tween.EaseOutBack);
-            Debug.Log(initalPosition); 
             Tween.Position(rectTransform, initalPosition, 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, () => { SetText(name); });
         }
     }

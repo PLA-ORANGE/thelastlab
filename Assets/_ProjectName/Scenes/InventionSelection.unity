@@ -291,6 +291,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2033396412}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1769069595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5972203804757316604, guid: dad028fdd18e2ef45993d339ff43cd60,
+    type: 3}
+  m_PrefabInstance: {fileID: 2033396412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2033396412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -472,6 +484,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8216058931740918401, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 52.666504
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025606174456414656, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7864820969451683728, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549983304458784337, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00048828125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549983304458784337, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -358.1233
       objectReference: {fileID: 0}
     - target: {fileID: 4010036156401895687, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
@@ -721,23 +758,12 @@ PrefabInstance:
     - target: {fileID: 377063448, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}
       propertyPath: button
       value: 
-      objectReference: {fileID: 8478581818635427800, guid: 5778ece8e609263448d0a8c735fef062,
-        type: 3}
+      objectReference: {fileID: 1769069595}
     - target: {fileID: 377063448, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}
       propertyPath: buttonPos
       value: 
       objectReference: {fileID: 71893444}
-    - target: {fileID: 7025606174456414656, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
-      objectReference: {fileID: 0}
     - target: {fileID: 6020124790484014218, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7864820969451683728, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_IsActive
       value: 0
