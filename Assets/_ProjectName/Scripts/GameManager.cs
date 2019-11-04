@@ -120,6 +120,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void SetCardSelectPhase()
         {
+            GamePhase = VoidPhase;
             ///priorisation d'évenement
             requestPopup.InitEvent();
             ///
@@ -132,7 +133,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
             swipManager.Init();
 
             swipHud.SetActive(true);
-            GamePhase = VoidPhase;
         }
 
         public void SetProjectPhase()
@@ -166,9 +166,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
             isRequestPopUp = true;
         }
 
-        private void VoidPhase()
+        protected void VoidPhase()
         {
-
+            Debug.Log("coucou");
         }
     }
 }
