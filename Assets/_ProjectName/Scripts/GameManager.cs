@@ -117,6 +117,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
         private void Update () {
             GamePhase();
 		}
+        /*
+        public void StartPhase()
+        {
+            if(Input.GetMouseButtonDown(0))
+        }*/
+
+        public void SelectProjectPhase
 
         public void SetCardSelectPhase()
         {
@@ -168,7 +175,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         protected void VoidPhase()
         {
-            Debug.Log("coucou");
         }
     }
 }

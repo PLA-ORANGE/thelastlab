@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0.98236495
       objectReference: {fileID: 0}
+    - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: cardHolderRectTransform
+      value: 
+      objectReference: {fileID: 101671724}
     - target: {fileID: 2202388412808414870, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -498,11 +503,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
-        type: 3}
-      propertyPath: cardHolderRectTransform
-      value: 
-      objectReference: {fileID: 101671724}
     - target: {fileID: 7900392761127173610, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: m_Enabled
@@ -1320,6 +1320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788944783280255657, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}
