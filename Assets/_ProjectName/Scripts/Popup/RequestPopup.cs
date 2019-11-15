@@ -125,8 +125,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             float yMin = Screen.height/4 - rectTransform.rect.height / 2;
             float yMax = -Screen.height/4 + rectTransform.rect.height / 2;
             
-            Debug.Log(xMin);
-            Debug.Log(xMax);
+            
             Vector2 position = new Vector2(UnityEngine.Random.Range(xMin,xMax), UnityEngine.Random.Range(yMin, yMax));
             Debug.Log(position);
             rectTransform.anchoredPosition = position;
