@@ -122,8 +122,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         {
             float xMin = -Screen.width/3 + rectTransform.rect.width/2;
             float xMax = Screen.width/3 - rectTransform.rect.width / 2;
-            float yMin = Screen.height/3 - rectTransform.rect.height / 2;
-            float yMax = -Screen.height/5 + rectTransform.rect.height / 2;
+            float yMin = Screen.height/4 - rectTransform.rect.height / 2;
+            float yMax = -Screen.height/4 + rectTransform.rect.height / 2;
             
             Debug.Log(xMin);
             Debug.Log(xMax);
