@@ -19,7 +19,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] private bool testPopup; 
         [SerializeField] private float timingAppear; 
         private RectTransform inventionRect;
-        private Vector2 initalPosition;
+        private Vector3 initalPosition;
         
         
         public override void Start() {
@@ -32,7 +32,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             inventionRect.localPosition = Vector3.zero;
             invention.GetComponent<Invention>().win = false;
             initalPosition = transform.position;
-            Tween.LocalScale(rectTransform, new Vector2(1.5f, 1.5f), timingAppear, 0.1f, Tween.EaseOutBack);
+            Tween.LocalScale(rectTransform, new Vector3(1.5f, 1.5f,1.5f), timingAppear, 0.1f, Tween.EaseOutBack);
 
         }
 
@@ -45,7 +45,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         public void OnClick() {
             container.CheckPopup();
             SetText("");
-            Tween.LocalScale(rectTransform, new Vector2(2.2f, 2.2f), 0.3f, 0, Tween.EaseOutBack);
+            Tween.LocalScale(rectTransform, new Vector3(2.2f, 2.2f,2.2f), 0.3f, 0, Tween.EaseOutBack);
             Tween.Position(rectTransform, new Vector2(centerScreen.position.x, centerScreen.position.y), 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, SetDescription);
             onClick = true;
             container.CheckWichInvention(gameObject.name);
@@ -55,7 +55,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         public void NotOnClick() {
             onClick = false;
             SetText(""); 
-            Tween.LocalScale(rectTransform, new Vector2(1, 1), 0.3f, 0, Tween.EaseOutBack);
+            Tween.LocalScale(rectTransform, new Vector3(1.5f, 1.5f,1.5f), 0.3f, 0, Tween.EaseOutBack);
             Tween.Position(rectTransform, initalPosition, 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, SetDescription);
         }
 

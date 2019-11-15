@@ -45,8 +45,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public void ClearAll() {
             Tween.Position(button.transform, new Vector3(0, -7, 0), 0.8f, 0,Tween.EaseOutBack);
-            Tween.Position(invention2.transform, new Vector3(invention2.transform.position.x, 8, 0), 0.5f, 0, Tween.EaseOutBack); 
-            Tween.Position(invention3.transform, new Vector3(invention3.transform.position.x, 8, 0), 0.5f, 0, Tween.EaseOutBack);
+            Tween.Position(invention2.transform, new Vector3(invention2.transform.position.x, 25, 0), 0.5f, 0, Tween.EaseOutBack); 
+            Tween.Position(invention3.transform, new Vector3(invention3.transform.position.x, 25, 0), 0.5f, 0, Tween.EaseOutBack);
             Tween.LocalScale(invention1.GetComponent<Image>().transform, Vector3.zero, 0.5f, 0, null, Tween.LoopType.None, null,EndPhase); 
         }
 
@@ -54,6 +54,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         private void EndPhase() {
             gameObject.SetActive(false);
             OnSelectionPhaseFinish?.Invoke(); 
+
             //gameManager s'abonne a cet événement 
         }
 	}

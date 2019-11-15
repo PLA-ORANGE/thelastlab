@@ -65,7 +65,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         private void Start () {
 
             RequestPopup.OnDisappear += RequestPopup_OnDisappear;
-
+            PopupInventionContainer.OnSelectionPhaseFinish += PopupInventionContainer_OnSelectionPhase; 
             GamePhase = WaitToStart;
             //SetSelectProjectPhase();
             //SetCardSelectPhase();
@@ -84,6 +84,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
             }*/
 
             TouchTxt.gameObject.SetActive(true);
+        }
+
+        private void PopupInventionContainer_OnSelectionPhase() {
+            SetCardSelectPhase(); 
         }
 
         private void RequestPopup_OnDisappear(RequestPopup sender)
@@ -138,7 +142,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
             inventionContainer.gameObject.SetActive(true);
             inventionValidateBtn.gameObject.SetActive(true);
 
-            inventionValidateBtn.onClick.AddListener(SetCardSelectPhase);
+            //inventionValidateBtn.onClick.AddListener(SetCardSelectPhase);
         }
 
         public void SetCardSelectPhase()
