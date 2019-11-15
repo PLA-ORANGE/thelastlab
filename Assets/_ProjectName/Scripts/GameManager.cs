@@ -60,11 +60,14 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private PopupInventionContainer inventionContainer;
         [SerializeField] private Button inventionValidateBtn;
 
+        [SerializeField] private Text TouchTxt;
+
         private void Start () {
 
             RequestPopup.OnDisappear += RequestPopup_OnDisappear;
 
-            SetSelectProjectPhase();
+            GamePhase = WaitToStart;
+            //SetSelectProjectPhase();
             //SetCardSelectPhase();
 
             //SetProjectPhase();
@@ -80,7 +83,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 card.GetComponent<Card>().setJob(startCards[i]);
             }*/
 
-
+            TouchTxt.gameObject.SetActive(true);
         }
 
         private void RequestPopup_OnDisappear(RequestPopup sender)
@@ -130,6 +133,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void SetSelectProjectPhase()
         {
+            TouchTxt.gameObject.SetActive(false);
+
             inventionContainer.gameObject.SetActive(true);
             inventionValidateBtn.gameObject.SetActive(true);
 
@@ -185,6 +190,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
             requestPopup.Appear();
 
             isRequestPopUp = true;
+        }
+
+        private void WaitToStart()
+        {
+            if (Input.GetMouseButtonDown(0)) SetSelectProjectPhase();
         }
 
         protected void VoidPhase()
