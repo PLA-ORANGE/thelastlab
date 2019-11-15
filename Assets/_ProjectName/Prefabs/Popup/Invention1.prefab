@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -331,6 +331,7 @@ MonoBehaviour:
   invention: {fileID: 522657099156843775, guid: 74c605bf29bc90c4eace32e49afe5234,
     type: 3}
   centerScreen: {fileID: 0}
+  testPopup: 0
 --- !u!114 &1806149107135659064
 MonoBehaviour:
   m_ObjectHideFlags: 0
