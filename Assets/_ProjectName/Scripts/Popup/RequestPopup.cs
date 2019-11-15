@@ -21,7 +21,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         protected RectTransform cardHolderRectTransform;
         protected GameObject detectedCard;
         protected Camera cam;
-
+        [SerializeField] private List<Sprite> spriteList = new List<Sprite>();
+        [SerializeField] private Image image; 
         public static event RequestPopupEventHandler OnAppear;
         public static event RequestPopupEventHandler OnDisappear;
         protected  GameManager gameManager; 
@@ -33,7 +34,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             set
             {
                 jobCode = value;
-                SetText(jobCode.ToString());
+                image.sprite = spriteList[(int)jobCode]; 
             }
         }
 
