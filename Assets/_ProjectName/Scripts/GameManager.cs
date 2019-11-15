@@ -54,7 +54,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
             JobCode.Mathématicien
         };
 
-        [SerializeField] private float spawnFrequencyRequest = 4f;
+        [SerializeField] float spawnFrequencyRequest = 4f;
+        [SerializeField, Range(1,10)] protected float spawnFrequencyRequestMax = 4f;
+        [SerializeField, Range(1,10)] protected float spawnFrequencyRequestMin = 4f;
         private float elapseTime = 0;
 
         [SerializeField] private PopupInventionContainer inventionContainer;
@@ -65,7 +67,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         private void Start () {
 
             RequestPopup.OnDisappear += RequestPopup_OnDisappear;
-
+            spawnFrequencyRequest = UnityEngine.Random.Range(spawnFrequencyRequestMin, spawnFrequencyRequestMax);
             GamePhase = WaitToStart;
             //SetSelectProjectPhase();
             //SetCardSelectPhase();
@@ -88,6 +90,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void RequestPopup_OnDisappear(RequestPopup sender)
         {
+            spawnFrequencyRequest = UnityEngine.Random.Range(spawnFrequencyRequestMin, spawnFrequencyRequestMax);
             isRequestPopUp = false;
         }
 
