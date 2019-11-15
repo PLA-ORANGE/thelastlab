@@ -11,10 +11,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
 {
     public enum JobCode
     {
-        Mathématicien = 0,
-        Chimiste = 1,
-        Ingénieur = 2,
-        Développeur = 3
+        Toxicologue = 0,
+        Expert_EnCybersécurité = 1,
+        Technical_Artiste = 2,
+        Ingénieur_Biomécanique = 3,
+        IntégrateurD_Ia = 4,
+        Bilogiste = 5,
+        Ingénieur_Automatique = 6
     }
 
 	public class Job {
@@ -25,10 +28,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
         {
             jobsColors = new Dictionary<JobCode, Color>();
 
-            jobsColors.Add(JobCode.Mathématicien, Color.red);
-            jobsColors.Add(JobCode.Chimiste, Color.blue);
-            jobsColors.Add(JobCode.Ingénieur, Color.green);
-            jobsColors.Add(JobCode.Développeur, Color.cyan);
+            jobsColors.Add(JobCode.Toxicologue, Color.red);
+            jobsColors.Add(JobCode.Expert_EnCybersécurité, Color.blue);
+            jobsColors.Add(JobCode.Technical_Artiste, Color.green);
+            jobsColors.Add(JobCode.Ingénieur_Automatique, Color.cyan);
+            jobsColors.Add(JobCode.IntégrateurD_Ia, Color.magenta);
+            jobsColors.Add(JobCode.Bilogiste, Color.yellow);
+            jobsColors.Add(JobCode.Ingénieur_Biomécanique, Color.grey);
         }
 
         static public Job GetAleaJob()

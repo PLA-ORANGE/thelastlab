@@ -36,22 +36,21 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         [SerializeField]
         private List<JobCode> popupRequests = new List<JobCode>() {
-            JobCode.Mathématicien,
-            JobCode.Ingénieur,
-            JobCode.Développeur,
-            JobCode.Chimiste,
-            JobCode.Mathématicien
+            JobCode.Toxicologue,
+            JobCode.IntégrateurD_Ia,
+            JobCode.Expert_EnCybersécurité,
+            JobCode.Ingénieur_Automatique
         };
 
         [SerializeField]
         private List<JobCode> startCards = new List<JobCode>() {
-            JobCode.Mathématicien,
-            JobCode.Ingénieur,
-            JobCode.Développeur,
-            JobCode.Chimiste,
-            JobCode.Mathématicien,
-            JobCode.Mathématicien,
-            JobCode.Mathématicien
+            JobCode.Toxicologue,
+            JobCode.Expert_EnCybersécurité,
+            JobCode.Technical_Artiste,
+            JobCode.Ingénieur_Automatique,
+            JobCode.IntégrateurD_Ia,
+            JobCode.Bilogiste,
+            JobCode.Ingénieur_Biomécanique
         };
 
         [SerializeField] private float spawnFrequencyRequest = 4f;
