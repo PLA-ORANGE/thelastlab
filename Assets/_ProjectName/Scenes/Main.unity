@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0.98236495
       objectReference: {fileID: 0}
+    - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: cardHolderRectTransform
+      value: 
+      objectReference: {fileID: 101671724}
     - target: {fileID: 2202388412808414870, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -498,11 +503,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
-        type: 3}
-      propertyPath: cardHolderRectTransform
-      value: 
-      objectReference: {fileID: 101671724}
     - target: {fileID: 7900392761127173610, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: m_Enabled
@@ -1086,6 +1086,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RequestPopupCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: testPopup
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6020124789347081980, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1196,6 +1201,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1687112143}
+    - target: {fileID: 3596875963299970782, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 263.33337
+      objectReference: {fileID: 0}
     - target: {fileID: 6814126805771646821, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_AnchorMin.y

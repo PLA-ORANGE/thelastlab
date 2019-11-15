@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a619b8c96f01462469071c5442fcd618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
 --- !u!1 &1035775745
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,15 +418,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b890a9540b8e71d44ad112b7770ba6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 7836755535208183790, guid: d1935b23c8bea724a918b0dde2190d2b,
-    type: 3}
   deckPrefab: {fileID: 1349772435022648706, guid: 382937c87a25f2d449eb5d0697e4b8c3,
+    type: 3}
+  cardPrefab: {fileID: 7836755535208183790, guid: d1935b23c8bea724a918b0dde2190d2b,
     type: 3}
   deckSpawn: {fileID: 248075729}
   labMenPrefab: {fileID: 0}
   labo: {fileID: 0}
-  startCards: 00000000010000000300000000000000020000000100000003000000
+  hud: {fileID: 0}
+  swipHud: {fileID: 0}
+  requestPopup: {fileID: 0}
+  progressBar: {fileID: 0}
   popupRequests: 0000000002000000030000000100000000000000
+  startCards: 00000000010000000300000000000000020000000100000003000000
   spawnFrequencyRequest: 4
 --- !u!1001 &6020124789287551763
 PrefabInstance:
@@ -549,6 +554,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1159637276}
+    - target: {fileID: 3596875963299970782, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 263.33337
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291739521833911968, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788944783280255657, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6814126805771646821, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_AnchorMin.y

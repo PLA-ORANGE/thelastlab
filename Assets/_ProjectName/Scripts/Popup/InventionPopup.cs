@@ -17,13 +17,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] private GameObject invention;
         [SerializeField] private RectTransform centerScreen;
         [SerializeField] private bool testPopup; 
+        [SerializeField] private float timingAppear; 
         private RectTransform inventionRect;
         private Vector2 initalPosition;
         
         
         public override void Start() {
             base.Start();
-            rectTransform.localScale = new Vector2(1.5f, 1.5f);
+            rectTransform.localScale = Vector2.zero; 
             Appear();
             container = FindObjectOfType<PopupInventionContainer>();
             invention = GameObject.Instantiate(invention, inventionPos);
@@ -31,7 +32,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             inventionRect.localPosition = Vector3.zero;
             invention.GetComponent<Invention>().win = false;
             initalPosition = transform.position;
-
+            Tween.LocalScale(rectTransform, new Vector2(1.5f, 1.5f), timingAppear, 0.1f, Tween.EaseOutBack);
 
         }
 
@@ -61,8 +62,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         private void SetDescription() {
             if(testPopup && onClick) {
                 SetText("Séticyksapu était une ville prospère jusqu’à ce que des gaz toxiques y soient détectés, et que la population ait dû être évacuée.");
-                popupText.fontSize = 15;
-                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, -17); 
+                popupText.fontSize = 17;
+                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, -20); 
             }
             else if(testPopup && !onClick) {
                 SetText("Drone assainissant");
