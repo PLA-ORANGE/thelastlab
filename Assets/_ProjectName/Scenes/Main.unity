@@ -1244,10 +1244,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: RequestPopupCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+    - target: {fileID: 8283959888757778605, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
-      propertyPath: testPopup
-      value: 1
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1047709715}
+    - target: {fileID: 8283959888757778605, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClearAll
       objectReference: {fileID: 0}
     - target: {fileID: 6020124789347081980, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
@@ -1353,6 +1358,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: inventionPos
+      value: 
+      objectReference: {fileID: 1132079976}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: testPopup
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6020124789347081981, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
@@ -1504,10 +1519,5 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: inventionPos
-      value: 
-      objectReference: {fileID: 1132079976}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dad028fdd18e2ef45993d339ff43cd60, type: 3}
