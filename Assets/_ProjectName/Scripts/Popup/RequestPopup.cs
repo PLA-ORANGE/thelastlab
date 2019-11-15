@@ -68,8 +68,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             {
                 Vector3 position = cardHolderRectTransform.position;
                 position = cam.ScreenToWorldPoint(position);
-                Debug.Log(sender.transform.position);
-                Debug.Log("pos" + position);
+
                 if (sender.transform.position.x >= (position.x - cardHolderRectTransform.rect.width/2) && sender.transform.position.x <= (position.x + cardHolderRectTransform.rect.width / 2))
                 {
                     if (sender.transform.position.y >= (position.y - cardHolderRectTransform.rect.height / 2) && sender.transform.position.y <= (position.y + cardHolderRectTransform.rect.height / 2))
