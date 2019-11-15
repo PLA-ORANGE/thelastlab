@@ -26,6 +26,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         [SerializeField] protected PopupWin popupWin;
         [SerializeField] protected ProgressBarProject progressBar;
+
+        [SerializeField] private ParticleSystem cardExplosion;
         
         protected float score = 0;  
         private GameObject deck;
@@ -97,6 +99,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public void SpawnInLab(Job job)
         {
             GameObject labPeople = Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
+            cardExplosion.Play();
+
+
             labPeople.GetComponent<MeshRenderer>().material.color = job.color;
         }
 

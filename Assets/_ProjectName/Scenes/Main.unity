@@ -138,6 +138,85 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2028852479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &579398789
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 818906630256881707, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_Name
+      value: CardExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.33186063
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.2273322
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.08274214
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91177976
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881718, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881717, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818906630256881717, guid: 858d058da9039714388cd5f615fa470c,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 858d058da9039714388cd5f615fa470c, type: 3}
 --- !u!1 &712980750
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +841,7 @@ MonoBehaviour:
   requestPopup: {fileID: 929462122}
   popupWin: {fileID: 1542390502}
   progressBar: {fileID: 1633247956}
+  cardExplosion: {fileID: 0}
   popupRequests: 0000000001000000030000000000000002000000
   startCards: 00000000010000000300000000000000020000000100000003000000
   spawnFrequencyRequest: 4
