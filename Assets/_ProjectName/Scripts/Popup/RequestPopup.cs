@@ -41,7 +41,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             base.Start();
             cam = Camera.main;
             gameManager = FindObjectOfType<GameManager>();
-
             if (!eventIsInit) InitEvent();
         }
 
@@ -67,7 +66,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
             if (exist)
             {
-
                 Vector3 position = cardHolderRectTransform.position;
                 position = cam.ScreenToWorldPoint(position);
 
@@ -121,6 +119,16 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public override void Appear()
         {
+            float xMin = -Screen.width/3 + rectTransform.rect.width/2;
+            float xMax = Screen.width/3 - rectTransform.rect.width / 2;
+            float yMin = Screen.height/3 - rectTransform.rect.height / 2;
+            float yMax = -Screen.height/5 + rectTransform.rect.height / 2;
+            
+            Debug.Log(xMin);
+            Debug.Log(xMax);
+            Vector2 position = new Vector2(UnityEngine.Random.Range(xMin,xMax), UnityEngine.Random.Range(yMin, yMax));
+            Debug.Log(position);
+            rectTransform.anchoredPosition = position;
             base.Appear();
             OnAppear?.Invoke(this);
         }
