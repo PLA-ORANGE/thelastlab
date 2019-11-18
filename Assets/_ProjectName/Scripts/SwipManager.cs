@@ -146,16 +146,19 @@ namespace Com.Github.PLAORANGE.Thelastlab
                     cardList.Remove(frontCard);
                     deck.AddCard(frontCard);
                     frontCard.transform.localScale = Vector3.one;
-
-                    OrderRoulement();
-                    SetRotation(0);
-
-                    OnValidateCard?.Invoke(this);
                     
-                    if(deck.Count == deck.MaxCard)
+                    OnValidateCard?.Invoke(this);
+
+
+                    if (cardList.Count == 0)
                     {
                         Destroy(cardContainer.gameObject);
                         GetComponent<GameManager>().SetProjectPhase();
+                    }
+                    else
+                    {
+                        SetRotation(0);
+                        OrderRoulement();
                     }
                 }
 
