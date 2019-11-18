@@ -6,6 +6,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 namespace Com.Github.PLAORANGE.Thelastlab.lab
 {
@@ -13,6 +14,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.lab
         protected NavMeshAgent agent;
         private float walkRadius = 5f;
         Vector3 finalPosition;
+
+        public Image img;
 
         Action DoAction;
 

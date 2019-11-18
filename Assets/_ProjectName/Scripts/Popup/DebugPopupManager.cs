@@ -47,7 +47,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         protected void OnClickPopupAppearButton()
         {
-            requestPopup.JobCode = Job.GetAleaCode();
+            //requestPopup.JobCode = Job.GetAleaCode();
             requestPopup.Appear();
         }
 

@@ -3,6 +3,7 @@
 /// Date : #DATE#
 ///-----------------------------------------------------------------
 
+using Com.Github.PLAORANGE.Thelastlab.Settings;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,43 +23,19 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
 	public class Job {
 
-        static Dictionary<JobCode, Color> jobsColors;
-
-        static public void InitJobColor()
-        {
-            jobsColors = new Dictionary<JobCode, Color>();
-
-            jobsColors.Add(JobCode.Toxicologue, Color.red);
-            jobsColors.Add(JobCode.Expert_EnCybersecurite, Color.blue);
-            jobsColors.Add(JobCode.Technical_Artiste, Color.green);
-            jobsColors.Add(JobCode.Ingenieur_Automatique, Color.cyan);
-            jobsColors.Add(JobCode.IntegrateurD_Ia, Color.magenta);
-            jobsColors.Add(JobCode.Biologiste, Color.yellow);
-            jobsColors.Add(JobCode.Ingenieur_Biomecanique, Color.grey);
-        }
-
-        static public Job GetAleaJob()
-        {
-            return new Job(GetAleaCode());
-        }
-
-        static public JobCode GetAleaCode()
-        {
-            Array jobCodes = Enum.GetValues(typeof(JobCode));
-            int index = UnityEngine.Random.Range(0, jobCodes.Length);
-
-            return (JobCode)jobCodes.GetValue(index);
-        }
-
-        public Color color;
         public JobCode code;
-	    
+        public Color color;
+        public string name;
+        public Sprite sprite;
+
         public Job(JobCode jobCode )
         {
-            if (jobsColors == null) InitJobColor();
+            JobConfig config = JobSettings.Instance.GetJobConfig(jobCode);
 
             code = jobCode;
-            color = jobsColors[jobCode];
+            color = config.Color;
+            name = config.Name;
+            sprite = config.Sprite;
         }
 		
 	}

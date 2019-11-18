@@ -1064,8 +1064,7 @@ MonoBehaviour:
   popupWin: {fileID: 1542390502}
   progressBar: {fileID: 1633247956}
   cardExplosion: {fileID: 1364580084}
-  popupRequests: 0000000000000000000000000000000000000000
-  startCards: 00000000000000000000000000000000000000000000000000000000
+  popupRequests: 00000000010000000200000003000000
   spawnFrequencyRequest: 4
   inventionContainer: {fileID: 1047709715}
   inventionValidateBtn: {fileID: 1134859647}
@@ -1140,7 +1139,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   rotationDuration: 0.5
   touchTolerance: 20
-  startCards: 00000000000000000000000000000000000000000000000000000000010000000300000000000000
+  startCards: 00000000010000000200000003000000040000000500000006000000
   deck: {fileID: 0}
   active: 0
   rightArroy: {fileID: 1115967658}

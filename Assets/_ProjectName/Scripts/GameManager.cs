@@ -5,6 +5,7 @@
 
 
 using Com.Github.PLAORANGE.Thelastlab.Hud;
+using Com.Github.PLAORANGE.Thelastlab.lab;
 using Com.Github.PLAORANGE.Thelastlab.Popup;
 using Pixelplacement;
 using System;
@@ -100,6 +101,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public void SpawnInLab(Job job)
         {
             GameObject labPeople = Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
+            labPeople.GetComponent<LabMen>().img.sprite = job.sprite;
 
             cardExplosion.GetComponent<ParticleSystem>().startColor = job.color;
             cardExplosion.Play();
