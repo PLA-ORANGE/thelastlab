@@ -16,8 +16,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.lab
         Vector3 finalPosition;
 
         public Image img;
+        public Canvas canvas;
 
         Action DoAction;
+        private Quaternion targetRotation;
 
         public void SetModeVoid()
         {
@@ -43,6 +45,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.lab
             {
                 GoToRandomPosition();
             }
+            Vector3 vector3 = Camera.main.transform.position - transform.position;
+            vector3 = Vector3.ProjectOnPlane(vector3, Vector3.up);
+
+            targetRotation = Quaternion.LookRotation(vector3, Vector3.up);
         }
 
         private void GoToRandomPosition()
@@ -64,6 +70,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.lab
         private void Update()
         {
             DoAction();
+
+
+
+            canvas.transform.rotation = targetRotation;
         }
 	}
 }

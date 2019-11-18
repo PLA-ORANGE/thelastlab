@@ -7,6 +7,7 @@ using Pixelplacement;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Com.Github.PLAORANGE.Thelastlab
 {
@@ -14,7 +15,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
     public class Card : MonoBehaviour {
 
         [SerializeField] private TextMeshProUGUI titleText = null;
-        [SerializeField] private Perso perso = null;
+        [SerializeField] private SpriteRenderer perso = null;
         [SerializeField] private SpriteRenderer backgroundSprite = null;
 
         private const float BACKGROUND_COLOR_COEFF = 0.5f;
@@ -77,6 +78,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
             Title = this.job.name;
 
             Color lColor = this.job.color;
+            perso.sprite = job.sprite;
             Debug.Log(lColor);
             /*
             perso.Color = lColor;
