@@ -50,7 +50,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         }
 
         private void Start () {
-            
+            //Init();
         }
 
         public void Init()

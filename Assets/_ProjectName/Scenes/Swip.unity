@@ -211,6 +211,7 @@ MonoBehaviour:
   touchTolerance: 20
   startCards: 00000000010000000200000003000000020000000300000000000000010000000300000000000000
   deck: {fileID: 1532551522}
+  active: 0
 --- !u!4 &928055080
 Transform:
   m_ObjectHideFlags: 0
@@ -516,5 +517,11 @@ PrefabInstance:
       propertyPath: swipManager
       value: 
       objectReference: {fileID: 928055079}
+    - target: {fileID: 2068987515094668387, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: inventionModel
+      value: 
+      objectReference: {fileID: 522657099156843775, guid: 74c605bf29bc90c4eace32e49afe5234,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}

@@ -20,10 +20,9 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField]
         protected RectTransform cardHolderRectTransform;
         protected GameObject detectedCard;
-        [SerializeField]
-        protected Image cardHolderImage;
         protected Camera cam;
-
+        [SerializeField] private List<Sprite> spriteList = new List<Sprite>();
+        [SerializeField] private Image image; 
         public static event RequestPopupEventHandler OnAppear;
         public static event RequestPopupEventHandler OnDisappear;
         protected  GameManager gameManager; 
@@ -35,7 +34,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             set
             {
                 jobCode = value;
-                SetText(jobCode.ToString());
+                image.sprite = spriteList[(int)jobCode]; 
             }
         }
 
@@ -43,14 +42,12 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             base.Start();
             cam = Camera.main;
             gameManager = FindObjectOfType<GameManager>();
-
             if (!eventIsInit) InitEvent();
         }
 
         public void InitEvent()
         {
             eventIsInit = true;
-
             Card.OnCardDrop += Card_OnCardDrop;
             Card.OnCardTaken += Card_OnCardTaken;
         }
@@ -70,16 +67,16 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
             if (exist)
             {
-                Vector3 position = cam.WorldToScreenPoint(sender.transform.position);
+                Vector3 position = cardHolderRectTransform.position;
+                position = cam.ScreenToWorldPoint(position);
 
-                if (position.x >= (cardHolderRectTransform.position.x - cardHolderRectTransform.rect.width/2) && position.x <= (cardHolderRectTransform.position.x + cardHolderRectTransform.rect.width / 2))
+                if (sender.transform.position.x >= (position.x - cardHolderRectTransform.rect.width/2) && sender.transform.position.x <= (position.x + cardHolderRectTransform.rect.width / 2))
                 {
-                    if (position.y >= (cardHolderRectTransform.position.y - cardHolderRectTransform.rect.height / 2) && position.y <= (cardHolderRectTransform.position.y + cardHolderRectTransform.rect.height / 2))
+                    if (sender.transform.position.y >= (position.y - cardHolderRectTransform.rect.height / 2) && sender.transform.position.y <= (position.y + cardHolderRectTransform.rect.height / 2))
                     {
                         if (sender.JobCode == jobCode && detectedCard is null)
                         {
                             detectedCard = sender.gameObject;
-                            Debug.Log("destroy card");
 
                             sender.Destroy();
                             detectedCard = null;
@@ -123,6 +120,15 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public override void Appear()
         {
+            float xMin = -Screen.width/3 + rectTransform.rect.width/2;
+            float xMax = Screen.width/3 - rectTransform.rect.width / 2;
+            float yMin = Screen.height/4 - rectTransform.rect.height / 2;
+            float yMax = -Screen.height/4 + rectTransform.rect.height / 2;
+            
+            
+            Vector2 position = new Vector2(UnityEngine.Random.Range(xMin,xMax), UnityEngine.Random.Range(yMin, yMax));
+            Debug.Log(position);
+            rectTransform.anchoredPosition = position;
             base.Appear();
             OnAppear?.Invoke(this);
         }

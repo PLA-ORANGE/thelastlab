@@ -9,13 +9,13 @@ using Com.Github.PLAORANGE.Thelastlab.Popup;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Com.Github.PLAORANGE.Thelastlab
 {
 	public class GameManager : MonoBehaviour {
 
         [SerializeField] private GameObject deckPrefab = null;
-        [SerializeField] private GameObject cardPrefab = null;
         [SerializeField] private Transform deckSpawn = null;
         [SerializeField] private GameObject labMenPrefab = null;
         [SerializeField] private GameObject labo = null;
@@ -24,8 +24,10 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] private GameObject swipHud = null;
         [SerializeField] private RequestPopup requestPopup;
 
-        protected PopupWin popupWin;
+        [SerializeField] protected PopupWin popupWin;
         [SerializeField] protected ProgressBarProject progressBar;
+
+        [SerializeField] private ParticleSystem cardExplosion;
         
         protected float score = 0;  
         private GameObject deck;
@@ -36,33 +38,38 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         [SerializeField]
         private List<JobCode> popupRequests = new List<JobCode>() {
-            JobCode.Mathématicien,
-            JobCode.Ingénieur,
-            JobCode.Développeur,
-            JobCode.Chimiste,
-            JobCode.Mathématicien
+            JobCode.Toxicologue,
+            JobCode.IntégrateurD_Ia,
+            JobCode.Expert_EnCybersécurité,
+            JobCode.Ingénieur_Automatique
         };
 
         [SerializeField]
         private List<JobCode> startCards = new List<JobCode>() {
-            JobCode.Mathématicien,
-            JobCode.Ingénieur,
-            JobCode.Développeur,
-            JobCode.Chimiste,
-            JobCode.Mathématicien,
-            JobCode.Mathématicien,
-            JobCode.Mathématicien
+            JobCode.Toxicologue,
+            JobCode.Expert_EnCybersécurité,
+            JobCode.Technical_Artiste,
+            JobCode.Ingénieur_Automatique,
+            JobCode.IntégrateurD_Ia,
+            JobCode.Bilogiste,
+            JobCode.Ingénieur_Biomécanique
         };
 
         [SerializeField] private float spawnFrequencyRequest = 4f;
         private float elapseTime = 0;
 
+        [SerializeField] private PopupInventionContainer inventionContainer;
+        [SerializeField] private Button inventionValidateBtn;
+
+        [SerializeField] private Text TouchTxt;
+
         private void Start () {
-            popupWin = FindObjectOfType<PopupWin>();
 
             RequestPopup.OnDisappear += RequestPopup_OnDisappear;
-
-            SetCardSelectPhase();
+            PopupInventionContainer.OnSelectionPhaseFinish += PopupInventionContainer_OnSelectionPhase; 
+            GamePhase = WaitToStart;
+            //SetSelectProjectPhase();
+            //SetCardSelectPhase();
 
             //SetProjectPhase();
 
@@ -77,7 +84,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 card.GetComponent<Card>().setJob(startCards[i]);
             }*/
 
-            
+            TouchTxt.gameObject.SetActive(true);
+        }
+
+        private void PopupInventionContainer_OnSelectionPhase() {
+            SetCardSelectPhase(); 
         }
 
         private void RequestPopup_OnDisappear(RequestPopup sender)
@@ -88,6 +99,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public void SpawnInLab(Job job)
         {
             GameObject labPeople = Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
+            cardExplosion.Play();
+
+
             labPeople.GetComponent<MeshRenderer>().material.color = job.color;
         }
 
@@ -98,6 +112,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
         }
 
         public void DisplayWinScreen() {
+            Debug.Log(popupWin);
+
             popupWin.Appear();
             popupWin.SetText("Félicitations !!", "Voici votre invention");
         }
@@ -115,14 +131,33 @@ namespace Com.Github.PLAORANGE.Thelastlab
         }
 
         private void Update () {
-            GamePhase();
+            GamePhase?.Invoke();
 		}
+        /*
+        public void StartPhase()
+        {
+            if(Input.GetMouseButtonDown(0))
+        }*/
+
+        public void SetSelectProjectPhase()
+        {
+            TouchTxt.gameObject.SetActive(false);
+
+            inventionContainer.gameObject.SetActive(true);
+            inventionValidateBtn.gameObject.SetActive(true);
+
+            //inventionValidateBtn.onClick.AddListener(SetCardSelectPhase);
+        }
 
         public void SetCardSelectPhase()
         {
+            GamePhase = VoidPhase;
             ///priorisation d'évenement
             requestPopup.InitEvent();
             ///
+
+            inventionContainer.gameObject.SetActive(false);
+            inventionValidateBtn.gameObject.SetActive(false);
 
             SwipManager swipManager = gameObject.GetComponent<SwipManager>();
 
@@ -132,7 +167,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
             swipManager.Init();
 
             swipHud.SetActive(true);
-            GamePhase = VoidPhase;
         }
 
         public void SetProjectPhase()
@@ -166,9 +200,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
             isRequestPopUp = true;
         }
 
-        private void VoidPhase()
+        private void WaitToStart()
         {
+            if (Input.GetMouseButtonDown(0)) SetSelectProjectPhase();
+        }
 
+        protected void VoidPhase()
+        {
         }
     }
 }

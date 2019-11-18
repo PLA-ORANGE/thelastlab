@@ -12,8 +12,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
 	public class SwipHUD : MonoBehaviour {
 
         [SerializeField] private GameObject inventionModel;
-        /*[SerializeField] private GameObject iventionPrefab;
-        [SerializeField] private Transform inventionSpawn;*/
         [SerializeField] private float modelSize;
         
         [SerializeField] private Text cartCount;

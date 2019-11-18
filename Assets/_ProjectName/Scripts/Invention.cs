@@ -7,10 +7,12 @@ using UnityEngine;
 
 namespace Com.Github.PLAORANGE.Thelastlab 
     {
-	public class Invention : MonoBehaviour {
 
+    
+	public class Invention : MonoBehaviour {
+        public bool win = true; 
         private void Start() {
-            transform.localScale = Vector3.zero;
+            transform.localScale = win ? Vector3.zero : new Vector3(40, 40, 40); 
             //transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
         }
 
