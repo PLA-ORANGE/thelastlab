@@ -67,12 +67,15 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
             if (exist)
             {
-                Vector3 position = cardHolderRectTransform.position;
-                position = cam.ScreenToWorldPoint(position);
-
-                if (sender.transform.position.x >= (position.x - cardHolderRectTransform.rect.width/2) && sender.transform.position.x <= (position.x + cardHolderRectTransform.rect.width / 2))
+                Vector3 position = sender.transform.position;
+                Vector3 position2 = sender.transform.position;
+                position = cam.WorldToScreenPoint(position);
+                Debug.Log("position" + position);
+                Debug.Log("xMax :" + cardHolderRectTransform.rect.xMax + " xMin :" + cardHolderRectTransform.rect.xMin);
+                Debug.Log("yMax :" + cardHolderRectTransform.rect.xMax + " yMin :" + cardHolderRectTransform.rect.yMin);
+                if (position.x <= (cardHolderRectTransform.position.x + cardHolderRectTransform.rect.xMax) && position.x >= (cardHolderRectTransform.position.x + cardHolderRectTransform.rect.xMin))
                 {
-                    if (sender.transform.position.y >= (position.y - cardHolderRectTransform.rect.height / 2) && sender.transform.position.y <= (position.y + cardHolderRectTransform.rect.height / 2))
+                    if (position.y <= (cardHolderRectTransform.position.y + cardHolderRectTransform.rect.yMax) && position.y >= (cardHolderRectTransform.position.y + cardHolderRectTransform.rect.yMin))
                     {
                         if (sender.JobCode == jobCode && detectedCard is null)
                         {
