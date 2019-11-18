@@ -130,7 +130,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
 
             Vector2 position = new Vector2(UnityEngine.Random.Range(xMin,xMax), UnityEngine.Random.Range(yMin, yMax));
-            Debug.Log(position);
+
             rectTransform.anchoredPosition = position;
             base.Appear();
             OnAppear?.Invoke(this);
