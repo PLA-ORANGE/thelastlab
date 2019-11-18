@@ -487,7 +487,7 @@ PrefabInstance:
     - target: {fileID: 2202388412808414874, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2687328127965480914, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
@@ -661,7 +661,7 @@ PrefabInstance:
     - target: {fileID: 2202388413095966633, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4661348187718418558, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
@@ -823,7 +823,7 @@ PrefabInstance:
     - target: {fileID: 2068987515094668388, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2068987515094668392, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
@@ -961,15 +961,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -100
       objectReference: {fileID: 0}
-    - target: {fileID: 5510673950285165226, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -100
-      objectReference: {fileID: 0}
     - target: {fileID: 4914527887686963378, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_CullTransparentMesh
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510673950285165226, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}

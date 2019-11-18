@@ -32,8 +32,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Start()
         {
-            Debug.Log("Deck_start");
-
             Card.OnCardTaken += Card_OnCardTaken;
             Card.OnCardDrop += Card_OnCardDrop;
 
