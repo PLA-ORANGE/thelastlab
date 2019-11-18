@@ -13,7 +13,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
     public delegate void CardEventHandler(Card sender);
     public class Card : MonoBehaviour {
 
-        [SerializeField] private TextMeshPro titleText = null;
+        [SerializeField] private TextMeshProUGUI titleText = null;
         [SerializeField] private SpriteRenderer logoSprite = null;
         [SerializeField] private Perso perso = null;
         [SerializeField] private SpriteRenderer backgroundSprite = null;

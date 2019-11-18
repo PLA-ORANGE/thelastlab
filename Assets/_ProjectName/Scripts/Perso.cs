@@ -20,8 +20,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
             }
             set {
                 color = value;
-                head.color = color;
-                bust.color = color;
+               
             }
         }
 
