@@ -81,7 +81,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         {
                             detectedCard = sender.gameObject;
 
-                            sender.Destroy();
+                            //sender.Destroy();
                             detectedCard = null;
 
                             gameManager.SpawnInLab(sender.job);
