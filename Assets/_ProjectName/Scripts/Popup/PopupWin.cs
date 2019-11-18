@@ -14,10 +14,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] private Transform inventionPos;
 
         public override void Appear() {
-            //Tween.LocalScale(rectTransform, new Vector2(0.50f, 0.50f), 1f, 0.1f, Tween.EaseOutBack);
+           
             exist = true;
             invention =  GameObject.Instantiate(invention,inventionPos);
-            //invention.transform.position =  
+            SetText("Bravo voici ton Drone assanissant");
             Tween.LocalScale(invention.transform, new Vector3(3, 3, 3), 1f, 0.1f, Tween.EaseOutBack);
         }
 

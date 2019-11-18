@@ -6,6 +6,7 @@
 
 using Com.Github.PLAORANGE.Thelastlab.Hud;
 using Com.Github.PLAORANGE.Thelastlab.Popup;
+using Pixelplacement;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -115,9 +116,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
         }
 
         public void DisplayWinScreen() {
-            Debug.Log(popupWin);
-
             popupWin.Appear();
+            Tween.LocalScale(popupWin.transform, new Vector3(1.2f, 1.2f, 1.2f),0.7f,0,Tween.EaseIn); 
             popupWin.SetText("Félicitations !!", "Voici votre invention");
         }
 
