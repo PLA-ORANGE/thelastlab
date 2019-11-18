@@ -102,9 +102,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
             GameObject labPeople = Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
 
             cardExplosion.GetComponent<ParticleSystem>().startColor = job.color;
-
             cardExplosion.Play();
-
 
             labPeople.GetComponent<MeshRenderer>().material.color = job.color;
         }
