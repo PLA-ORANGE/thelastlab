@@ -3,9 +3,11 @@
 /// Date : #DATE#
 ///-----------------------------------------------------------------
 
+using Pixelplacement;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 namespace Com.Github.PLAORANGE.Thelastlab
 {
@@ -35,6 +37,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public Deck deck;
         public bool active;
+
+        [SerializeField] Transform rightArroy;
+        [SerializeField] Transform leftArroy;
 
         private GameObject FrontCard 
         { 
@@ -105,6 +110,24 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 if (currentTouch.x > startTouch.x - touchTolerance && currentTouch.x < startTouch.x + touchTolerance) rotationDirection = 0;
                 else rotationDirection = Mathf.RoundToInt((startTouch - currentTouch).normalized.x);
 
+                
+
+                if(rotationDirection > 0)
+                {
+                    Tween.LocalScale(rightArroy, new Vector3(1, 1, 1), 0.1f, 0);
+                    Tween.LocalScale(leftArroy, new Vector3(-2, 2, 1), 0.1f, 0);
+                }
+                else if(rotationDirection < 0)
+                {
+                    Tween.LocalScale(leftArroy, new Vector3(-1, 1, 1), 0.1f, 0);
+                    Tween.LocalScale(rightArroy, new Vector3(2, 2, 1), 0.1f, 0);
+                }
+                else
+                {
+                    Tween.LocalScale(leftArroy, new Vector3(-1, 1, 1), 0.1f, 0);
+                    Tween.LocalScale(rightArroy, new Vector3(1, 1, 1), 0.1f, 0);
+                }
+
                 if (rotationDirection != this.rotationDirection)
                     SetRotation(rotationDirection);
             }
@@ -135,6 +158,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
                         GetComponent<GameManager>().SetProjectPhase();
                     }
                 }
+
+                Tween.LocalScale(leftArroy, new Vector3(-1, 1, 1), 0.1f, 0);
+                Tween.LocalScale(rightArroy, new Vector3(1, 1, 1), 0.1f, 0);
             }
         }
 
