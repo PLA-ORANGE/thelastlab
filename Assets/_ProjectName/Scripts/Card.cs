@@ -14,7 +14,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
     public class Card : MonoBehaviour {
 
         [SerializeField] private TextMeshProUGUI titleText = null;
-        [SerializeField] private SpriteRenderer logoSprite = null;
         [SerializeField] private Perso perso = null;
         [SerializeField] private SpriteRenderer backgroundSprite = null;
 
@@ -72,10 +71,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
             OnCardDrop?.Invoke(this);
         }
 
-        private void Start () {
-            //setJob(Job.GetAleaJob());
-        }
-
         public void setJob(Job job)
         {
             this.job = job;
@@ -84,7 +79,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
             Color lColor = this.job.color;
 
             perso.Color = lColor;
-            logoSprite.color = lColor;
 
             lColor.g *= BACKGROUND_COLOR_COEFF;
             lColor.r *= BACKGROUND_COLOR_COEFF;
