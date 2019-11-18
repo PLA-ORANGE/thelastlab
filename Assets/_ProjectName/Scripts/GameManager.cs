@@ -99,6 +99,9 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public void SpawnInLab(Job job)
         {
             GameObject labPeople = Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
+
+            cardExplosion.GetComponent<ParticleSystem>().startColor = job.color;
+
             cardExplosion.Play();
 
 
