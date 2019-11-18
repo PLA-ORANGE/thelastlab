@@ -38,23 +38,23 @@ namespace Com.Github.PLAORANGE.Thelastlab
         private Action GamePhase;
 
         [SerializeField]
-        private List<JobCode> popupRequests = new List<JobCode>() {
+       private List<JobCode> popupRequests = new List<JobCode>() {
             JobCode.Toxicologue,
-            JobCode.IntégrateurD_Ia,
-            JobCode.Expert_EnCybersécurité,
-            JobCode.Ingénieur_Automatique
+            JobCode.IntegrateurD_Ia,
+            JobCode.Expert_EnCybersecurite,
+            JobCode.Ingenieur_Biomecanique
         };
 
-        [SerializeField]
+       /* [SerializeField]
         private List<JobCode> startCards = new List<JobCode>() {
             JobCode.Toxicologue,
             JobCode.Expert_EnCybersécurité,
             JobCode.Technical_Artiste,
             JobCode.Ingénieur_Automatique,
             JobCode.IntégrateurD_Ia,
-            JobCode.Bilogiste,
+            JobCode.Biologiste,
             JobCode.Ingénieur_Biomécanique
-        };
+        };*/
 
         [SerializeField] private float spawnFrequencyRequest = 4f;
         private float elapseTime = 0;
