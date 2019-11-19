@@ -12,14 +12,6 @@ namespace Com.Github.PLAORANGE.Thelastlab.Settings
     public class JobSettings : ScriptableObject
     {
 
-        private static JobSettings instance;
-        public static JobSettings Instance { get { return instance; } }
-
-        private JobSettings()
-        {
-            instance = this;
-        }
-
         [SerializeField] private List<JobConfig> list = new List<JobConfig>();
 
         private Dictionary<JobCode, JobConfig> jobDictionary;

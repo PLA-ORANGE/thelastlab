@@ -30,7 +30,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public Job(JobCode jobCode )
         {
-            JobConfig config = JobSettings.Instance.GetJobConfig(jobCode);
+            JobConfig config = JobManager.Instance.jobSettings.GetJobConfig(jobCode);
 
             code = jobCode;
             color = config.Color;
