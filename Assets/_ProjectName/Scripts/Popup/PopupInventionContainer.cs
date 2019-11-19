@@ -16,6 +16,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] protected InventionPopup invention1; 
         [SerializeField] protected InventionPopup invention2; 
         [SerializeField] protected InventionPopup invention3;
+        [SerializeField] protected AnimationCurve animInvention; 
+        [SerializeField] protected AnimationCurve animButton; 
         [SerializeField] private Button button;
         protected List<InventionPopup> inventionPopupList = new List<InventionPopup>();
 
@@ -44,10 +46,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         }
 
         public void ClearAll() {
-            Tween.Position(button.transform, new Vector3(0, -7, 0), 0.8f, 0,Tween.EaseOutBack);
-            Tween.Position(invention2.transform, new Vector3(invention2.transform.position.x, 25, 0), 0.5f, 0, Tween.EaseOutBack); 
-            Tween.Position(invention3.transform, new Vector3(invention3.transform.position.x, 25, 0), 0.5f, 0, Tween.EaseOutBack);
-            Tween.LocalScale(invention1.GetComponent<Image>().transform, Vector3.zero, 0.5f, 0, null, Tween.LoopType.None, null,EndPhase); 
+            Tween.Position(button.transform, new Vector3(0, -20, 0), 0.8f, 0.2f,animButton);
+            Tween.Position(invention2.transform, new Vector3(invention2.transform.position.x, 25, 0), 0.5f,0.3f , Tween.EaseOutBack); 
+            Tween.Position(invention3.transform, new Vector3(invention3.transform.position.x, 25, 0), 0.5f,0.5f , Tween.EaseOutBack);
+            Tween.LocalScale(invention1.GetComponent<Image>().transform, Vector3.zero, 0.5f, 0.7f,animInvention, Tween.LoopType.None, null,EndPhase); 
         }
 
 

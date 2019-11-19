@@ -4,6 +4,7 @@
 ///-----------------------------------------------------------------
 
 using Pixelplacement;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] private GameObject invention;
         [SerializeField] private RectTransform centerScreen;
         [SerializeField] private bool testPopup; 
-        [SerializeField] private float timingAppear; 
+        [SerializeField] private float timingAppear;
+        [SerializeField] private Color textColor; 
         private RectTransform inventionRect;
         private Vector3 initalPosition;
         
@@ -62,24 +64,27 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             SetText(""); 
             Tween.LocalScale(rectTransform, new Vector3(1.5f, 1.5f,1.5f), 0.3f, 0, Tween.EaseOutBack);
             Tween.Position(rectTransform, initalPosition, 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, SetDescription);
+            transform.GetChild(0).gameObject.SetActive(false);
+            popupText.color = Color.black;
         }
 
         private void SetDescription() {
             if(testPopup && onClick) {
                 SetText("Une fuite de gaz toxique envahit la ville de Séticyksapû! Vous êtes la seule équipe assez avancée pour venir en aide à sa population! Construisez un drône capable d’assainir la ville!");
 
-
-                popupText.fontSize = 14;
-                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 10); 
+                transform.GetChild(0).gameObject.SetActive(true);
+                popupText.color = textColor; 
+                popupText.fontSize = 11;
+                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 2.2f); 
             }
             else if(testPopup && !onClick) {
                 SetText("Drone assainissant");
-                popupText.fontSize = 12;
-                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 20);
+                popupText.fontSize = 11;
+                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 10);
             }
 
             if(!testPopup && onClick) {
-                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 5f);
+                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 10);
                 SetText("Bloqué");
             }
         }
