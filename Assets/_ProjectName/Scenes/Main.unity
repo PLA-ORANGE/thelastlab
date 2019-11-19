@@ -1084,7 +1084,7 @@ MonoBehaviour:
   popupWin: {fileID: 1542390502}
   progressBar: {fileID: 1633247956}
   cardExplosion: {fileID: 1364580084}
-  popupRequests: 0000000001000000020000000300000001000000
+  popupRequests: 0000000001000000020000000300000004000000
   spawnFrequencyRequest: 4
   inventionContainer: {fileID: 1047709715}
   inventionValidateBtn: {fileID: 1134859647}
