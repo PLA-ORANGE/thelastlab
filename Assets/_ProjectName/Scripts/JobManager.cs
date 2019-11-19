@@ -4,6 +4,7 @@
 ///-----------------------------------------------------------------
 
 using Com.Github.PLAORANGE.Thelastlab.Settings;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Com.Github.PLAORANGE.Thelastlab
@@ -21,17 +22,35 @@ namespace Com.Github.PLAORANGE.Thelastlab
 			}
 			
 			instance = this;
-		}
-		
-		private void Start () {
-			
-		}
-		
-		private void Update () {
-			
-		}
-		
-		private void OnDestroy(){
+            FeedDictionary();
+
+        }
+
+        [SerializeField] private List<JobConfig> list = new List<JobConfig>();
+
+        private Dictionary<JobCode, JobConfig> jobDictionary;
+        /*
+        private void OnValidate()
+        {
+            FeedDictionary();
+        }*/
+
+        void FeedDictionary()
+        {
+            jobDictionary = new Dictionary<JobCode, JobConfig>();
+
+            foreach (JobConfig jobConfig in list)
+            {
+                jobDictionary.Add(jobConfig.Code, jobConfig);
+            }
+        }
+
+        public JobConfig GetJobConfig(JobCode jobCode)
+        {
+            return jobDictionary[jobCode];
+        }
+
+        private void OnDestroy(){
 			if (this == instance) instance = null;
 		}
 	}

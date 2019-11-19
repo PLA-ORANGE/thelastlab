@@ -74,18 +74,16 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void setJob(Job job)
         {
+            Debug.Log(job);
+
             this.job = job;
             Title = this.job.name;
 
             Color lColor = this.job.color;
             perso.sprite = job.sprite;
             Debug.Log(lColor);
-            /*
-            perso.Color = lColor;
 
-            lColor.g *= BACKGROUND_COLOR_COEFF;
-            lColor.r *= BACKGROUND_COLOR_COEFF;
-            lColor.b *= BACKGROUND_COLOR_COEFF;*/
+            //lColor.b *= BACKGROUND_COLOR_COEFF;
 
             backgroundSprite.color = lColor;
         }
