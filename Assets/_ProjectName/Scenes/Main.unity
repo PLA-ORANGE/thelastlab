@@ -554,19 +554,19 @@ PrefabInstance:
         type: 3}
       propertyPath: spriteList.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 9833dc88a135ddd47970423ce3ef94d6,
+      objectReference: {fileID: 21300000, guid: 80ab177bd6ac2e8488fa3f663fadac13,
         type: 3}
     - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: spriteList.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 9833dc88a135ddd47970423ce3ef94d6,
+      objectReference: {fileID: 21300000, guid: 985174c1dd44f1046a4b7bbdba1b7e6d,
         type: 3}
     - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: spriteList.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 9833dc88a135ddd47970423ce3ef94d6,
+      objectReference: {fileID: 21300000, guid: f901979b30376734d82261958b258b42,
         type: 3}
     - target: {fileID: 2202388412808414870, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   popupWin: {fileID: 1542390502}
   progressBar: {fileID: 1633247956}
   cardExplosion: {fileID: 1364580084}
-  popupRequests: 00000000010000000200000003000000
+  popupRequests: 0000000001000000020000000300000001000000
   spawnFrequencyRequest: 4
   inventionContainer: {fileID: 1047709715}
   inventionValidateBtn: {fileID: 1134859647}
