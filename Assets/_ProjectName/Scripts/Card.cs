@@ -14,7 +14,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
     public delegate void CardEventHandler(Card sender);
     public class Card : MonoBehaviour {
 
-        [SerializeField] private TextMeshProUGUI titleText = null;
         [SerializeField] private SpriteRenderer perso = null;
         [SerializeField] private SpriteRenderer backgroundSprite = null;
 
@@ -29,15 +28,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public JobCode JobCode { 
             get { return job.code;}
-        }
-
-        public string Title {
-            get{
-                return titleText.text;
-            }
-            set{
-                titleText.text = value;
-            }
         }
 
         private Quaternion CameraRotation {
@@ -77,7 +67,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
             Debug.Log(job);
 
             this.job = job;
-            Title = this.job.name;
+            //Title = this.job.name;
 
             Color lColor = this.job.color;
             perso.sprite = job.sprite;
@@ -85,7 +75,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
             //lColor.b *= BACKGROUND_COLOR_COEFF;
 
-            backgroundSprite.color = lColor;
+            backgroundSprite.sprite = job.backgroundSprite;
         }
 
         public void setJob(JobCode jobCode)
