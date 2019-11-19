@@ -1561,40 +1561,40 @@ MonoBehaviour:
   jobSettings: {fileID: 11400000, guid: 35cb3abf5fecbac45b9d95e9846e01c7, type: 2}
   list:
   - code: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 0, b: 0.8227806, a: 1}
     name: Toxicologue
-    sprite: {fileID: 21300000, guid: f13e07e25d86c4a47ac22befd5ccb1f1, type: 3}
-    backgroundSprite: {fileID: 21300000, guid: 05f9aadcf193d4440bbd77da74c479b3, type: 3}
+    sprite: {fileID: 21300000, guid: 0cb53bf8bc5db454fb62bf22cc70699c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 9d6c5cd75ff29ad44950a515f5caeb19, type: 3}
   - code: 1
     color: {r: 0, g: 0.18980217, b: 1, a: 1}
     name: "Expert en Cybers\xE9curit\xE9"
-    sprite: {fileID: 21300000, guid: fe4bc229d01ea534e8e6269b134a733b, type: 3}
-    backgroundSprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 40aaa71dbb6790b4d973a8be2d906e8f, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 8ed720fe823e4054d982eb22d7420ce6, type: 3}
   - code: 2
     color: {r: 1, g: 0.6691481, b: 0, a: 1}
     name: Artiste Technique
     sprite: {fileID: 21300000, guid: 22975cfe4afd75a4e84e3983c7d2b44f, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 2f944102cb8a481439fa275b2b26c91e, type: 3}
   - code: 3
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 0, b: 0, a: 1}
     name: "Ing\xE9nieur Biomecanique"
-    sprite: {fileID: 21300000, guid: 795e05559a65d7242b0de2796ea10280, type: 3}
+    sprite: {fileID: 21300000, guid: 7b23c489f35d6974c9804ac70838d1bb, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 05f9aadcf193d4440bbd77da74c479b3, type: 3}
   - code: 4
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 0, g: 0.7933049, b: 1, a: 1}
     name: "Int\xE9grateur d'IA"
-    sprite: {fileID: 21300000, guid: 40aaa71dbb6790b4d973a8be2d906e8f, type: 3}
-    backgroundSprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f13e07e25d86c4a47ac22befd5ccb1f1, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: a535c9900cae4d54c82726f0fd5a19d7, type: 3}
   - code: 5
     color: {r: 0, g: 1, b: 0.097765446, a: 1}
     name: Biologiste
-    sprite: {fileID: 21300000, guid: 7b23c489f35d6974c9804ac70838d1bb, type: 3}
+    sprite: {fileID: 21300000, guid: 795e05559a65d7242b0de2796ea10280, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 8ed720fe823e4054d982eb22d7420ce6, type: 3}
   - code: 6
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 1, g: 0, b: 0.6563244, a: 1}
     name: "Ing\xE9nieur automatique"
-    sprite: {fileID: 21300000, guid: 0cb53bf8bc5db454fb62bf22cc70699c, type: 3}
-    backgroundSprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: fe4bc229d01ea534e8e6269b134a733b, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 17e8aa623bccb1946b46b164c5698807, type: 3}
 --- !u!114 &1542390502 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
@@ -2196,6 +2196,12 @@ PrefabInstance:
       propertyPath: timingAppear
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3167784475592909775, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: invention
+      value: 
+      objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
+        type: 3}
     - target: {fileID: 6020124789347081980, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2311,6 +2317,12 @@ PrefabInstance:
       propertyPath: timingAppear
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: invention
+      value: 
+      objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
+        type: 3}
     - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: inventionPos
@@ -2469,7 +2481,7 @@ PrefabInstance:
     - target: {fileID: 8291739521833911968, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7864820969451683728, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
@@ -2479,7 +2491,7 @@ PrefabInstance:
     - target: {fileID: 8788944783280255657, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4206469016318762801, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
