@@ -16,6 +16,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] protected InventionPopup invention1; 
         [SerializeField] protected InventionPopup invention2; 
         [SerializeField] protected InventionPopup invention3;
+        [SerializeField] protected AnimationCurve animInvention; 
+       // [SerializeField] protected AnimationCurve animButton; 
         [SerializeField] private Button button;
         protected List<InventionPopup> inventionPopupList = new List<InventionPopup>();
 

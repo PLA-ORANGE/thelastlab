@@ -1871,6 +1871,12 @@ PrefabInstance:
       propertyPath: timingAppear
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3167784475592909775, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: invention
+      value: 
+      objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
+        type: 3}
     - target: {fileID: 6020124789347081980, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1986,6 +1992,12 @@ PrefabInstance:
       propertyPath: timingAppear
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: invention
+      value: 
+      objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
+        type: 3}
     - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: inventionPos
@@ -2154,7 +2166,7 @@ PrefabInstance:
     - target: {fileID: 8788944783280255657, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4206469016318762801, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
