@@ -27,6 +27,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public Color color;
         public string name;
         public Sprite sprite;
+        public Sprite backgroundSprite;
 
         public Job(JobCode jobCode )
         {
@@ -37,6 +38,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
             color = config.Color;
             name = config.Name;
             sprite = config.Sprite;
+            backgroundSprite = config.BackgroundSprite;
         }
 		
 	}
