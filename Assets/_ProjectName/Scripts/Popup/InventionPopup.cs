@@ -30,9 +30,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             invention = GameObject.Instantiate(invention, inventionPos);
             inventionRect = invention.AddComponent<RectTransform>(); 
             inventionRect.localPosition = Vector3.zero;
-            invention.GetComponent<Invention>().win = false;
+           
+
+                invention.GetComponent<Invention>().win = false;
+                Tween.LocalScale(rectTransform, new Vector3(1.5f, 1.5f, 1.5f), timingAppear, 0.1f, Tween.EaseOutBack);
+            
+           // else Tween.LocalScale(rectTransform, new Vector3(0.4f, 0.4f, 0.4f), timingAppear, 0.1f, Tween.EaseOutBack);
             initalPosition = transform.position;
-            Tween.LocalScale(rectTransform, new Vector3(1.5f, 1.5f,1.5f), timingAppear, 0.1f, Tween.EaseOutBack);
+            //Tween.LocalScale(rectTransform, new Vector3(1.5f, 1.5f,1.5f), timingAppear, 0.1f, Tween.EaseOutBack);
 
         }
 
@@ -46,7 +51,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             container.CheckPopup();
             SetText("");
             Tween.LocalScale(rectTransform, new Vector3(2.2f, 2.2f,2.2f), 0.3f, 0, Tween.EaseOutBack);
-            Tween.Position(rectTransform, new Vector2(centerScreen.position.x, centerScreen.position.y), 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, SetDescription);
+            Tween.Position(rectTransform, new Vector3(centerScreen.position.x, centerScreen.position.y,0), 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, SetDescription);
             onClick = true;
             container.CheckWichInvention(gameObject.name);
 
@@ -61,18 +66,22 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         private void SetDescription() {
             if(testPopup && onClick) {
-                SetText("Séticyksapu était une ville prospère jusqu’à ce que des gaz toxiques y soient détectés, et que la population ait dû être évacuée.");
-                popupText.fontSize = 17;
-                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, -20); 
+                SetText("Une fuite de gaz toxique envahit la ville de Séticyksapû! Vous êtes la seule équipe assez avancée pour venir en aide à sa population! Construisez un drône capable d’assainir la ville!");
+
+
+                popupText.fontSize = 14;
+                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 10); 
             }
             else if(testPopup && !onClick) {
                 SetText("Drone assainissant");
-                popupText.fontSize = 20;
-                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, -1.5f);
+                popupText.fontSize = 12;
+                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 20);
             }
 
-            if(!testPopup) SetText("Bloqué"); 
-
+            if(!testPopup && onClick) {
+                popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 5f);
+                SetText("Bloqué");
+            }
         }
     }
 }
