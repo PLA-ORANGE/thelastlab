@@ -16,28 +16,28 @@ MonoBehaviour:
   - code: 0
     color: {r: 1, g: 0, b: 0, a: 1}
     name: Toxicologue
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 40aaa71dbb6790b4d973a8be2d906e8f, type: 3}
   - code: 1
     color: {r: 1, g: 0.8166498, b: 0, a: 1}
     name: "Expert en Cybersecurit\xE9"
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 22975cfe4afd75a4e84e3983c7d2b44f, type: 3}
   - code: 2
     color: {r: 0.28778648, g: 1, b: 0, a: 1}
     name: Artiste Technique
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: fe4bc229d01ea534e8e6269b134a733b, type: 3}
   - code: 3
     color: {r: 0, g: 1, b: 0.97384214, a: 1}
     name: "Ing\xE9nieur Biomecanique"
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 0cb53bf8bc5db454fb62bf22cc70699c, type: 3}
   - code: 4
     color: {r: 1, g: 0, b: 0.86353207, a: 1}
     name: "Int\xE9grateur d'IA"
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 795e05559a65d7242b0de2796ea10280, type: 3}
   - code: 5
     color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     name: Biologiste
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 40aaa71dbb6790b4d973a8be2d906e8f, type: 3}
   - code: 6
     color: {r: 0, g: 0.012544394, b: 1, a: 1}
     name: "Ing\xE9nieur Automatique"
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 40aaa71dbb6790b4d973a8be2d906e8f, type: 3}
