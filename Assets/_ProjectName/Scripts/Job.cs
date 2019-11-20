@@ -31,7 +31,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public Job(JobCode jobCode )
         {
-            Debug.Log(jobCode);
+            
             JobConfig config = JobManager.Instance.GetJobConfig(jobCode);
 
             code = jobCode;

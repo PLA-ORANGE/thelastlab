@@ -17,8 +17,9 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
            
             exist = true;
             invention =  GameObject.Instantiate(invention,inventionPos);
+            
             SetText("Bravo voici ton Drone assanissant");
-            Tween.LocalScale(invention.transform, new Vector3(3, 3, 3), 1f, 0.1f, Tween.EaseOutBack);
+            Tween.LocalScale(invention.transform, new Vector3(3, 3, 3), 1f, 0.1f,Tween.EaseIn);
         }
 
     }

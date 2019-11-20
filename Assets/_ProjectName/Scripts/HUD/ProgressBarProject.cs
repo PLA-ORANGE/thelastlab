@@ -73,7 +73,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         }
 
         public void ClearBar() {
-            GameObject.Destroy(slider.gameObject);
+            Tween.LocalPosition(slider.transform, new Vector3(10, 10, 10), 0.3f, 0, Tween.EaseOut,Tween.LoopType.None,null,() => GameObject.Destroy(slider.gameObject)); 
+           
         }
     }
 }

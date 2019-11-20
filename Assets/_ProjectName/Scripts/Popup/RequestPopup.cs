@@ -123,13 +123,13 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public override void Appear()
         {
-            float xMin = 0;
-            float xMax = Screen.width/2 - rectTransform.rect.width ;
-            float yMin = Screen.width/2 - rectTransform.rect.height;
-            float yMax = Screen.width +rectTransform.rect.height;
+             float xMin = 0;
+             float xMax = 700 ;
+             float yMin = 500;
+             float yMax =900;
 
 
-            Vector2 position = new Vector2(UnityEngine.Random.Range(xMin,xMax), UnityEngine.Random.Range(yMin, yMax));
+            Vector2 position =/* new Vector2(450, 450);*/ new Vector2(UnityEngine.Random.Range(xMin,xMax), UnityEngine.Random.Range(yMin, yMax));
 
             rectTransform.anchoredPosition = position;
             base.Appear();

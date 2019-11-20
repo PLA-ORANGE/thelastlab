@@ -64,14 +64,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void setJob(Job job)
         {
-            Debug.Log(job);
-
+            
             this.job = job;
             //Title = this.job.name;
 
             Color lColor = this.job.color;
             perso.sprite = job.sprite;
-            Debug.Log(lColor);
+
 
             //lColor.b *= BACKGROUND_COLOR_COEFF;
 
