@@ -21391,11 +21391,6 @@ PrefabInstance:
       propertyPath: textColor.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8837986226314157999, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -200.12329
-      objectReference: {fileID: 0}
     - target: {fileID: 5468151305391102438, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: animInvention.m_Curve.Array.size
@@ -21507,6 +21502,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
         type: 3}
+    - target: {fileID: 8837986226314157999, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -200.12329
+      objectReference: {fileID: 0}
     - target: {fileID: 6020124789347081980, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21633,6 +21633,12 @@ PrefabInstance:
       propertyPath: inventionPos
       value: 
       objectReference: {fileID: 1132079976}
+    - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: invention
+      value: 
+      objectReference: {fileID: 2845934422281824040, guid: cb51b2a249f37564eb60ee6daee691a0,
+        type: 3}
     - target: {fileID: 4108270007734019703, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_Sprite
