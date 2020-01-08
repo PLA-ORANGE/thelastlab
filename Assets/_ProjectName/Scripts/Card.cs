@@ -3,6 +3,7 @@
 /// Date : #DATE#
 ///-----------------------------------------------------------------
 
+using Com.Github.PLAORANGE.Thelastlab.Popup;
 using Pixelplacement;
 using System.Collections.Generic;
 using TMPro;
@@ -15,8 +16,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
     public class Card : MonoBehaviour {
 
         [SerializeField] private SpriteRenderer perso = null;
-        [SerializeField] private SpriteRenderer backgroundSprite = null;
-
+        public SpriteRenderer backgroundSprite = null;
+        [SerializeField] protected GameObject cardHollow;
         private const float BACKGROUND_COLOR_COEFF = 0.5f;
 
         public static event CardEventHandler OnCardTaken;
@@ -26,11 +27,33 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public bool isDestroying;
 
+
+        protected void Awake()
+        {
+            RequestPopup.OnAppear += RequestPopup_OnAppear;
+        }
+
+        protected void RequestPopup_OnAppear(RequestPopup sender)
+        {
+            if (RequestPopup.firstCard)
+            {
+                RequestPopup.firstCard = false;
+                if(job.code == sender.JobCode)
+                {
+                    Transform hollow = Instantiate(cardHollow, backgroundSprite.transform).transform;
+                    hollow.localPosition = Vector3.zero;
+                    hollow.localScale = Vector3.one;
+                    hollow.localRotation = Quaternion.Euler(Vector3.zero);
+                    hollow.parent = null;
+                }
+            }
+        }
+
         public JobCode JobCode { 
             get { return job.code;}
         }
 
-        private Quaternion CameraRotation {
+        public Quaternion CameraRotation {
             get
             {
                 return Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up);
@@ -86,6 +109,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
         {
             isDestroying = true;
             Destroy(gameObject);
+        }
+
+        protected void OnDestroy()
+        {
+            RequestPopup.OnAppear -= RequestPopup_OnAppear;
         }
     }
 }

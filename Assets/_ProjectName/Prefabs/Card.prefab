@@ -437,6 +437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perso: {fileID: 8001126882903279192}
   backgroundSprite: {fileID: 2545559706388135062}
+  cardHollow: {fileID: 37966755833077542, guid: 52d3e24210e11e148b3affb476030758,
+    type: 3}
   isDestroying: 0
 --- !u!65 &1557881838700161347
 BoxCollider:
