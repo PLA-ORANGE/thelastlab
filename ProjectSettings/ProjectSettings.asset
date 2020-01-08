@@ -256,8 +256,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/KeyStore/PLA.keystore
-  AndroidKeyaliasName: plaorange
+  AndroidKeystoreName: '{inproject}: key/orange.keystore'
+  AndroidKeyaliasName: orangepla
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
