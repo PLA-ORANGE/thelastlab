@@ -10506,6 +10506,36 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8708268168283389705, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708268168283389705, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708268168387113676, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_Text
+      value: 0 / 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024700320531649128, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024700320531649128, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024700320531649128, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
 --- !u!224 &1115967658 stripped
