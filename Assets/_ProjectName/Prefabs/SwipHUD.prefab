@@ -1,5 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1031231480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031231481}
+  - component: {fileID: 1031231483}
+  - component: {fileID: 1031231482}
+  m_Layer: 5
+  m_Name: text tuto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1031231481
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031231480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 12.8998165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2068987515094668392}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0.000061035156, y: 287.71997}
+  m_SizeDelta: {x: 0, y: 189}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &1031231483
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031231480}
+  m_CullTransparentMesh: 0
+--- !u!114 &1031231482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031231480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 3e64c286daddb014d87bfcf15612acdb, type: 3}
+    m_FontSize: 74
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 176
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Choisi tes cartes en les faisant gliss\xE9 \xE0 droite ou \xE0 gauche"
 --- !u!1 &1349860178046531477
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,7 +105,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349860178046531477}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2068987515094668392}
@@ -93,7 +172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2068987515094668392
 RectTransform:
   m_ObjectHideFlags: 0
@@ -109,6 +188,7 @@ RectTransform:
   - {fileID: 8708268168387113677}
   - {fileID: 6381581688356578466}
   - {fileID: 5510673950285165226}
+  - {fileID: 1031231481}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,8 +215,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -896414021
+  m_SortingOrder: 2500
   m_TargetDisplay: 0
 --- !u!114 &2068987515094668394
 MonoBehaviour:
@@ -189,7 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9f8261a916ef6488af190d865d0def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventionModel: {fileID: 0}
+  inventionModel: {fileID: 522657099156843775, guid: 74c605bf29bc90c4eace32e49afe5234,
+    type: 3}
   modelSize: 200
   cartCount: {fileID: 8708268168387113676}
   inventionName: {fileID: 8708268168889039802}
@@ -220,7 +301,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6769988145785338684}
   m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2068987515094668392}
@@ -238,7 +319,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6769988145785338684}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!114 &9153829072978493693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 0 / 7
+  m_Text: 0 / 4
 --- !u!1 &8708268168889039804
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +543,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Invention Name
+  m_Text: 'Drone assainissant
+
+'
 --- !u!1001 &8708268167832508766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -533,14 +616,29 @@ PrefabInstance:
     - target: {fileID: 522657099156843774, guid: 74c605bf29bc90c4eace32e49afe5234,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 200
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 522657099156843774, guid: 74c605bf29bc90c4eace32e49afe5234,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 200
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 522657099156843774, guid: 74c605bf29bc90c4eace32e49afe5234,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845706576697166646, guid: 74c605bf29bc90c4eace32e49afe5234,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845706576697166646, guid: 74c605bf29bc90c4eace32e49afe5234,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845706576697166646, guid: 74c605bf29bc90c4eace32e49afe5234,
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200

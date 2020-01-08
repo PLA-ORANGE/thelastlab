@@ -17,7 +17,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField, Range(0,5)] private float maxHight = 4f;
         [SerializeField, Range(0,2)] private float cardSpace = 1f;
         [SerializeField, Range(0,90)] private float angleIntervalle = 35;
-        [SerializeField] private uint maxCard = 7;
+        [SerializeField] private uint maxCard = 4;
 
         public bool colliderOnly = false;
 

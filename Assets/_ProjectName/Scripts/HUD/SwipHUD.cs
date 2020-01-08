@@ -46,7 +46,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         {
             Deck deck = sender.deck;
 
-            CartCountTxt = deck.Count + " / " + deck.MaxCard;
+            CartCountTxt = deck.Count + " / 4";
         }
 
         private void Update () {
