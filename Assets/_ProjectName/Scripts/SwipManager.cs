@@ -118,17 +118,17 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 if(rotationDirection > 0)
                 {
                     Tween.LocalScale(leftArroy, new Vector3(1.5f, 1.5f, 1), 0.1f, 0);
-                    Tween.LocalScale(rightArroy, new Vector3(-1, 1, 1), 0.1f, 0);
+                    Tween.LocalScale(rightArroy, new Vector3(0, 0, 0), 0.1f, 0);
                 }
                 else if(rotationDirection < 0)
                 {
-                    Tween.LocalScale(leftArroy, new Vector3(1, 1, 1), 0.1f, 0);
-                    Tween.LocalScale(rightArroy, new Vector3(-1.5f, 1.5f, 1), 0.1f, 0);
+                    Tween.LocalScale(leftArroy, new Vector3(0, 0, 0), 0.1f, 0);
+                    Tween.LocalScale(rightArroy, new Vector3(1.5f, 1.5f, 1), 0.1f, 0);
                 }
                 else
                 {
-                    Tween.LocalScale(leftArroy, new Vector3(1, 1, 1), 0.1f, 0);
-                    Tween.LocalScale(rightArroy, new Vector3(-1, 1, 1), 0.1f, 0);
+                    Tween.LocalScale(leftArroy, new Vector3(0, 0, 0), 0.1f, 0);
+                    Tween.LocalScale(rightArroy, new Vector3(0, 0, 0), 0.1f, 0);
                 }
 
                 if (rotationDirection != this.rotationDirection)
@@ -170,8 +170,8 @@ namespace Com.Github.PLAORANGE.Thelastlab
                     }
                 }
 
-                Tween.LocalScale(leftArroy, new Vector3(1, 1, 1), 0.1f, 0);
-                Tween.LocalScale(rightArroy, new Vector3(-1, 1, 1), 0.1f, 0);
+                Tween.LocalScale(leftArroy, new Vector3(0, 0, 0), 0.1f, 0);
+                Tween.LocalScale(rightArroy, new Vector3(0, 0, 0), 0.1f, 0);
             }
         }
 
