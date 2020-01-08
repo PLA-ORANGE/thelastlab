@@ -15,30 +15,34 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
     public delegate void RequestPopupEventHandler(RequestPopup sender);
 
-    public class RequestPopup : Popup {
+    public class RequestPopup : Popup
+    {
 
         [SerializeField]
         protected RectTransform cardHolderRectTransform;
         protected GameObject detectedCard;
         protected Camera cam;
         [SerializeField] private List<Sprite> spriteList = new List<Sprite>();
-        [SerializeField] private Image image; 
+        [SerializeField] private Image image;
         public static event RequestPopupEventHandler OnAppear;
         public static event RequestPopupEventHandler OnDisappear;
-        protected  GameManager gameManager; 
+        protected GameManager gameManager;
         private JobCode jobCode;
         private int givingScore = 20;
         private bool eventIsInit;
-
-        public JobCode JobCode {
+        static public bool firstCard = true;
+        public JobCode JobCode
+        {
+            get => jobCode;
             set
             {
                 jobCode = value;
-                image.sprite = spriteList[(int)jobCode]; 
+                image.sprite = spriteList[(int)jobCode];
             }
         }
 
-        override public void Start() {
+        override public void Start()
+        {
             base.Start();
             cam = Camera.main;
             gameManager = FindObjectOfType<GameManager>();
@@ -67,47 +71,41 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
             if (exist)
             {
-                Vector3 position = sender.transform.position;
-                Vector3 position2 = sender.transform.position;
-                position = cam.WorldToScreenPoint(position);
-                Debug.Log("position" + position);
-                Debug.Log("xMax :" + cardHolderRectTransform.rect.xMax + " xMin :" + cardHolderRectTransform.rect.xMin);
-                Debug.Log("yMax :" + cardHolderRectTransform.rect.xMax + " yMin :" + cardHolderRectTransform.rect.yMin);
-                if (position.x <= (cardHolderRectTransform.position.x + cardHolderRectTransform.rect.xMax) && position.x >= (cardHolderRectTransform.position.x + cardHolderRectTransform.rect.xMin))
+                Vector2 cardPos = Camera.main.WorldToScreenPoint(sender.backgroundSprite.transform.position);
+                cardPos = Camera.main.ScreenToWorldPoint(new Vector3(cardPos.x, cardPos.y, Camera.main.nearClipPlane));
+                Vector2 popupPos = Camera.main.ScreenToWorldPoint(new Vector3(transform.position.x, transform.position.y, Camera.main.nearClipPlane));
+                float distance = Vector2.Distance(cardPos, popupPos);
+                Debug.Log(distance);
+                if (distance <= 2)
                 {
-                    if (position.y <= (cardHolderRectTransform.position.y + cardHolderRectTransform.rect.yMax) && position.y >= (cardHolderRectTransform.position.y + cardHolderRectTransform.rect.yMin))
+                    if(sender.JobCode == jobCode && detectedCard is null)
                     {
-                        if (sender.JobCode == jobCode && detectedCard is null)
-                        {
-                            detectedCard = sender.gameObject;
+                        detectedCard = sender.gameObject;
 
-                            //sender.Destroy();
-                            detectedCard = null;
+                        //sender.Destroy();
+                        detectedCard = null;
 
-                            gameManager.SpawnInLab(sender.job);
-                            CorrectAnswer();
-                        }
-                        else if (detectedCard is null)
-                        {
-                            FalseAnswer();
-                            Deck deck = FindObjectOfType<Deck>();
-                            deck.colliderOnly = false;
-                        }
+                        gameManager.SpawnInLab(sender.job);
+                        CorrectAnswer();
+                    }
+                    else if (detectedCard is null)
+                    {
+                        FalseAnswer();
+                        Deck deck = FindObjectOfType<Deck>();
+                        deck.colliderOnly = false;
                     }
                 }
             }
         }
 
-
-
         public void CorrectAnswer()
         {
             gameManager.AddScore(givingScore);
-            
+
             //Debug.Log("La reponse donnee a la requete est correct");
             Disapear();
         }
-        
+
         public void FalseAnswer()
         {
             ProgressBarProject progressBar = FindObjectOfType<ProgressBarProject>();
@@ -123,13 +121,13 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public override void Appear()
         {
-             float xMin = 0;
-             float xMax = 700 ;
-             float yMin = 500;
-             float yMax =900;
+            float xMin = 0;
+            float xMax = 700;
+            float yMin = 500;
+            float yMax = 900;
 
 
-            Vector2 position =/* new Vector2(450, 450);*/ new Vector2(UnityEngine.Random.Range(xMin,xMax), UnityEngine.Random.Range(yMin, yMax));
+            Vector2 position =/* new Vector2(450, 450);*/ new Vector2(UnityEngine.Random.Range(xMin, xMax), UnityEngine.Random.Range(yMin, yMax));
 
             rectTransform.anchoredPosition = position;
             base.Appear();
