@@ -10762,6 +10762,7 @@ MonoBehaviour:
   active: 0
   rightArroy: {fileID: 1115967658}
   leftArroy: {fileID: 691241709}
+  tutoTxt: {fileID: 1459420346}
 --- !u!114 &1196231902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3167784475592909775, guid: dad028fdd18e2ef45993d339ff43cd60,
@@ -15884,6 +15885,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4e703896f2c806458f717e289d16b01, type: 3}
+--- !u!1 &1459420346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1031231480, guid: 32a6973889ebf174cb21e61a632844d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1089750194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534412106
 GameObject:
   m_ObjectHideFlags: 0
@@ -22231,7 +22238,7 @@ PrefabInstance:
     - target: {fileID: 4172453892656894847, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 52.271423
+      value: 52.271484
       objectReference: {fileID: 0}
     - target: {fileID: 4172453892656894847, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
