@@ -49,6 +49,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 }
             }
             Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(popup.transform.position.x, popup.transform.position.y, Camera.main.nearClipPlane));
+            Debug.Log("point : " + point);
             Tween.Position(transform,startPoint ,point, 1, 0, Tween.EaseInOut, Tween.LoopType.None, null, null,true);
             Tween.LocalRotation(transform,cards[0].CameraRotation, 0.5f, 0, Tween.EaseInOut, Tween.LoopType.None, null, null,true);
             Tween.LocalScale(transform, Vector3.zero, 0.5f, 1, Tween.EaseInBack, Tween.LoopType.None, null, HollowAnim,true);

@@ -10363,7 +10363,7 @@ PrefabInstance:
     - target: {fileID: 2068987515094668388, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5510673950285165226, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
@@ -10506,6 +10506,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 4914527887686963378, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Drone assainissant
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
+        type: 3}
+    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 87
+      objectReference: {fileID: 0}
     - target: {fileID: 8708268168283389705, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -10515,6 +10538,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8708268168889039803, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
@@ -10547,29 +10585,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
         type: 3}
-    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Drone assainissant
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
-        type: 3}
-    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 87
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914527887686963378, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3024700320531649128, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10584,21 +10599,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
@@ -21356,7 +21356,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036693094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -8.82843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1277197601}
@@ -21364,7 +21364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 19.562744, y: 148.68286}
   m_SizeDelta: {x: 0, y: 125.58002}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2036693096
