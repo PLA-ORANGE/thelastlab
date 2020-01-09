@@ -76,6 +76,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                 //cardPos = Camera.main.ScreenToWorldPoint(new Vector3(cardPos.x, cardPos.y, Camera.main.nearClipPlane));
                 Vector3 popupPos = Camera.main.ScreenToWorldPoint(new Vector3(transform.position.x, transform.position.y, Camera.main.nearClipPlane));
                 popupPos = Vector3.ProjectOnPlane(popupPos, Camera.main.transform.forward);
+                
                 float distance = Vector3.Distance(cardPos, popupPos);
 
                 Debug.Log("pos : " + popupPos);
