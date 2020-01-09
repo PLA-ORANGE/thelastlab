@@ -14,12 +14,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
     {
         [HideInInspector] public bool onClick = false;
         protected PopupInventionContainer container;
+
         [SerializeField] RectTransform inventionPos;
         [SerializeField] private GameObject invention;
         [SerializeField] private RectTransform centerScreen;
         [SerializeField] private bool testPopup;
         [SerializeField] private float timingAppear;
         [SerializeField] private Color textColor;
+
         private RectTransform inventionRect;
         private Vector3 initalPosition;
 
@@ -64,13 +66,13 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             SetText("");
             Tween.LocalScale(rectTransform, new Vector3(1.5f, 1.5f, 1.5f), 0.3f, 0, Tween.EaseOutBack);
             Tween.Position(rectTransform, initalPosition, 0.5f, 0, Tween.EaseInOutBack, Tween.LoopType.None, null, SetDescription);
-            transform.GetChild(0).gameObject.SetActive(false);
-            popupText.color = Color.black;
+            //transform.GetChild(0).gameObject.SetActive(false);
+            
         }
 
         private void SetDescription() {
             if(testPopup && onClick) {
-                SetText("Une fuite de gaz toxique envahit la ville de Séticyksapû! Vous êtes la seule équipe assez avancée pour venir en aide à sa population! Construisez un drône capable d’assainir la ville!");
+              
 
                 transform.GetChild(0).gameObject.SetActive(true);
                 popupText.color = textColor;
@@ -83,10 +85,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                 popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 30);
             }
 
-            if(!testPopup && onClick) {
+            /*if(!testPopup && onClick) {
                 popupText.rectTransform.anchoredPosition = new Vector2(popupText.rectTransform.anchoredPosition.x, 30);
                 SetText("Bloqué");
-            }
+            }*/
+        }
+
+        protected override void UpdateText() {
+            
         }
     }
 }

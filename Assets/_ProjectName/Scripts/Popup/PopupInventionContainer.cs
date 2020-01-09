@@ -34,7 +34,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             inventionPopupList.Add(invention1);
             inventionPopupList.Add(invention2);
             inventionPopupList.Add(invention3);
-            buttonContainerAnimator = buttonContainer.GetComponent<Animator>(); 
+            buttonContainerAnimator = buttonContainer.GetComponent<Animator>();
+            GetComponent<Animator>().SetTrigger("Appear"); 
         }
 
         public void CheckPopup() {
@@ -65,6 +66,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public void ClearAll() {
             buttonContainerAnimator.SetTrigger("Disappear");
+            GetComponent<Animator>().SetTrigger("Disappear");
+
             Tween.Position(button.transform, new Vector3(0, -20, 0), 0.8f, 0.2f, animButton);
             Tween.Position(invention2.transform, new Vector3(invention2.transform.position.x, 25, 0), 0.5f, 0.3f, Tween.EaseOutBack);
             Tween.Position(invention3.transform, new Vector3(invention3.transform.position.x, 25, 0), 0.5f, 0.5f, Tween.EaseOutBack);

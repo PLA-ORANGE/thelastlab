@@ -64,7 +64,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         }
 
 
-        protected void UpdateText() {
+      virtual  protected void UpdateText() {
             popupTitle.text = TitlePopup;
             popupText.text = TextPopup;
         }
