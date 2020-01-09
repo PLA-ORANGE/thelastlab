@@ -144,7 +144,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void SetSelectProjectPhase()
         {
-            TouchTxt.gameObject.SetActive(false);
+            TouchTxt.text = "Choisis ton projet"; 
 
             inventionContainer.gameObject.SetActive(true);
             inventionValidateBtn.gameObject.SetActive(true);
@@ -154,6 +154,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void SetCardSelectPhase()
         {
+            TouchTxt.gameObject.SetActive(false);
             GamePhase = VoidPhase;
             ///priorisation d'évenement
             requestPopup.InitEvent();
