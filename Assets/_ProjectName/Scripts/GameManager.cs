@@ -98,11 +98,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
             isRequestPopUp = false;
         }
 
-        public void SpawnInLab(Job job)
+        public void SpawnInLab(Job job, Vector3 pos)
         {
             GameObject labPeople = Instantiate(labMenPrefab, labo.transform.position, Quaternion.identity, labo.transform);
             labPeople.GetComponent<LabMen>().img.sprite = job.sprite;
 
+            //Debug.Log("popup pos : " + pos);
+            cardExplosion.transform.position = pos;
             cardExplosion.GetComponent<ParticleSystem>().startColor = job.color;
             cardExplosion.Play();
 

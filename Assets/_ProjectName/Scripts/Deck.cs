@@ -56,7 +56,6 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Card_OnCardDrop(Card sender)
         {
-            Debug.Log("Deck");
 
             if (sender.isDestroying || colliderOnly) return;
 

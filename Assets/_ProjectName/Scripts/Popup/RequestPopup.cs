@@ -67,15 +67,21 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         private void Card_OnCardDrop(Card sender)
         {
-            Debug.Log("Request");
 
             if (exist)
             {
-                Vector2 cardPos = Camera.main.WorldToScreenPoint(sender.backgroundSprite.transform.position);
-                cardPos = Camera.main.ScreenToWorldPoint(new Vector3(cardPos.x, cardPos.y, Camera.main.nearClipPlane));
-                Vector2 popupPos = Camera.main.ScreenToWorldPoint(new Vector3(transform.position.x, transform.position.y, Camera.main.nearClipPlane));
-                float distance = Vector2.Distance(cardPos, popupPos);
-                Debug.Log(distance);
+                Vector3 cardPos = Vector3.ProjectOnPlane(sender.transform.position, Camera.main.transform.forward);
+                //cardPos.z = Camera.main.nearClipPlane;
+                //Vector2 cardPos = Camera.main.WorldToScreenPoint(sender.backgroundSprite.transform.position);
+                //cardPos = Camera.main.ScreenToWorldPoint(new Vector3(cardPos.x, cardPos.y, Camera.main.nearClipPlane));
+                Vector3 popupPos = Camera.main.ScreenToWorldPoint(new Vector3(transform.position.x, transform.position.y, Camera.main.nearClipPlane));
+                popupPos = Vector3.ProjectOnPlane(popupPos, Camera.main.transform.forward);
+                
+                float distance = Vector3.Distance(cardPos, popupPos);
+
+                Debug.Log("pos : " + popupPos);
+                Debug.DrawLine(cardPos, popupPos, Color.red, 1000);
+
                 if (distance <= 2)
                 {
                     if(sender.JobCode == jobCode && detectedCard is null)
@@ -85,7 +91,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         //sender.Destroy();
                         detectedCard = null;
 
-                        gameManager.SpawnInLab(sender.job);
+                        gameManager.SpawnInLab(sender.job, popupPos);
                         CorrectAnswer();
                     }
                     else if (detectedCard is null)
