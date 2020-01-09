@@ -153,7 +153,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
                     cardList.Remove(frontCard);
                     deck.AddCard(frontCard);
-                    frontCard.transform.localScale = Vector3.one;
+                    frontCard.transform.localScale = Vector3.one * 1.5f;
                     
                     OnValidateCard?.Invoke(this);
 
