@@ -91,7 +91,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                         //sender.Destroy();
                         detectedCard = null;
 
-                        gameManager.SpawnInLab(sender.job, popupPos);
+                        gameManager.SpawnInLab(sender.job, cardPos);
                         CorrectAnswer();
                     }
                     else if (detectedCard is null)
