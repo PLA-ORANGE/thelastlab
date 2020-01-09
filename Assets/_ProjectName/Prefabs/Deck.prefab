@@ -44,9 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e453fb215ef7143b006c741b949a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHight: 3.7
-  cardSpace: 1.2
-  angleIntervalle: 45
+  maxHight: 3.5
+  cardSpace: 2
+  angleIntervalle: 35
+  maxCard: 4
+  colliderOnly: 1
 --- !u!65 &-6921124911838948018
 BoxCollider:
   m_ObjectHideFlags: 0
