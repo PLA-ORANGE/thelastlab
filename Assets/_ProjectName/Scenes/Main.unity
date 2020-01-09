@@ -194,6 +194,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &91602717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4314703640011340387, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 997584219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4443b539b554fd44aa221554950576f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &101671724 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2687328127965480914, guid: 0929f3a5e69c49544aec25d715d6e5d6,
@@ -10494,29 +10506,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -100
       objectReference: {fileID: 0}
-    - target: {fileID: 4914527887686963378, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Drone assainissant
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
-        type: 3}
-    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 87
-      objectReference: {fileID: 0}
     - target: {fileID: 8708268168283389705, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -10526,21 +10515,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8708268168889039803, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
@@ -10573,6 +10547,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
         type: 3}
+    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Drone assainissant
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
+        type: 3}
+    - target: {fileID: 8708268168889039802, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914527887686963378, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3024700320531649128, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10587,6 +10584,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194417628358899104, guid: 32a6973889ebf174cb21e61a632844d1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
@@ -10679,7 +10691,7 @@ MonoBehaviour:
   swipHud: {fileID: 348376833}
   requestPopup: {fileID: 929462122}
   popupWin: {fileID: 1542390502}
-  progressBar: {fileID: 1633247956}
+  progressBar: {fileID: 91602717}
   cardExplosion: {fileID: 1364580084}
   popupRequests: 0000000001000000020000000300000000000000
   spawnFrequencyRequest: 4
@@ -16049,18 +16061,6 @@ Transform:
   m_Father: {fileID: 1183919229}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1633247956 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2202388412410422976, guid: 0929f3a5e69c49544aec25d715d6e5d6,
-    type: 3}
-  m_PrefabInstance: {fileID: 997584219}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4443b539b554fd44aa221554950576f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1687112141
 GameObject:
   m_ObjectHideFlags: 0
