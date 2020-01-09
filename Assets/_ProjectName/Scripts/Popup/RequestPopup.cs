@@ -17,7 +17,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
     public class RequestPopup : Popup
     {
-
+        [SerializeField]
+        protected RectTransform cardSpawner;
         [SerializeField]
         protected RectTransform cardHolderRectTransform;
         protected GameObject detectedCard;
@@ -127,11 +128,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public override void Appear()
         {
-            float xMin = 0;
-            float xMax = 700;
-            float yMin = 500;
-            float yMax = 900;
-
+            float xMin = cardSpawner.rect.xMin + rectTransform.rect.width/2;
+            float xMax = cardSpawner.rect.xMax - rectTransform.rect.width / 2;
+            float yMin = cardSpawner.rect.yMin + rectTransform.rect.height/ 2;
+            float yMax = cardSpawner.rect.yMax - rectTransform.rect.height / 2;
 
             Vector2 position =/* new Vector2(450, 450);*/ new Vector2(UnityEngine.Random.Range(xMin, xMax), UnityEngine.Random.Range(yMin, yMax));
 
