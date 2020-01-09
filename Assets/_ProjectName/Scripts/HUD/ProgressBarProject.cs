@@ -44,8 +44,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
 
         public void UpdateSlider(float value)
         {
-            initColor = fillImage.GetComponentInChildren<Image>().color;
-            fillImage.GetComponentInChildren<Image>().color = Color.green;
+            /*initColor = fillImage.GetComponentInChildren<Image>().color;
+            fillImage.GetComponentInChildren<Image>().color = Color.green;*/
             Tween.Value(slider.value, value/100, SliderUpdate, 1, 0, Tween.EaseInOut, Tween.LoopType.None, null, EndTween);
         }
 
@@ -55,7 +55,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
 
         protected void SliderUpdate(float value)
         {
-            slider.value = value;
+            fillImage.fillAmount = value;
             fillImage.enabled = (value != 0);
         }
 
