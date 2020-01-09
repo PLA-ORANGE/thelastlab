@@ -55,6 +55,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
 
         protected void SliderUpdate(float value)
         {
+            slider.value = value;
             fillImage.fillAmount = value;
             fillImage.enabled = (value != 0);
         }

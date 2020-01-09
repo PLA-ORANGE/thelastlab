@@ -456,22 +456,22 @@ PrefabInstance:
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1409636181034746742, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}
@@ -537,11 +537,6 @@ PrefabInstance:
         type: 3}
       propertyPath: spriteList.Array.size
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1409636181034746737, guid: a0922cf33665e73409ef62924f1f027e,
-        type: 3}
-      propertyPath: cardHolderRectTransform
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1409636181034746737, guid: a0922cf33665e73409ef62924f1f027e,
         type: 3}

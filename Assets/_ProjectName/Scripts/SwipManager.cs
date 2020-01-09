@@ -17,6 +17,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public event SwipManagerEventHandler OnValidateCard;
 
+        [SerializeField] protected float cardScale = 1.25f;
         [SerializeField] GameObject cardPrefab;
         [SerializeField] Transform cardContainer;
 
@@ -153,7 +154,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
                     cardList.Remove(frontCard);
                     deck.AddCard(frontCard);
-                    frontCard.transform.localScale = Vector3.one;
+                    frontCard.transform.localScale = Vector3.one * cardScale;
                     
                     OnValidateCard?.Invoke(this);
 
