@@ -10,6 +10,7 @@ using System;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using Com.Github.PLAORANGE.Thelastlab.Hud;
+using System.Linq;
 
 namespace Com.Github.PLAORANGE.Thelastlab.Popup
 {
@@ -19,6 +20,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
     {
         [SerializeField]
         protected RectTransform cardSpawner;
+        protected List<RectTransform> spawners = new List<RectTransform>();
         [SerializeField]
         protected RectTransform cardHolderRectTransform;
         protected GameObject detectedCard;
@@ -128,14 +130,14 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public override void Appear()
         {
-            float xMin = cardSpawner.rect.xMin + rectTransform.rect.width/2;
-            float xMax = cardSpawner.rect.xMax - rectTransform.rect.width / 2;
-            float yMin = cardSpawner.rect.yMin + rectTransform.rect.height/ 2;
-            float yMax = cardSpawner.rect.yMax - rectTransform.rect.height / 2;
-
-            Vector2 position =/* new Vector2(450, 450);*/ new Vector2(UnityEngine.Random.Range(xMin, xMax), UnityEngine.Random.Range(yMin, yMax));
-
+            if(spawners.Count == 0)
+            {
+                spawners = cardSpawner.GetComponentsInChildren<RectTransform>().ToList();
+            }
+            int index = UnityEngine.Random.Range(0, spawners.Count);
+            Vector2 position = spawners[index].anchoredPosition ;
             rectTransform.anchoredPosition = position;
+            spawners.RemoveAt(index);
             base.Appear();
             OnAppear?.Invoke(this);
         }
