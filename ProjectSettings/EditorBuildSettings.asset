@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_ProjectName/Scenes/InventionSelection.unity
     guid: c12008eca1c13a0479cc5ebb89288ba1
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ProjectName/Scenes/Main.unity
     guid: 7ebcebcf4eb12844ea5e577a25a5af9a
-  - enabled: 1
+  - enabled: 0
     path: Assets/_ProjectName/Scenes/ux card selector.unity
     guid: d561949378feef2478d59ff80a395bc1
   m_configObjects: {}
