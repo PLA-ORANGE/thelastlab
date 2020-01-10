@@ -40,6 +40,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Hud
         private void Start () {
             swipManager.OnValidateCard += SwipManager_OnValidateCard;
             //inventionModel = Instantiate(iventionPrefab, inventionSpawn);
+            GetComponent<Animator>().SetTrigger("appear");
         }
 
         private void SwipManager_OnValidateCard(SwipManager sender)
