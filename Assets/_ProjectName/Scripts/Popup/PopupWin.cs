@@ -17,6 +17,8 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         [SerializeField] private Transform inventionPos;
         [SerializeField] private GameObject fondInventionPrefab;
         [SerializeField] private Button buttonRetry;
+
+        private string sceneName = "Main"; 
         
         [SerializeField] private AnimationCurve inventionCurve;
 
@@ -33,7 +35,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
         public void Retry() {
             Destroy(FindObjectOfType<TweenEngine>().gameObject);
-            SceneManager.LoadScene("CopyMainWinScreen"); 
+            SceneManager.LoadScene(sceneName); 
         }
 
     }
