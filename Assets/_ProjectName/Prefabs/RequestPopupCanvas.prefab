@@ -410,8 +410,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Une fuite de gaz toxique envahit la ville de S\xE9ticyksap\xFB ! Vous \xEAtes
-    la seule   \xE9quipe assez avanc\xE9e pour venir en \naide \xE0 sa population
-    ! \nConstruisez un dr\xF4ne capable d\u2019assainir la ville!"
+    la seule \xE9quipe assez avanc\xE9e pour venir en \naide \xE0 sa population !
+    \nConstruisez un dr\xF4ne capable d\u2019assainir la ville!"
 --- !u!114 &1068643197
 MonoBehaviour:
   m_ObjectHideFlags: 0
