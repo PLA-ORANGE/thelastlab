@@ -1910,41 +1910,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: testPopup
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: textPopup
-      value: Drone assainissant
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: timingAppear
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: textColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: textColor.g
-      value: 0.23917176
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: textColor.b
-      value: 0.6415094
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: textColor.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5468151305391102438, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: animInvention.m_Curve.Array.size
@@ -2056,6 +2021,68 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
         type: 3}
+    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: textPopup
+      value: "Bloqu\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: timingAppear
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: invention
+      value: 
+      objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
+        type: 3}
+    - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: inventionPos
+      value: 
+      objectReference: {fileID: 1132079976}
+    - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: invention
+      value: 
+      objectReference: {fileID: 2845934422281824040, guid: cb51b2a249f37564eb60ee6daee691a0,
+        type: 3}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: testPopup
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: textPopup
+      value: Drone assainissant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: timingAppear
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: textColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: textColor.g
+      value: 0.23917176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: textColor.b
+      value: 0.6415094
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592692564999425646, guid: dad028fdd18e2ef45993d339ff43cd60,
+        type: 3}
+      propertyPath: textColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8837986226314157999, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2166,33 +2193,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: textPopup
-      value: "Bloqu\xE9"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: timingAppear
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3495252496476376367, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: invention
-      value: 
-      objectReference: {fileID: 2880515968366356004, guid: 9a78c3c9164e61a44b6531452b679b6d,
-        type: 3}
-    - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: inventionPos
-      value: 
-      objectReference: {fileID: 1132079976}
-    - target: {fileID: 2283977100489505697, guid: dad028fdd18e2ef45993d339ff43cd60,
-        type: 3}
-      propertyPath: invention
-      value: 
-      objectReference: {fileID: 2845934422281824040, guid: cb51b2a249f37564eb60ee6daee691a0,
-        type: 3}
     - target: {fileID: 4108270007734019703, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_Sprite
@@ -2750,17 +2750,17 @@ PrefabInstance:
     - target: {fileID: 4413265772703119714, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -53.325012
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4413265772703119714, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -16.547256
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4413265772703119714, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -862.83856
+      value: -900
       objectReference: {fileID: 0}
     - target: {fileID: 1501266101773418415, guid: dad028fdd18e2ef45993d339ff43cd60,
         type: 3}
