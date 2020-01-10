@@ -67,7 +67,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
         public void ClearAll() {
             buttonContainerAnimator.SetTrigger("Disappear");
             GetComponent<Animator>().SetTrigger("Disappear");
-
+            Destroy(invention1.transform.GetChild(2).GetComponent<Button>().gameObject);  
             Tween.Position(button.transform, new Vector3(0, -20, 0), 0.8f, 0.2f, animButton);
             Tween.Position(invention2.transform, new Vector3(invention2.transform.position.x, 25, 0), 0.5f, 0.3f, Tween.EaseOutBack);
             Tween.Position(invention3.transform, new Vector3(invention3.transform.position.x, 25, 0), 0.5f, 0.5f, Tween.EaseOutBack);
