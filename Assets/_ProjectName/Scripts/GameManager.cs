@@ -85,7 +85,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
                 deck.GetComponent<Deck>().AddCard(card);
                 card.GetComponent<Card>().setJob(startCards[i]);
             }*/
-
+           
             TouchTxt.gameObject.SetActive(true);
         }
 
@@ -120,7 +120,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         public void DisplayWinScreen() {
             popupWin.Appear();
             Tween.LocalScale(popupWin.transform, new Vector3(1.2f, 1.2f, 1.2f),0.7f,0,Tween.EaseIn); 
-            popupWin.SetText("Félicitations !!", "Voici votre invention");
+            popupWin.SetText("Bravo !", "Voici votre invention");
         }
 
         public void  AddScore (float value) {
@@ -146,7 +146,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void SetSelectProjectPhase()
         {
-            TouchTxt.gameObject.SetActive(false);
+            TouchTxt.text = "Choisis ton projet"; 
 
             inventionContainer.gameObject.SetActive(true);
             inventionValidateBtn.gameObject.SetActive(true);
@@ -156,13 +156,14 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         public void SetCardSelectPhase()
         {
+            TouchTxt.gameObject.SetActive(false);
             GamePhase = VoidPhase;
             ///priorisation d'évenement
             requestPopup.InitEvent();
             ///
 
-            inventionContainer.gameObject.SetActive(false);
-            inventionValidateBtn.gameObject.SetActive(false);
+            //inventionContainer.gameObject.SetActive(false);
+            //inventionValidateBtn.gameObject.SetActive(false);
 
             SwipManager swipManager = gameObject.GetComponent<SwipManager>();
 
@@ -212,6 +213,11 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         protected void VoidPhase()
         {
+        }
+
+        private void OnDestroy() {
+            RequestPopup.OnDisappear -= RequestPopup_OnDisappear;
+            PopupInventionContainer.OnSelectionPhaseFinish -= PopupInventionContainer_OnSelectionPhase;
         }
     }
 }

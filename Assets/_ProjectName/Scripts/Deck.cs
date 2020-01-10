@@ -162,5 +162,13 @@ namespace Com.Github.PLAORANGE.Thelastlab
             AddCard(other.gameObject);
             
         }
+
+        private void OnDestroy() {
+            Card.OnCardTaken -= Card_OnCardTaken;
+            Card.OnCardDrop -= Card_OnCardDrop;
+
+            RequestPopup.OnAppear -= RequestPopup_OnAppear;
+            RequestPopup.OnDisappear -= RequestPopup_OnDisappear;
+        }
     }
 }
