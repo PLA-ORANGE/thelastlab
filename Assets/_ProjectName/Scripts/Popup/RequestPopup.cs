@@ -73,7 +73,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
 
             if (exist)
             {
-                Vector3 cardPos = Vector3.ProjectOnPlane(sender.transform.position, Camera.main.transform.forward);
+                Vector3 cardPos = Vector3.ProjectOnPlane(sender.backgroundSprite.transform.position, Camera.main.transform.forward);
                 //cardPos.z = Camera.main.nearClipPlane;
                 //Vector2 cardPos = Camera.main.WorldToScreenPoint(sender.backgroundSprite.transform.position);
                 //cardPos = Camera.main.ScreenToWorldPoint(new Vector3(cardPos.x, cardPos.y, Camera.main.nearClipPlane));
@@ -85,7 +85,7 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
                 Debug.Log("pos : " + popupPos);
                 Debug.DrawLine(cardPos, popupPos, Color.red, 1000);
 
-                if (distance <= 2)
+                if (distance <= 2.5f)
                 {
                     if(sender.JobCode == jobCode && detectedCard is null)
                     {
