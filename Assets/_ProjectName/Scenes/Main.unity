@@ -410,6 +410,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5596581088881337237, guid: 0929f3a5e69c49544aec25d715d6e5d6,
+        type: 3}
+      propertyPath: spriteList.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: c836e28c35a22634c8d2d08a91b71cc7,
+        type: 3}
     - target: {fileID: 2202388412808414870, guid: 0929f3a5e69c49544aec25d715d6e5d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,6 +616,18 @@ PrefabInstance:
     - target: {fileID: 2068987515094668388, guid: 32a6973889ebf174cb21e61a632844d1,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 736537855, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 345.59998
+      objectReference: {fileID: 0}
+    - target: {fileID: 736537855, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 345.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 736537855, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2068987515094668392, guid: 32a6973889ebf174cb21e61a632844d1,
@@ -834,18 +852,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031231481, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 736537855, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 345.59998
-      objectReference: {fileID: 0}
-    - target: {fileID: 736537855, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 345.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 736537855, guid: 32a6973889ebf174cb21e61a632844d1, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
