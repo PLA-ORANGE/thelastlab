@@ -147,5 +147,10 @@ namespace Com.Github.PLAORANGE.Thelastlab.Popup
             base.Disapear();
             OnDisappear?.Invoke(this);
         }
+
+        private void OnDestroy()
+        {
+            firstCard = true;
+        }
     }
 }
