@@ -43,6 +43,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
         [SerializeField] Transform leftArroy;
 
         [SerializeField] private GameObject tutoTxt;
+        [SerializeField] private GameObject numberCardTxt;
         private bool isFirstCardChoose = true;
 
         private GameObject FrontCard 
@@ -149,6 +150,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
                     {
                         isFirstCardChoose = false;
                         tutoTxt.SetActive(false);
+                        numberCardTxt.SetActive(true);
                     }
                     GameObject frontCard = FrontCard;
 
