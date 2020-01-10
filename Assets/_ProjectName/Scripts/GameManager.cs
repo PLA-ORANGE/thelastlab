@@ -180,7 +180,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
             GamePhase = ProjectPhase;
             elapseTime = spawnFrequencyRequest / 2;
 
-            swipHud.SetActive(false);
+            swipHud.GetComponent<Animator>().SetTrigger("disappear");
             hud.SetActive(true);
 
             gameObject.GetComponent<DragAndDrop>().active = true;
