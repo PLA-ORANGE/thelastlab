@@ -67,7 +67,7 @@ namespace Com.Github.PLAORANGE.Thelastlab
 
         private void Start () {
 
-            RequestPopup.OnDisappear += RequestPopup_OnDisappear;
+             RequestPopup.OnDisappear += RequestPopup_OnDisappear;
             PopupInventionContainer.OnSelectionPhaseFinish += PopupInventionContainer_OnSelectionPhase; 
             GamePhase = WaitToStart;
             //SetSelectProjectPhase();
